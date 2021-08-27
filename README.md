@@ -8,3 +8,6 @@
 <h3>This package is still under development</h3>
 
 </div>
+<h2>Wanna be notified for new updates?</h2>
+
+Join our [support server](https://discord.gg/qY3rB9UZKu)
