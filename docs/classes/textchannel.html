@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TextChannel | arcscord</title>
-	<meta name="description" content="Documentation for arcscord">
+	<title>TextChannel | libcord</title>
+	<meta name="description" content="Documentation for libcord">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">arcscord</a>
+					<a href="../index.html" class="title">libcord</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">arcscord</a>
+					<a href="../modules.html">libcord</a>
 				</li>
 				<li>
 					<a href="textchannel.html">TextChannel</a>
@@ -100,6 +100,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="textchannel.html#guild" class="tsd-kind-icon">guild</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="textchannel.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="textchannel.html#lastmessageid" class="tsd-kind-icon">last<wbr>Message<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="textchannel.html#messages" class="tsd-kind-icon">messages</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="textchannel.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="textchannel.html#nsfw" class="tsd-kind-icon">nsfw</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="textchannel.html#parentid" class="tsd-kind-icon">parent<wbr>Id</a></li>
@@ -119,7 +120,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="textchannel.html#createmessage" class="tsd-kind-icon">create<wbr>Message</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="textchannel.html#send" class="tsd-kind-icon">send</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="textchannel.html#update" class="tsd-kind-icon">update</a></li>
 							</ul>
 						</section>
@@ -139,7 +140,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="guildchannel.html">GuildChannel</a>.<a href="guildchannel.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/TextChannel.ts#L16">src/structures/channels/TextChannel.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/TextChannel.ts#L17">src/structures/channels/TextChannel.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -165,7 +166,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="guildchannel.html">GuildChannel</a>.<a href="guildchannel.html#client">client</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/Base.ts#L8">src/structures/Base.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/Base.ts#L8">src/structures/Base.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -176,7 +177,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="guildchannel.html">GuildChannel</a>.<a href="guildchannel.html#guild">guild</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/GuildChannel.ts#L11">src/structures/channels/GuildChannel.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/GuildChannel.ts#L10">src/structures/channels/GuildChannel.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -187,7 +188,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="guildchannel.html">GuildChannel</a>.<a href="guildchannel.html#id">id</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/Channel.ts#L8">src/structures/channels/Channel.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/Channel.ts#L7">src/structures/channels/Channel.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -197,7 +198,17 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Message<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">`</span><span class="tsd-signature-symbol">${</span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">`</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/TextChannel.ts#L16">src/structures/channels/TextChannel.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/TextChannel.ts#L16">src/structures/channels/TextChannel.ts:16</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="messages" class="tsd-anchor"></a>
+					<h3>messages</h3>
+					<div class="tsd-signature tsd-kind-icon">messages<span class="tsd-signature-symbol">:</span> <a href="collection.html" class="tsd-signature-type" data-tsd-kind="Class">Collection</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">`</span><span class="tsd-signature-symbol">${</span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">`</span><span class="tsd-signature-symbol">, </span><a href="message.html" class="tsd-signature-type" data-tsd-kind="Class">Message</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/TextChannel.ts#L17">src/structures/channels/TextChannel.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -208,7 +219,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="guildchannel.html">GuildChannel</a>.<a href="guildchannel.html#name">name</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/GuildChannel.ts#L10">src/structures/channels/GuildChannel.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/GuildChannel.ts#L9">src/structures/channels/GuildChannel.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -219,7 +230,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="guildchannel.html">GuildChannel</a>.<a href="guildchannel.html#nsfw">nsfw</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/GuildChannel.ts#L12">src/structures/channels/GuildChannel.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/GuildChannel.ts#L11">src/structures/channels/GuildChannel.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -230,7 +241,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="guildchannel.html">GuildChannel</a>.<a href="guildchannel.html#parentid">parentId</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/GuildChannel.ts#L14">src/structures/channels/GuildChannel.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/GuildChannel.ts#L13">src/structures/channels/GuildChannel.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -241,7 +252,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="guildchannel.html">GuildChannel</a>.<a href="guildchannel.html#permissionoverwrites">permissionOverwrites</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/GuildChannel.ts#L15">src/structures/channels/GuildChannel.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/GuildChannel.ts#L14">src/structures/channels/GuildChannel.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -252,7 +263,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="guildchannel.html">GuildChannel</a>.<a href="guildchannel.html#position">position</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/GuildChannel.ts#L13">src/structures/channels/GuildChannel.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/GuildChannel.ts#L12">src/structures/channels/GuildChannel.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -262,7 +273,7 @@
 					<div class="tsd-signature tsd-kind-icon">rate<wbr>Limit<wbr>Per<wbr>User<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/TextChannel.ts#L15">src/structures/channels/TextChannel.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/TextChannel.ts#L15">src/structures/channels/TextChannel.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -272,7 +283,7 @@
 					<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/TextChannel.ts#L14">src/structures/channels/TextChannel.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/TextChannel.ts#L14">src/structures/channels/TextChannel.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -283,7 +294,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides <a href="guildchannel.html">GuildChannel</a>.<a href="guildchannel.html#type">type</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/TextChannel.ts#L10">src/structures/channels/TextChannel.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/TextChannel.ts#L10">src/structures/channels/TextChannel.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -300,7 +311,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/Channel.ts#L17">src/structures/channels/Channel.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/Channel.ts#L16">src/structures/channels/Channel.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -311,17 +322,17 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="createmessage" class="tsd-anchor"></a>
-					<h3>create<wbr>Message</h3>
+					<a name="send" class="tsd-anchor"></a>
+					<h3>send</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Message<span class="tsd-signature-symbol">(</span>content<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, msg<span class="tsd-signature-symbol">?: </span><a href="../interfaces/messageoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">MessageOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="message.html" class="tsd-signature-type" data-tsd-kind="Class">Message</a><span class="tsd-signature-symbol">&gt;</span></li>
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Message<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><a href="../interfaces/messageoptionswithcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">MessageOptionsWithContent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="message.html" class="tsd-signature-type" data-tsd-kind="Class">Message</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<span class="tsd-signature-symbol">(</span>content<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, msg<span class="tsd-signature-symbol">?: </span><a href="../interfaces/messageoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">MessageOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="message.html" class="tsd-signature-type" data-tsd-kind="Class">Message</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><a href="../interfaces/messageoptionswithcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">MessageOptionsWithContent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="message.html" class="tsd-signature-type" data-tsd-kind="Class">Message</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/TextChannel.ts#L32">src/structures/channels/TextChannel.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/TextChannel.ts#L33">src/structures/channels/TextChannel.ts:33</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -338,7 +349,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/TextChannel.ts#L33">src/structures/channels/TextChannel.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/TextChannel.ts#L34">src/structures/channels/TextChannel.ts:34</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -362,7 +373,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="guildchannel.html">GuildChannel</a>.<a href="guildchannel.html#update">update</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/structures/channels/TextChannel.ts#L25">src/structures/channels/TextChannel.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/structures/channels/TextChannel.ts#L27">src/structures/channels/TextChannel.ts:27</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -407,6 +418,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="textchannel.html#lastmessageid" class="tsd-kind-icon">last<wbr>Message<wbr>Id</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="textchannel.html#messages" class="tsd-kind-icon">messages</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="textchannel.html#name" class="tsd-kind-icon">name</a>
 							</li>
@@ -435,7 +449,7 @@
 								<a href="textchannel.html#mention" class="tsd-kind-icon">mention</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="textchannel.html#createmessage" class="tsd-kind-icon">create<wbr>Message</a>
+								<a href="textchannel.html#send" class="tsd-kind-icon">send</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="textchannel.html#update" class="tsd-kind-icon">update</a>

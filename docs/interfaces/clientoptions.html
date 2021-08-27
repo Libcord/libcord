@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ClientOptions | arcscord</title>
-	<meta name="description" content="Documentation for arcscord">
+	<title>ClientOptions | libcord</title>
+	<meta name="description" content="Documentation for libcord">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">arcscord</a>
+					<a href="../index.html" class="title">libcord</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,7 +52,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">arcscord</a>
+					<a href="../modules.html">libcord</a>
 				</li>
 				<li>
 					<a href="clientoptions.html">ClientOptions</a>
@@ -86,6 +86,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="clientoptions.html#isabot" class="tsd-kind-icon">isABot</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="clientoptions.html#presence" class="tsd-kind-icon">presence</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="clientoptions.html#slashcommandbydefault" class="tsd-kind-icon">slash<wbr>Command<wbr>ByDefault</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="clientoptions.html#token" class="tsd-kind-icon">token</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,7 +100,7 @@
 					<div class="tsd-signature tsd-kind-icon">disable<wbr>Intents<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;GUILDS&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GUILD_MEMBERS&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GUILD_BANS&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GUILD_EMOJIS&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GUILD_INTEGRATIONS&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GUILD_WEBHOOKS&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GUILD_INVITES&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GUILD_VOICE_STATES&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GUILD_PRESENCES&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GUILD_MESSAGES&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GUILD_MESSAGE_REACTIONS&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GUILD_MESSAGE_TYPING&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;DIRECT_MESSAGES&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;DIRECT_MESSAGE_REACTIONS&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;DIRECT_MESSAGE_TYPING&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/Client.ts#L55">src/Client.ts:55</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/Client.ts#L59">src/Client.ts:59</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -114,7 +115,7 @@
 					<div class="tsd-signature tsd-kind-icon">disables<wbr>Events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">&quot;ApplicationCommandCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ApplicationCommandDelete&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ApplicationCommandUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ChannelCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ChannelDelete&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ChannelPinsUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ChannelUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildBanAdd&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildBanRemove&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildDelete&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildEmojisUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildIntegrationsUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildMemberAdd&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildMemberRemove&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildMembersChunk&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildMemberUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildRoleCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildRoleDelete&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildRoleUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildStickersUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;GuildUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;IntegrationCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;IntegrationDelete&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;IntegrationUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;InteractionCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;InviteCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;InviteDelete&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;MessageCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;MessageDelete&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;MessageDeleteBulk&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;MessageReactionAdd&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;MessageReactionRemove&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;MessageReactionRemoveAll&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;MessageReactionRemoveEmoji&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;MessageUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;PresenceUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;StageInstanceCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;StageInstanceDelete&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;StageInstanceUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;Ready&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;Resumed&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ThreadCreate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ThreadDelete&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ThreadListSync&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ThreadMembersUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ThreadMemberUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ThreadUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;TypingStart&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;UserUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;VoiceServerUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;VoiceStateUpdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;WebhooksUpdate&quot;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/Client.ts#L51">src/Client.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/Client.ts#L55">src/Client.ts:55</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -129,7 +130,7 @@
 					<div class="tsd-signature tsd-kind-icon">fetch<wbr>All<wbr>Members<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/Client.ts#L61">src/Client.ts:61</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/Client.ts#L65">src/Client.ts:65</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -149,7 +150,7 @@
 					<div class="tsd-signature tsd-kind-icon">isABot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/Client.ts#L67">src/Client.ts:67</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/Client.ts#L71">src/Client.ts:71</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -169,7 +170,7 @@
 					<div class="tsd-signature tsd-kind-icon">presence<span class="tsd-signature-symbol">:</span> <a href="presence.html" class="tsd-signature-type" data-tsd-kind="Interface">Presence</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/Client.ts#L47">src/Client.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/Client.ts#L51">src/Client.ts:51</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -184,7 +185,7 @@
 					<div class="tsd-signature tsd-kind-icon">slash<wbr>Command<wbr>ByDefault<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/arcoz0308/arcscord/blob/19131dc/src/Client.ts#L72">src/Client.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/Client.ts#L76">src/Client.ts:76</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -196,6 +197,21 @@
 							<dd><p>true</p>
 							</dd>
 						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="token" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> token</h3>
+					<div class="tsd-signature tsd-kind-icon">token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9add24d/src/Client.ts#L81">src/Client.ts:81</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The token for the bot is required</p>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -232,6 +248,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="clientoptions.html#slashcommandbydefault" class="tsd-kind-icon">slash<wbr>Command<wbr>ByDefault</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="clientoptions.html#token" class="tsd-kind-icon">token</a>
 							</li>
 						</ul>
 					</li>
