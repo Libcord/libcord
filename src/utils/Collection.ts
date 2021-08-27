@@ -17,7 +17,7 @@ export class Collection<K, V> extends Map<K, V> {
     }
     return super.set(key, value);
   }
-  public add(obj: any, extra: any, replace: boolean = false): any {
+  public add(obj: any, replace: boolean = false): any {
     if (obj.id == null) {
       throw new Error("missing object id");
     }
