@@ -7,6 +7,8 @@ import {
   GatewayPresenceUpdateData,
   GatewayReceivePayload,
   GatewayHelloData,
+  GatewayGuildCreateDispatch,
+  APIGuild,
 } from "discord-api-types/v9";
 import { EventEmitter } from "events";
 import { Client } from "../Client";
@@ -29,7 +31,11 @@ interface Actions {
   MESSAGE?: ACTIONS.MESSAGE_CREATE;
 }
 
-export type GatewayStatus = "disconnected" | "connected" | "connecting...";
+export type GatewayStatus =
+  | "disconnected"
+  | "connected"
+  | "connecting..."
+  | "waiting_for_guilds";
 
 export class Gateway {
   public ws?: AWebSocket;
@@ -122,15 +128,26 @@ export class Gateway {
         this.heartbeatInterval = (msg.d as GatewayHelloData).heartbeat_interval;
         this.identify();
         break;
-      case GatewayOpcodes.Dispatch:
-        this.handleEvent(msg as GatewayDispatchPayload).then();
-        break;
       case GatewayOpcodes.HeartbeatAck:
         this.lastHeartbeatAck = true;
         this.lastHeartbeatReceive = Date.now();
         this.latency = this.lastHeartbeatReceive - this.lastHeartbeatSend;
         this.client.ws.ping = this.latency;
         break;
+      case GatewayOpcodes.Dispatch: {
+        const { d, t } = msg as GatewayDispatchPayload;
+        if (
+          this.status === "waiting_for_guilds" &&
+          t === <any>GatewayDispatchEvents.GuildCreate
+        ) {
+          const guild = d as unknown as GatewayGuildCreateDispatch;
+          const g = new Guild(this.client, guild as unknown as APIGuild);
+
+          this.client.guilds.add(g);
+        } else {
+          this.handleEvent(msg as GatewayDispatchPayload).then();
+        }
+      }
     }
   }
 
@@ -142,6 +159,7 @@ export class Gateway {
     switch (msg.t) {
       case GatewayDispatchEvents.Ready:
         this.heartbeat();
+        this.status = "waiting_for_guilds";
         this.actions.READY!.handle(msg.d).then();
         break;
       case GatewayDispatchEvents.MessageCreate:
