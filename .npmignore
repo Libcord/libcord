@@ -2,6 +2,7 @@ src/
 tsconfig.json
 Test.ts
 docs/
+test/
 config.json
 typedoc.json
 node_modules

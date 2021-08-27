@@ -1,8 +1,8 @@
-import { Client, TextChannel } from "../src/index";
+import { Client } from "../src/index";
 
 const client = new Client();
 
-client.connect("NzM1ODg0OTI5MTk5NzY3NjMz.XxmwPw.-w-RXHN3XAmsXsDV2oMxobh-08w");
+client.connect("");
 client.on("ready", () => {
   console.log(client.user?.username);
 });
