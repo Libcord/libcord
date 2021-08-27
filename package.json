@@ -1,6 +1,6 @@
 {
   "name": "libcord",
-  "version": "0.0.1-beta",
+  "version": "0.0.1",
   "description": "A library to interact with the Discord API written in typescript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
