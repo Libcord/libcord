@@ -12,5 +12,5 @@
   "categorizeByGroup": true,
   "defaultCategory": "Other",
   "tsconfig": "tsconfig.json",
-  "cname": "arcscord.js.org"
+  "cname": "tovade.github.io/libcord"
 }
