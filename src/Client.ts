@@ -1,7 +1,6 @@
 import {
   APIChannel,
   APIGuildMember,
-  APIMessage,
   GatewayDispatchEvents,
 } from "discord-api-types/v9";
 import { Intents, CLIENT_EVENTS } from "./Constants";
@@ -16,6 +15,7 @@ import {
   GUILD,
   CHANNEL,
   GUILD_MEMBERS,
+  GATEWAY_CONNECT,
   MESSAGES,
 } from "./rest/EndPoints";
 import { RestManager } from "./rest/RestManager";
@@ -42,6 +42,7 @@ import {
 import { Collection } from "./utils/Collection";
 import { EventEmitter } from "./utils/EventEmitter";
 import { Snowflake } from "./utils/Snowflake";
+import { RequestError } from "./utils/Errors";
 
 export interface ClientOptions {
   /**
@@ -190,9 +191,16 @@ export class Client extends EventEmitter {
   public connect(token: string): Client {
     if (!token || typeof token !== "string")
       throw new SyntaxError("NO_TOKEN_PROVIDED");
-    if (token.length !== 59) throw new SyntaxError("INVALID_TOKEN_PROVIDED");
-    this.token = token;
-    this.gateway.connect(token);
+    if (token.length !== 59) throw new SyntaxError("INVALID_TOKEN");
+    this.requestHandler.request("GET", GATEWAY_CONNECT, {}, token).then((r) => {
+      if (r instanceof RequestError) {
+        if (r.status === "403") throw new SyntaxError("INVALID_TOKEN");
+        throw r;
+      }
+      this.token = token;
+      let url: string = r.url;
+      this.gateway.connect(token, url);
+    });
     return this;
   }
 

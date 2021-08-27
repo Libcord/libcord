@@ -45,6 +45,7 @@ export class Gateway {
   public lastHeartbeatAck: boolean = true;
   public emitter: EventEmitter;
   private _token!: string;
+  private _url!: string;
   private readonly intents: number;
 
   constructor(client: Client, emitter: any) {
@@ -89,7 +90,7 @@ export class Gateway {
     this.sendWS(GatewayOpcodes.Heartbeat, this.lastSequence);
   }
 
-  public connect(token: string) {
+  public connect(token: string, url: string) {
     this._token = token;
     if (this.ws && this.ws.isOpen) {
       this.emitter.emit(
@@ -98,14 +99,13 @@ export class Gateway {
       );
       return;
     }
+    this._url = url;
     this.initWS();
   }
 
   public initWS() {
     this.status = "connecting...";
-    this.ws = new AWebSocket(
-      `wss://gateway.discord.gg/?v=${API_VERSION}&encoding=json`
-    );
+    this.ws = new AWebSocket(this._url);
     this.ws.on("open", () => this.onWsOpen);
     this.ws.on("message", (msg) => this.onWsMessage(msg));
     this.ws.on("error", (error) => this.onWsError(error));
