@@ -122,3 +122,41 @@ export enum CLIENT_EVENTS {
   CONNECTED = "connected",
 }
 export const API_VERSION: number = 9;
+
+export interface AuthorOptions {
+  /**
+   * Author name
+   */
+  name?: string;
+
+  /**
+   * Author URL
+   */
+  url?: string;
+}
+
+export interface ThumbnailOptions {
+  /**
+   * Thumbnail URL
+   */
+  url?: string;
+}
+
+export interface ImageOptions {
+  /**
+   * Image URL
+   */
+  url?: string;
+}
+
+export interface FooterOptions {
+  /**
+   * Footer text
+   */
+  text?: string;
+
+  /**
+   * Footer icon URL
+   */
+  icon_url?: string;
+}

@@ -37,11 +37,11 @@ export const USER_ME = "/users/@me";
 
 //images
 export const DEFAULT_USER_AVATAR = (discriminator: string) =>
-  `/${IMAGE_BASE_URL}/embed/avatars/${discriminator}.png`;
+  `${IMAGE_BASE_URL}/embed/avatars/${discriminator}.png`;
 export const USER_AVATAR = (
   user: string,
   hash: string,
   format: imageFormats,
   size: imageSize
-) => `/${IMAGE_BASE_URL}/avatars/${user}/${hash}.${format}?size${size}`;
+) => `${IMAGE_BASE_URL}/avatars/${user}/${hash}.${format}?size${size}`;
 // @formatter:on

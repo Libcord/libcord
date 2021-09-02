@@ -4,8 +4,10 @@ import { Client } from "../../Client";
 import { Snowflake } from "../../utils/Snowflake";
 import { ChannelTypes } from "./Channel";
 import { GuildChannel } from "./GuildChannel";
-import { Message, MessageOptions, MessageOptionsWithContent } from "../Message";
+import { Message, MessageOptions } from "../Message";
+import { Embed } from "../Embed";
 
+import { MESSAGES } from "../../rest/EndPoints";
 export class TextChannel extends GuildChannel {
   public readonly type:
     | ChannelTypes.TEXT_CHANNEL
@@ -30,16 +32,45 @@ export class TextChannel extends GuildChannel {
     this.rateLimitPerUser = data.rate_limit_per_user || null;
     return super.update(data);
   }
-  public send(content: string, msg?: MessageOptions): Promise<Message>;
-  public send(msg: MessageOptionsWithContent): Promise<Message>;
+  public send(content: MessageOptions | string | Embed): Promise<Message>;
+  public send(msg: MessageOptions | string | Embed): Promise<Message>;
   public async send(
-    cOrM: string | MessageOptionsWithContent,
-    msg?: MessageOptions
-  ): Promise<Message> {
-    if (this.type !== ChannelTypes.TEXT_CHANNEL)
-      throw new SyntaxError("NOT_A_TEXT_CHANNEL");
-    if (typeof cOrM === "string")
-      return this.client.createMessage(this.id, cOrM, msg);
-    return this.client.createMessage(this.id, cOrM);
+    msg: MessageOptions | string
+  ): Promise<Message | undefined> {
+    const payload = {
+      content: "" as any,
+      embeds: [] as any,
+    };
+    if (msg instanceof Embed) {
+      payload.embeds.push(msg.getJSON());
+    }
+    if (typeof msg === "string") {
+      payload.content = msg;
+    }
+    if (typeof msg === "object") {
+      if (typeof msg?.content === "string") {
+        payload.content = msg?.content;
+      }
+      if (msg.content instanceof Embed) {
+        payload.embeds.push(msg.content.getJSON());
+      }
+      if (msg.embeds) {
+        msg.embeds.forEach((em) => {
+          if (em instanceof Embed) {
+            payload.embeds.push((em as Embed).getJSON());
+          } else {
+            throw new Error("[LIBCORD] Embeds must be an instance of <Embed>");
+          }
+        });
+      }
+    }
+    const res: any = await this.client.requestHandler.request(
+      "POST",
+      MESSAGES(this.id),
+      JSON.stringify(payload),
+      this.client.token
+    );
+    const data = { channel: this, ...res };
+    return new Message(this.client, data);
   }
 }

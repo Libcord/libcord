@@ -5,6 +5,7 @@ import { Base } from "./Base";
 import { User, TextChannel } from "./index";
 import { CustomMessageData } from "../gateway/actions/MESSAGE_CREATE";
 import { Member } from "..";
+import { Embed } from "./Embed";
 
 /**
  * @category Structures
@@ -66,8 +67,7 @@ export class Message extends Base {
   }
 }
 
-export interface MessageOptions {}
-
-export interface MessageOptionsWithContent extends MessageOptions {
-  content?: string;
+export interface MessageOptions {
+  content?: string | Embed;
+  embeds?: Array<Embed>;
 }

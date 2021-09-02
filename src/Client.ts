@@ -29,7 +29,6 @@ import {
   Member,
   Message,
   MessageOptions,
-  MessageOptionsWithContent,
   Presence,
   PrivateChannel,
   resolveApplicationCommandForApi,
@@ -283,56 +282,6 @@ export class Client extends EventEmitter {
       }
       resolve(members);
     });
-  }
-
-  public createMessage(
-    channelId: Snowflake,
-    content: string,
-    msg?: MessageOptions
-  ): Promise<Message>;
-  public createMessage(
-    channelId: Snowflake,
-    msg: MessageOptionsWithContent
-  ): Promise<Message>;
-  public async createMessage(
-    channelId: Snowflake,
-    cOrM: string | MessageOptionsWithContent,
-    msg?: MessageOptions
-  ): Promise<Message> {
-    let r: CustomMessageData;
-
-    if (typeof cOrM === "string") {
-      if (msg) {
-        (msg as { [index: string]: any })["content"] = cOrM;
-        r = await this.requestHandler.request(
-          "POST",
-          MESSAGES(channelId),
-          msg,
-          this.token
-        );
-      } else
-        r = await this.requestHandler.request(
-          "POST",
-          MESSAGES(channelId),
-          {
-            content: cOrM,
-          },
-          this.token
-        );
-    } else
-      r = await this.requestHandler.request(
-        "POST",
-        MESSAGES(channelId),
-        cOrM,
-        this.token
-      );
-    if (r.guild_id && !this.guilds.has(r.guild_id as Snowflake))
-      await this.fetchGuild(r.guild_id as Snowflake);
-    //TODO channel, user and members
-    r.channel = (await this.fetchChannel(
-      r.channel_id as Snowflake
-    )) as TextChannel;
-    return new Message(this, r);
   }
 
   public async createDM(userId: Snowflake): Promise<PrivateChannel> {

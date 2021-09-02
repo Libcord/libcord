@@ -23,7 +23,7 @@ export class ClientUser extends User {
    *     status: "dnd",
    *     activity: {
    *         type: "game",
-   *         name: "on arcscord"
+   *         name: "on libcord"
    *     }
    * });
    */
@@ -50,7 +50,7 @@ export class ClientUser extends User {
    * @param activity the activity to set
    * @example
    * client.user.setActivity({
-   *     name: 'using arcscord',
+   *     name: 'using libcord',
    *     type: 'game'
    * });
    */

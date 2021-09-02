@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MessageOptionsWithContent | libcord</title>
+	<title>FooterOptions | libcord</title>
 	<meta name="description" content="Documentation for libcord">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">libcord</a>
 				</li>
 				<li>
-					<a href="messageoptionswithcontent.html">MessageOptionsWithContent</a>
+					<a href="footeroptions.html">FooterOptions</a>
 				</li>
 			</ul>
-			<h1>Interface MessageOptionsWithContent</h1>
+			<h1>Interface FooterOptions</h1>
 		</div>
 	</div>
 </header>
@@ -69,12 +69,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="messageoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">MessageOptions</a>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">MessageOptionsWithContent</span>
-							</li>
-						</ul>
+						<span class="target">FooterOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -85,7 +80,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="messageoptionswithcontent.html#content" class="tsd-kind-icon">content</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="footeroptions.html#icon_url" class="tsd-kind-icon">icon_<wbr>url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="footeroptions.html#text" class="tsd-kind-icon">text</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,14 +90,34 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="content" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> content</h3>
-					<div class="tsd-signature tsd-kind-icon">content<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="icon_url" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> icon_<wbr>url</h3>
+					<div class="tsd-signature tsd-kind-icon">icon_<wbr>url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/0c3b8bd/src/structures/Message.ts#L72">src/structures/Message.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/Constants.ts#L161">src/Constants.ts:161</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Footer icon URL</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="text" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> text</h3>
+					<div class="tsd-signature tsd-kind-icon">text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/Constants.ts#L156">src/Constants.ts:156</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Footer text</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -118,10 +134,13 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="messageoptionswithcontent.html" class="tsd-kind-icon">Message<wbr>Options<wbr>With<wbr>Content</a>
+						<a href="footeroptions.html" class="tsd-kind-icon">Footer<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="messageoptionswithcontent.html#content" class="tsd-kind-icon">content</a>
+								<a href="footeroptions.html#icon_url" class="tsd-kind-icon">icon_<wbr>url</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="footeroptions.html#text" class="tsd-kind-icon">text</a>
 							</li>
 						</ul>
 					</li>

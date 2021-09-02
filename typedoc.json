@@ -11,6 +11,5 @@
   ],
   "categorizeByGroup": true,
   "defaultCategory": "Other",
-  "tsconfig": "tsconfig.json",
-  "cname": "tovade.github.io/libcord"
+  "tsconfig": "tsconfig.json"
 }
