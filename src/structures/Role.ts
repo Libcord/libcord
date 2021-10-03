@@ -9,6 +9,8 @@ export class Role extends Base {
   public hoisted!: boolean;
   public integrated!: boolean;
   public color!: number;
+  public icon!: string;
+  public unicodeEmoji!: string;
   constructor(client: Client, data: APIRole) {
     super(client);
     this.id = data.id as Snowflake;
@@ -17,6 +19,9 @@ export class Role extends Base {
     this.hoisted = data.hoist;
     this.integrated = data.managed;
     this.color = data.color;
+    this.icon = data.icon;
+    this.unicodeEmoji = data.unicode_emoji;
+    
   }
   get hex() {
     return this.color.toString(16);
