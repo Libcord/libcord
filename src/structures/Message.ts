@@ -20,23 +20,23 @@ export class Message extends Base {
 
   constructor(client: Client, data: CustomMessageData) {
     super(client);
-    this.id = data.id as Snowflake;
-    this.channelID = data.channel_id as Snowflake;
+    this.id = data.id as unknown as Snowflake;
+    this.channelID = data.channel_id as unknown as Snowflake;
     this.channel = data.channel;
     this.content = data.content;
     if (data.author) {
       if (data.author.discriminator !== "0000") {
-        if (this.client.users.get(data.author.id as Snowflake)) {
-          this.author = this.client.users.get(data.author.id as Snowflake);
+        if (this.client.users.get(data.author.id as unknown as Snowflake)) {
+          this.author = this.client.users.get(data.author.id as unknown as Snowflake);
         } else {
           this.author = new User(this.client, data.author);
         }
       }
     }
     if (data.guild_id) {
-      const guild = this.client.guilds.get(data.guild_id as Snowflake);
+      const guild = this.client.guilds.get(data.guild_id as unknown as Snowflake);
 
-      this.member = guild?.members.get(data.author.id as Snowflake) as Member;
+      this.member = guild?.members.get(data.author.id as unknown as Snowflake) as Member;
     }
     //this._patchData(data);
   }
@@ -49,16 +49,16 @@ export class Message extends Base {
   private async _patchData(
     data: GatewayMessageCreateDispatchData
   ): Promise<void> {
-    this.id = data.id as Snowflake;
-    this.channelID = data.channel_id as Snowflake;
+    this.id = data.id as unknown as Snowflake;
+    this.channelID = data.channel_id as unknown as Snowflake;
     this.channel = (await this.client.fetchChannel(
-      data.channel_id as Snowflake
+      data.channel_id as unknown as Snowflake
     )) as TextChannel;
     this.content = data.content;
     if (data.author) {
       if (data.author.discriminator !== "0000") {
-        if (this.client.users.get(data.author.id as Snowflake)) {
-          this.author = this.client.users.get(data.author.id as Snowflake);
+        if (this.client.users.get(data.author.id as unknown as Snowflake)) {
+          this.author = this.client.users.get(data.author.id as unknown as Snowflake);
         } else {
           this.author = new User(this.client, data.author);
         }

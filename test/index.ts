@@ -1,5 +1,5 @@
 import { Client, Embed } from "../src/index";
-import { token } from "../config.json";
+import { token } from "./config.json";
 const client = new Client();
 
 client.connect(token);

@@ -167,7 +167,7 @@ export class ApplicationCommand extends Base {
     }
     
     updateData(data: APIApplicationCommand): ApplicationCommand {
-        if (data.id && data.id !== this.id) this.id = data.id as Snowflake;
+        if (data.id && data.id as unknown as Snowflake !== this.id) this.id = data.id as unknown as Snowflake;
         if (data.name && data.name !== this.name) this.name = data.name;
         if (data.description && data.description !== this.description) this.description = data.description;
         if (data.options && JSON.stringify(data.options as any) !== JSON.stringify(this.options)) this.options = data.options as any;

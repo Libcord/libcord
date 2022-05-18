@@ -15,16 +15,16 @@ export class GuildChannel extends Channel {
 
   constructor(client: Client, data: APIChannel) {
     super(client, data);
-    this.guild = client.guilds.get(data.guild_id as Snowflake)!;
+    this.guild = client.guilds.get(data.guild_id as unknown as Snowflake)!;
     this.name = data.name!;
     this.nsfw = !!data.nsfw;
     this.position = data.position || 0;
-    this.parentId = (data.parent_id as Snowflake) || null;
+    this.parentId = (data.parent_id as unknown as Snowflake) || null;
     if (data.permission_overwrites) {
       for (const permissionOverwrite of data.permission_overwrites) {
         this.permissionOverwrites.push(
           new PermissionOverwrite(
-            permissionOverwrite as {
+            permissionOverwrite as unknown as {
               id: Snowflake;
               type: number;
               allow: string;
@@ -41,14 +41,14 @@ export class GuildChannel extends Channel {
     if (data.nsfw !== this.nsfw) this.nsfw = !!data.nsfw;
     if (data.position && this.position !== data.position)
       this.position = data.position;
-    if (data.parent_id && this.parentId !== data.parent_id)
-      this.parentId = data.parent_id as Snowflake;
+    if (data.parent_id && this.parentId && this.parentId !== data.parent_id as unknown as Snowflake)
+      this.parentId = data.parent_id as unknown as Snowflake;
     this.permissionOverwrites = [];
     if (data.permission_overwrites) {
       for (const permissionOverwrite of data.permission_overwrites) {
         this.permissionOverwrites.push(
           new PermissionOverwrite(
-            permissionOverwrite as {
+            permissionOverwrite as unknown as {
               id: Snowflake;
               type: number;
               allow: string;

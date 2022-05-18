@@ -31,14 +31,14 @@ export class Guild extends Base {
 
   constructor(client: Client, data: APIGuild) {
     super(client);
-    this.id = data.id as Snowflake;
+    this.id = data.id as unknown as Snowflake;
     this.name = data.name;
     this.icon = data.icon;
     this.slash = data.splash;
     this.discoverySlash = data.discovery_splash;
-    this.ownerId = data.owner_id as Snowflake;
-    this.owner = client.users.get(data.owner_id as Snowflake)!;
-    this.afkChannelId = data.afk_channel_id as Snowflake;
+    this.ownerId = data.owner_id as unknown as Snowflake;
+    this.owner = client.users.get(data.owner_id as unknown as Snowflake)!;
+    this.afkChannelId = data.afk_channel_id as unknown as Snowflake;
     if (data.roles !== undefined) {
       for (let i = 0; i < data.roles.length; i++) {
         const role = data.roles[i];

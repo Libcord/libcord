@@ -9,7 +9,7 @@ export interface CustomMessageData extends GatewayMessageCreateDispatchData {
 export class MESSAGE_CREATE extends Action {
   async handle(data: CustomMessageData) {
     data.channel = (await this.client.fetchChannel(
-      data.channel_id as Snowflake
+      data.channel_id as unknown as Snowflake
     )) as TextChannel;
     this.emitter.emit(CLIENT_EVENTS.MESSAGE, new Message(this.client, data));
   }

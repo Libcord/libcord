@@ -35,30 +35,49 @@ export interface rawRest {
 }
 export class RestManager {
   public agent: string;
-  constructor(client: Client) {
-    this.agent = `LibCord (https://github.com/tovade, ${version})`;
+  private token: string;
+
+  constructor() {
+    this.agent = `DiscordBot (https://github.com/MrPrivacyCoder, ${version})`;
+    this.token = ""
   }
-  private isEmpty(obj: any) {
-    for (var key in obj) {
-      if (obj.hasOwnProperty(key)) return false;
-    }
-    return true;
+  setToken(token: string): boolean {
+    this.token = token
+    return true
   }
-  request(method: Method, url: string, data: any, token: string): Promise<any> {
+  request(method: Method, url: string, data?: any, token?: string): Promise<any> {
     return new Promise(async (resolve, reject) => {
-      const response = await axios({
-        method: method,
-        baseURL: BASE_URL,
-        url: url,
-        data: this.isEmpty(data) ? null : data,
-        headers: {
-          Authorization: `Bot ${token}`,
-          "Content-Type": "application/json",
-          "User-Agent": this.agent,
-        },
-        timeout: 1000,
-      }).catch(async (e) => {
-        console.log(e);
+      try {
+        if(data) {
+           const response = await axios({
+            method: method,
+            baseURL: BASE_URL,
+            url: url,
+            data: await data,
+            headers: {
+              Authorization: `Bot ${this.token}`,
+              "Content-Type": "application/json",
+              "User-Agent": this.agent,
+            },
+            timeout: 10000,
+          })
+          if(response) return resolve(response.data)
+        } else {
+          const response = await axios({
+            method: method,
+            baseURL: BASE_URL,
+            url: url,
+            headers: {
+              Authorization: `Bot ${this.token}`,
+              "Content-Type": "application/json",
+              "User-Agent": this.agent,
+            },
+            timeout: 10000,
+          })
+          if(response) return resolve(response.data)
+        }
+      } catch(e: any)
+      { console.log(e);
         return reject(
           new RequestError(
             "API ERROR",
@@ -68,10 +87,7 @@ export class RestManager {
             e.response.status,
             e.response.statusText
           )
-        );
-      });
-      if (response) resolve(response.data);
-      else reject("UNKNOWN ERROR");
+        )}
     });
   }
 }

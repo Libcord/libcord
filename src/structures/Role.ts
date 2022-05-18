@@ -19,8 +19,6 @@ export class Role extends Base {
     this.hoisted = data.hoist;
     this.integrated = data.managed;
     this.color = data.color;
-    this.icon = data.icon;
-    this.unicodeEmoji = data.unicode_emoji;
     
   }
   get hex() {

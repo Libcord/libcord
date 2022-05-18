@@ -64,14 +64,14 @@ export class User extends Base {
         super(client);
         
         // init data
-        this.id = data.id as Snowflake;
+        this.id = data.id as unknown as Snowflake;
         this.avatar = data.avatar;
         this.username = data.username;
         this.discriminator = data.discriminator;
         this.tag = `${data.username}#${data.discriminator}`;
         this.bot = !!data.bot;
         this.system = !!data.system;
-        this.createAt = getDate(data.id as Snowflake);
+        this.createAt = getDate(data.id as unknown as Snowflake);
         this.publicFlags = data.public_flags ? data.public_flags : 0;
     }
     
@@ -88,7 +88,7 @@ export class User extends Base {
         if (!this.avatar)
             return DEFAULT_USER_AVATAR(`${parseInt(this.discriminator, 10) % 5}`);
         if (dynamic && this.avatar && this.avatar.startsWith('a_')) format = 'gif';
-        return USER_AVATAR(this.id, this.avatar, format, size);
+        return USER_AVATAR(this.id as unknown as string, this.avatar, format, size);
     }
     
     toString() {

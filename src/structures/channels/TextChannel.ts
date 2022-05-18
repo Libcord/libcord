@@ -22,12 +22,12 @@ export class TextChannel extends GuildChannel {
     super(client, data);
     this.topic = data.topic || null;
     this.rateLimitPerUser = data.rate_limit_per_user || null;
-    this.lastMessageId = (data.last_message_id as Snowflake) || null;
+    this.lastMessageId = (data.last_message_id as unknown as Snowflake) || null;
     this.messages = new Collection();
   }
 
   update(data: APIChannel): GuildChannel {
-    this.lastMessageId = (data.last_message_id as Snowflake) || null;
+    this.lastMessageId = (data.last_message_id as unknown as Snowflake) || null;
     this.topic = data.topic || null;
     this.rateLimitPerUser = data.rate_limit_per_user || null;
     return super.update(data);
