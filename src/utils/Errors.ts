@@ -15,7 +15,7 @@ export class RequestError extends Error {
   ) {
     message += `
 debug: 
-url : ${url}
+url : ${method} ${url}
 data : ${data}
 status : ${status}
 message : ${msg}`;

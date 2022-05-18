@@ -9,7 +9,7 @@ export class Channel extends Base {
 
   constructor(client: Client, data: APIChannel) {
     super(client);
-    this.id = data.id as Snowflake;
+    this.id = data.id as unknown as Snowflake;
     this.type = data.type as unknown as ChannelTypes;
   }
 

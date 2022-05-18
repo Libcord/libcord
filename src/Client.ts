@@ -180,7 +180,7 @@ export class Client extends EventEmitter {
     this.fetchAllMembers = !!options.fetchAllMembers;
     this.bot = typeof options.isABot === "undefined" || options.isABot;
     this.gateway = new Gateway(this, this);
-    this.requestHandler = new RestManager(this);
+    this.requestHandler = new RestManager();
     this.options = options;
   }
 
@@ -190,8 +190,10 @@ export class Client extends EventEmitter {
   public connect(token: string): Client {
     if (!token || typeof token !== "string")
       throw new SyntaxError("NO_TOKEN_PROVIDED");
-    if (token.length !== 59) throw new SyntaxError("INVALID_TOKEN");
-    this.requestHandler.request("GET", GATEWAY_CONNECT, {}, token).then((r) => {
+
+    this.requestHandler.setToken(token)
+
+    this.requestHandler.request("GET", GATEWAY_CONNECT).then((r) => {
       if (r instanceof RequestError) {
         if (r.status === "403") throw new SyntaxError("INVALID_TOKEN");
         throw r;
@@ -231,7 +233,7 @@ export class Client extends EventEmitter {
     if (checkCache && this.channels.has(id)) return this.channels.get(id)!;
 
     const c = await this.requestHandler
-      .request("GET", CHANNEL(id), {}, this.token)
+      .request("GET", CHANNEL(id))
       .catch((e) => {
         return e;
       });
@@ -265,7 +267,7 @@ export class Client extends EventEmitter {
         );
 
       const r = (await this.requestHandler
-        .request("GET", GUILD_MEMBERS(guildId, limit, after), {}, this.token)
+        .request("GET", GUILD_MEMBERS(guildId, limit, after))
         .catch((e) => {
           return reject(e);
         })) as APIGuildMember[];
@@ -312,9 +314,7 @@ export class Client extends EventEmitter {
       const commands: ApplicationCommand[] = [];
       for (const cmd of await this.requestHandler.request(
         "GET",
-        APPLICATION_GLOBAL_COMMANDS(this.user.id),
-        {},
-        this.token
+        APPLICATION_GLOBAL_COMMANDS(this.user.id)
       )) {
         const command = new ApplicationCommand(this, cmd);
         commands.push(command);

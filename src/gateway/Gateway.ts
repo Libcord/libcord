@@ -206,7 +206,7 @@ export class Gateway {
   }
 
   public async createGuild(guild: APIUnavailableGuild) {
-    const response = await this.client.fetchGuild(guild.id as Snowflake);
+    const response = await this.client.fetchGuild(guild.id as unknown as Snowflake);
     this.client.guilds.set(response.id as Snowflake, response);
   }
 

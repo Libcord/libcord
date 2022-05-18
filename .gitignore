@@ -2,7 +2,7 @@ node_modules
 Test.ts
 lib
 .idea
-config.json
+test
 docsjson
 package-lock.json
 deno/.idea

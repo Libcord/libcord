@@ -25,7 +25,7 @@ export class Member extends Base {
     super(client);
 
     this.user =
-      this.client.users.get(data.user?.id as Snowflake) ||
+      this.client.users.get(data.user?.id as unknown as Snowflake) ||
       new User(client, data.user!);
     this.id = this.user.id;
     this.displayName =
@@ -41,7 +41,7 @@ export class Member extends Base {
 
     if (data.roles !== null) {
       for (const roleId of data.roles) {
-        const role = this.guild.roles.get(roleId as Snowflake);
+        const role = this.guild.roles.get(roleId as unknown as Snowflake);
         this.roles.add(role);
       }
     }

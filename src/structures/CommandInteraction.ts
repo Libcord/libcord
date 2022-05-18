@@ -23,19 +23,19 @@ export class CommandInteraction extends Base {
     constructor(client: Client, data: APIInteraction) {
         super(client);
         this.data = data;
-        this.id = data.id as Snowflake;
-        this.channel = client.channels.get(data.channel_id as Snowflake) || null;
+        this.id = data.id as unknown as Snowflake;
+        this.channel = client.channels.get(data.channel_id as unknown as Snowflake) || null;
         this.token = data.token;
         if (Utils.isGuildInteraction(data)) {
-            this.guild = client.guilds.get(data.guild_id as Snowflake)!;
+            this.guild = client.guilds.get(data.guild_id as unknown as Snowflake)!;
             this.member =
-                this.guild.members.get(data.member.user.id as Snowflake) ||
+                this.guild.members.get(data.member.user.id as unknown as Snowflake) ||
                 new Member(client, this.guild, data.member);
             this.user = this.member.user;
         } else {
             this.guild = null;
             this.member = null;
-            this.user = data.user ? client.users.get(data.user.id as Snowflake) || new User(client, data.user) : undefined;
+            this.user = data.user ? client.users.get(data.user.id as unknown as Snowflake) || new User(client, data.user) : undefined;
         }
     }
 }

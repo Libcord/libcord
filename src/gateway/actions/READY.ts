@@ -8,7 +8,7 @@ import { CLIENT_EVENTS } from "../../Constants";
 export class READY extends Action {
   async handle(d: GatewayReadyDispatchData) {
     this.client.user = new ClientUser(this.client, d.user);
-    this.client.users.set(d.user.id as Snowflake, this.client.user);
+    this.client.users.set(d.user.id as unknown as Snowflake, this.client.user);
     if (this.client.fetchAllMembers) {
       for (const [id] of this.client.guilds) {
         await this.client.fetchMembers(id, 1000);
