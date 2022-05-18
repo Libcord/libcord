@@ -10,4 +10,4 @@
 </div>
 <h2>Wanna be notified for new updates?</h2>
 
-Join our [support server](https://discord.gg/qY3rB9UZKu)
+Join our [support server](https://discord.gg/ezjNxXE5ru)
