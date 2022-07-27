@@ -4,11 +4,13 @@ import { Collection } from "../utils/Collection";
 import { Snowflake } from "../utils/Snowflake";
 import { ApplicationCommand } from "./ApplicationCommand";
 import { Base } from "./Base";
-import { Channel, ChannelTypes } from "./channels/Channel";
 import { VoiceChannel } from "./channels/VoiceChannel";
 import { Member } from "./Member";
 import { User } from "./User";
 import { Role } from "./Role";
+import ChannelManager from "../managers/ChannelManager";
+import { ChannelTypes } from "../Constants";
+import RoleManager from "../managers/RoleManager";
 
 /**
  * @category Structures
@@ -22,10 +24,10 @@ export class Guild extends Base {
   public ownerId: Snowflake;
   public owner: User;
   public afkChannelId: Snowflake | null;
-  public channels = new Collection<Snowflake, Channel>();
+  public channels: ChannelManager;
   public members = new Collection<Snowflake, Member>();
   public slashCommands = new Collection<Snowflake, ApplicationCommand>();
-  public roles = new Collection<Snowflake, Role>();
+  public roles: RoleManager;
 
   public data: APIGuild;
 
@@ -39,25 +41,20 @@ export class Guild extends Base {
     this.ownerId = data.owner_id as unknown as Snowflake;
     this.owner = client.users.get(data.owner_id as unknown as Snowflake)!;
     this.afkChannelId = data.afk_channel_id as unknown as Snowflake;
-    if (data.roles !== undefined) {
-      for (let i = 0; i < data.roles.length; i++) {
-        const role = data.roles[i];
-        this.roles.add(new Role(this.client, role));
-      }
-    }
+    this.data = data;
+    this.roles = new RoleManager(client, this);
+    this.channels = new ChannelManager(client, this);
     if (data.members) {
       for (const member of data?.members!) {
         this.members.add(new Member(this.client, this, member));
       }
     }
-    this.data = data;
   }
 
   get afkChannel(): VoiceChannel | null {
-    return this.afkChannelId && this.channels.has(this.afkChannelId)
-      ? this.channels.get(this.afkChannelId)!.type ===
-        ChannelTypes.VOICE_CHANNEL
-        ? (this.channels.get(this.afkChannelId) as VoiceChannel)
+    return this.afkChannelId && this.channels.cache?.has(this.afkChannelId)
+      ? this.channels.cache?.get(this.afkChannelId)!.type === ChannelTypes.Voice
+        ? (this.channels.cache?.get(this.afkChannelId) as VoiceChannel)
         : null
       : null;
   }

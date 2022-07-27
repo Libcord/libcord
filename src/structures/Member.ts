@@ -41,8 +41,9 @@ export class Member extends Base {
 
     if (data.roles !== null) {
       for (const roleId of data.roles) {
-        const role = this.guild.roles.get(roleId as unknown as Snowflake);
-        this.roles.add(role);
+        const role = this.guild.roles
+          .fetch(roleId as unknown as Snowflake)
+          .then((r) => this.roles.add(r));
       }
     }
     this.data = data;

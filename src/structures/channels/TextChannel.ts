@@ -2,17 +2,16 @@ import { APIChannel } from "discord-api-types/v9";
 import { Collection } from "../..";
 import { Client } from "../../Client";
 import { Snowflake } from "../../utils/Snowflake";
-import { ChannelTypes } from "./Channel";
+import { ChannelTypes } from "../../Constants";
 import { GuildChannel } from "./GuildChannel";
 import { Message, MessageOptions } from "../Message";
 import { Embed } from "../Embed";
 
 import { MESSAGES } from "../../rest/EndPoints";
+
 export class TextChannel extends GuildChannel {
-  public readonly type:
-    | ChannelTypes.TEXT_CHANNEL
-    | ChannelTypes.NEWS_CHANNEL
-    | ChannelTypes.UNKNOWN = ChannelTypes.TEXT_CHANNEL;
+  // @ts-ignore
+  public readonly type: ChannelTypes.Text | ChannelTypes.News;
   public topic: string | null;
   public rateLimitPerUser: number | null;
   public lastMessageId: Snowflake | null;

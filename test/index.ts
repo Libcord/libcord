@@ -1,27 +1,15 @@
-import { Client, Embed } from "../src/index";
+import { Client, Colors } from "../src";
 import { token } from "./config.json";
+
 const client = new Client();
 
 client.connect(token);
 client.on("ready", () => {
   console.log(client.user?.username);
 });
-client.on("messageCreate", (message) => {
+client.on("messageCreate", async (message) => {
   if (message.author?.bot) return;
-  const embed = new Embed()
-    .setTitle("Hello")
-    .setDescription("There")
-    .setFooter({
-      text: message.author?.username,
-      url: message.author?.avatarURL({ format: "png" }),
-    })
-    .setTimestamp()
-    .setThumbnail(message.author?.avatarURL({ format: "png" }))
-    .setImage(message.author?.avatarURL({ format: "png", size: 1024 }))
-    .setColor("#fffff")
-    .setAuthor({
-      name: message.author?.username,
-      url: message.author?.avatarURL({ format: "png" }),
-    });
-  message.channel.send(embed);
+  const role = await message.guild?.roles.fetch("1001859987624181801");
+
+  message.channel.send(`${role?.name}`);
 });

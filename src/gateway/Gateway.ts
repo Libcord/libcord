@@ -1,19 +1,19 @@
 import {
+  APIGuild,
   APIUnavailableGuild,
+  GatewayChannelModifyDispatchData,
   GatewayDispatchEvents,
   GatewayDispatchPayload,
+  GatewayGuildCreateDispatch,
+  GatewayHelloData,
   GatewayIdentifyData,
   GatewayOpcodes,
   GatewayPresenceUpdateData,
   GatewayReceivePayload,
-  GatewayHelloData,
-  GatewayGuildCreateDispatch,
-  APIGuild,
 } from "discord-api-types/v9";
 import { EventEmitter } from "events";
 import { Client } from "../Client";
-import { API_VERSION, CLIENT_EVENTS } from "../Constants";
-import { GUILD } from "../rest/EndPoints";
+import { CLIENT_EVENTS } from "../Constants";
 import { ActivityTypes, Guild, Presence } from "../structures";
 import { platform } from "../utils/Platform";
 import { Snowflake } from "../utils/Snowflake";
@@ -29,6 +29,12 @@ export interface rawWSEvent {
 interface Actions {
   READY?: ACTIONS.READY;
   MESSAGE?: ACTIONS.MESSAGE_CREATE;
+  CHANNEL_CREATE?: ACTIONS.CHANNEL_CREATE;
+  CHANNEL_EDIT?: ACTIONS.CHANNEL_EDIT;
+  CHANNEL_DELETE?: ACTIONS.CHANNEL_DELETE;
+  ROLE_CREATE?: ACTIONS.ROLE_CREATE;
+  ROLE_EDIT?: ACTIONS.ROLE_EDIT;
+  ROLE_DELETE?: ACTIONS.ROLE_DELETE;
 }
 
 export type GatewayStatus =
@@ -164,7 +170,33 @@ export class Gateway {
         break;
       case GatewayDispatchEvents.MessageCreate:
         this.heartbeat();
-        this.actions.MESSAGE!.handle(msg.d as CustomMessageData);
+        await this.actions.MESSAGE!.handle(msg.d as CustomMessageData);
+        break;
+      case GatewayDispatchEvents.ChannelCreate:
+        this.heartbeat();
+        await this.actions.CHANNEL_CREATE!.handle(
+          msg.d as unknown as GatewayChannelModifyDispatchData
+        );
+        break;
+      case GatewayDispatchEvents.ChannelUpdate:
+        this.heartbeat();
+        await this.actions.CHANNEL_EDIT!.handle(msg.d);
+        break;
+      case GatewayDispatchEvents.ChannelDelete:
+        this.heartbeat();
+        await this.actions.CHANNEL_DELETE!.handle(msg.d);
+        break;
+      case GatewayDispatchEvents.GuildRoleCreate:
+        this.heartbeat();
+        await this.actions.ROLE_CREATE!.handle(msg.d);
+        break;
+      case GatewayDispatchEvents.GuildRoleUpdate:
+        this.heartbeat();
+        await this.actions.ROLE_EDIT!.handle(msg.d);
+        break;
+      case GatewayDispatchEvents.GuildRoleDelete:
+        this.heartbeat();
+        await this.actions.ROLE_DELETE!.handle(msg.d);
         break;
     }
   }
@@ -206,7 +238,9 @@ export class Gateway {
   }
 
   public async createGuild(guild: APIUnavailableGuild) {
-    const response = await this.client.fetchGuild(guild.id as unknown as Snowflake);
+    const response = await this.client.fetchGuild(
+      guild.id as unknown as Snowflake
+    );
     this.client.guilds.set(response.id as Snowflake, response);
   }
 

@@ -3,7 +3,7 @@ import {
   APIGuildMember,
   GatewayDispatchEvents,
 } from "discord-api-types/v9";
-import { Intents, CLIENT_EVENTS } from "./Constants";
+import { Intents, CLIENT_EVENTS, ChannelTypes } from "./Constants";
 import { Gateway, rawWSEvent } from "./gateway/Gateway";
 import { CustomMessageData } from "./gateway/actions/MESSAGE_CREATE";
 import {
@@ -34,7 +34,6 @@ import {
   resolveApplicationCommandForApi,
   User,
   TextChannel,
-  ChannelTypes,
   VoiceChannel,
   CategoryChannel,
 } from "./structures";
@@ -191,7 +190,7 @@ export class Client extends EventEmitter {
     if (!token || typeof token !== "string")
       throw new SyntaxError("NO_TOKEN_PROVIDED");
 
-    this.requestHandler.setToken(token)
+    this.requestHandler.setToken(token);
 
     this.requestHandler.request("GET", GATEWAY_CONNECT).then((r) => {
       if (r instanceof RequestError) {
@@ -326,29 +325,51 @@ export class Client extends EventEmitter {
   }
 
   /**
-   * Create a new global command. New global commands will be available in all guilds after 1 hour <br>
+   * Create a new global command. New global commands will be available in all guilds after 1 hour, this also takes arrays <br>
    * ⚠ Creating a command with the same name as an existing command for your application will overwrite the old command. see [discord-api-docs](https://discord.com/developers/docs/interactions/slash-commands#create-global-application-command)
-   * @param data a base object of the command
+   * @param data a base object of the command or an array of the commands
    * @param [cache=true] set the command to cache
    */
   public createApplicationCommand(
-    data: ApplicationCommandBase,
+    data: ApplicationCommandBase | ApplicationCommandBase[],
     cache = true
-  ): Promise<ApplicationCommand> {
+  ): Promise<ApplicationCommand | ApplicationCommand[]> {
     return new Promise(async (resolve, reject) => {
       if (!this.user) return reject(new Error("client isn't connected"));
-      data = resolveApplicationCommandForApi(data) as ApplicationCommandBase;
-      const command = new ApplicationCommand(
-        this,
-        await this.requestHandler.request(
-          "POST",
-          APPLICATION_GLOBAL_COMMANDS(this.user.id),
-          data,
-          this.token
-        )
-      );
-      if (cache) this.slashCommands.set(command.id, command);
-      resolve(command);
+      if (Array.isArray(data)) {
+        let arr = [];
+        for (const cmd of data) {
+          const resolvedData = resolveApplicationCommandForApi(
+            data
+          ) as ApplicationCommandBase;
+          const command = new ApplicationCommand(
+            this,
+            await this.requestHandler.request(
+              "POST",
+              APPLICATION_GLOBAL_COMMANDS(this.user.id),
+              resolvedData,
+              this.token
+            )
+          );
+          if (cache) this.slashCommands.set(command.id, command);
+          arr.push(command);
+        }
+
+        resolve(arr);
+      } else {
+        data = resolveApplicationCommandForApi(data) as ApplicationCommandBase;
+        const command = new ApplicationCommand(
+          this,
+          await this.requestHandler.request(
+            "POST",
+            APPLICATION_GLOBAL_COMMANDS(this.user.id),
+            data,
+            this.token
+          )
+        );
+        if (cache) this.slashCommands.set(command.id, command);
+        resolve(command);
+      }
     });
   }
 
@@ -502,30 +523,53 @@ export class Client extends EventEmitter {
    * Create a new guild command. <br>
    * ⚠ Creating a command with the same name as an existing command for your application will overwrite the old command. see [discord-api-docs](https://discord.com/developers/docs/interactions/slash-commands#create-guild-application-command)
    * @param guildId the id of the guild
-   * @param data a base object of the command
+   * @param data a base object of the command, or an array of commands
    * @param [cache=true] set the command to cache
    */
   public createGuildApplicationCommand(
     guildId: Snowflake,
-    data: ApplicationCommandBase,
+    data: ApplicationCommandBase | ApplicationCommandBase[],
     cache = true
-  ): Promise<ApplicationCommand> {
+  ): Promise<ApplicationCommand | ApplicationCommand[]> {
     return new Promise(async (resolve, reject) => {
       if (!this.user) return reject(new Error("client isn't connected"));
-      data = resolveApplicationCommandForApi(data) as ApplicationCommandBase;
-      if (!this.guilds.has(guildId)) await this.fetchGuild(guildId);
-      const command = new ApplicationCommand(
-        this,
-        await this.requestHandler.request(
-          "POST",
-          APPLICATION_GUILD_COMMANDS(this.user.id, guildId),
-          data,
-          this.token
-        )
-      );
-      if (cache)
-        this.guilds.get(guildId)!.slashCommands.set(command.id, command);
-      resolve(command);
+      if (Array.isArray(data)) {
+        let arr = [];
+        for (const cmd of data) {
+          const fetchedData = resolveApplicationCommandForApi(
+            data
+          ) as ApplicationCommandBase;
+          if (!this.guilds.has(guildId)) await this.fetchGuild(guildId);
+          const command = new ApplicationCommand(
+            this,
+            await this.requestHandler.request(
+              "POST",
+              APPLICATION_GUILD_COMMANDS(this.user.id, guildId),
+              fetchedData,
+              this.token
+            )
+          );
+          if (cache)
+            this.guilds.get(guildId)!.slashCommands.set(command.id, command);
+          arr.push(command);
+        }
+        resolve(arr);
+      } else {
+        data = resolveApplicationCommandForApi(data) as ApplicationCommandBase;
+        if (!this.guilds.has(guildId)) await this.fetchGuild(guildId);
+        const command = new ApplicationCommand(
+          this,
+          await this.requestHandler.request(
+            "POST",
+            APPLICATION_GUILD_COMMANDS(this.user.id, guildId),
+            data,
+            this.token
+          )
+        );
+        if (cache)
+          this.guilds.get(guildId)!.slashCommands.set(command.id, command);
+        resolve(command);
+      }
     });
   }
 

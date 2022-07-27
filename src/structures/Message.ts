@@ -2,7 +2,7 @@ import { GatewayMessageCreateDispatchData } from "discord-api-types/v9";
 import { Client } from "../Client";
 import { Snowflake } from "../utils/Snowflake";
 import { Base } from "./Base";
-import { User, TextChannel } from "./index";
+import { User, TextChannel, Guild } from "./index";
 import { CustomMessageData } from "../gateway/actions/MESSAGE_CREATE";
 import { Member } from "..";
 import { Embed } from "./Embed";
@@ -17,6 +17,7 @@ export class Message extends Base {
   public content!: string;
   public author!: User | undefined;
   public member!: Member;
+  public guild?: Guild;
 
   constructor(client: Client, data: CustomMessageData) {
     super(client);
@@ -27,16 +28,23 @@ export class Message extends Base {
     if (data.author) {
       if (data.author.discriminator !== "0000") {
         if (this.client.users.get(data.author.id as unknown as Snowflake)) {
-          this.author = this.client.users.get(data.author.id as unknown as Snowflake);
+          this.author = this.client.users.get(
+            data.author.id as unknown as Snowflake
+          );
         } else {
           this.author = new User(this.client, data.author);
         }
       }
     }
     if (data.guild_id) {
-      const guild = this.client.guilds.get(data.guild_id as unknown as Snowflake);
+      const guild = this.client.guilds.get(
+        data.guild_id as unknown as Snowflake
+      );
+      this.guild = guild;
 
-      this.member = guild?.members.get(data.author.id as unknown as Snowflake) as Member;
+      this.member = guild?.members.get(
+        data.author.id as unknown as Snowflake
+      ) as Member;
     }
     //this._patchData(data);
   }
@@ -58,7 +66,9 @@ export class Message extends Base {
     if (data.author) {
       if (data.author.discriminator !== "0000") {
         if (this.client.users.get(data.author.id as unknown as Snowflake)) {
-          this.author = this.client.users.get(data.author.id as unknown as Snowflake);
+          this.author = this.client.users.get(
+            data.author.id as unknown as Snowflake
+          );
         } else {
           this.author = new User(this.client, data.author);
         }
