@@ -88,12 +88,13 @@
 								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="groupchannel.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="groupchannel.html#client" class="tsd-kind-icon">client</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="groupchannel.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="groupchannel.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="groupchannel.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="groupchannel.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -118,7 +119,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="channel.html">Channel</a>.<a href="channel.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/structures/channels/GroupChannel.ts#L7">src/structures/channels/GroupChannel.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/structures/channels/GroupChannel.ts#L5">src/structures/channels/GroupChannel.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -135,7 +136,7 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="client" class="tsd-anchor"></a>
@@ -144,29 +145,40 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="channel.html">Channel</a>.<a href="channel.html#client">client</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/structures/Base.ts#L8">src/structures/Base.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/structures/Base.ts#L8">src/structures/Base.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="id" class="tsd-anchor"></a>
 					<h3>id</h3>
-					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">`</span><span class="tsd-signature-symbol">${</span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">`</span></div>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="channel.html">Channel</a>.<a href="channel.html#id">id</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/structures/channels/Channel.ts#L7">src/structures/channels/Channel.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/structures/channels/Channel.ts#L8">src/structures/channels/Channel.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="channel.html">Channel</a>.<a href="channel.html#name">name</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/structures/channels/Channel.ts#L10">src/structures/channels/Channel.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="type" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/channeltypes.html#group_channel" class="tsd-signature-type" data-tsd-kind="Enumeration member">GROUP_CHANNEL</a><span class="tsd-signature-symbol"> = ...</span></div>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../enums/channeltypes.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ChannelTypes</a></div>
 					<aside class="tsd-sources">
-						<p>Overrides <a href="channel.html">Channel</a>.<a href="channel.html#type">type</a></p>
+						<p>Inherited from <a href="channel.html">Channel</a>.<a href="channel.html#type">type</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/structures/channels/GroupChannel.ts#L7">src/structures/channels/GroupChannel.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/structures/channels/Channel.ts#L9">src/structures/channels/Channel.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -183,7 +195,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/structures/channels/Channel.ts#L16">src/structures/channels/Channel.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/structures/channels/Channel.ts#L19">src/structures/channels/Channel.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -216,7 +228,10 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="groupchannel.html#id" class="tsd-kind-icon">id</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="groupchannel.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="groupchannel.html#type" class="tsd-kind-icon">type</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">

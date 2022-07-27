@@ -68,6 +68,7 @@
 								<li class="tsd-kind-enum"><a href="enums/applicationcommandoptionstypes.html" class="tsd-kind-icon">Application<wbr>Command<wbr>Options<wbr>Types</a></li>
 								<li class="tsd-kind-enum"><a href="enums/client_events.html" class="tsd-kind-icon">CLIENT_<wbr>EVENTS</a></li>
 								<li class="tsd-kind-enum"><a href="enums/channeltypes.html" class="tsd-kind-icon">Channel<wbr>Types</a></li>
+								<li class="tsd-kind-enum"><a href="enums/colors.html" class="tsd-kind-icon">Colors</a></li>
 								<li class="tsd-kind-enum"><a href="enums/intents.html" class="tsd-kind-icon">Intents</a></li>
 								<li class="tsd-kind-enum"><a href="enums/permissions.html" class="tsd-kind-icon">Permissions</a></li>
 							</ul>
@@ -117,6 +118,8 @@
 								<li class="tsd-kind-interface"><a href="interfaces/applicationcommandoptionchoice.html" class="tsd-kind-icon">Application<wbr>Command<wbr>Option<wbr>Choice</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/applicationcommandoptionwithsubcommand.html" class="tsd-kind-icon">Application<wbr>Command<wbr>Option<wbr>With<wbr>Sub<wbr>Command</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/authoroptions.html" class="tsd-kind-icon">Author<wbr>Options</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/channelcreateoptions.html" class="tsd-kind-icon">Channel<wbr>Create<wbr>Options</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/channeleditoptions.html" class="tsd-kind-icon">Channel<wbr>Edit<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/clientoptions.html" class="tsd-kind-icon">Client<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/editapplicationcommandoptions.html" class="tsd-kind-icon">Edit<wbr>Application<wbr>Command<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/footeroptions.html" class="tsd-kind-icon">Footer<wbr>Options</a></li>
@@ -124,6 +127,8 @@
 								<li class="tsd-kind-interface"><a href="interfaces/imageurloptions.html" class="tsd-kind-icon">Image<wbr>Url<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/messageoptions.html" class="tsd-kind-icon">Message<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/presence.html" class="tsd-kind-icon">Presence</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/rolecreateoptions.html" class="tsd-kind-icon">Role<wbr>Create<wbr>Options</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/roleeditoptions.html" class="tsd-kind-icon">Role<wbr>Edit<wbr>Options</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/thumbnailoptions.html" class="tsd-kind-icon">Thumbnail<wbr>Options</a></li>
 							</ul>
 						</section>
@@ -168,7 +173,7 @@
 					<div class="tsd-signature tsd-kind-icon">Activity<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="enums/activitytypes.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ActivityTypes</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/structures/User.ts#L143">src/structures/User.ts:143</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/structures/User.ts#L143">src/structures/User.ts:143</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -178,7 +183,7 @@
 					<div class="tsd-signature tsd-kind-icon">Application<wbr>Command<wbr>Options<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="enums/applicationcommandoptionstypes.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ApplicationCommandOptionsTypes</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/structures/ApplicationCommand.ts#L101">src/structures/ApplicationCommand.ts:101</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/structures/ApplicationCommand.ts#L101">src/structures/ApplicationCommand.ts:101</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -188,7 +193,7 @@
 					<div class="tsd-signature tsd-kind-icon">Permission<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="enums/permissions.html" class="tsd-signature-type" data-tsd-kind="Enumeration">Permissions</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/utils/Permissions.ts#L148">src/utils/Permissions.ts:148</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/utils/Permissions.ts#L148">src/utils/Permissions.ts:148</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -198,7 +203,7 @@
 					<div class="tsd-signature tsd-kind-icon">Presence<wbr>Status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;online&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dnd&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;idle&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;invisible&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;offline&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/structures/User.ts#L168">src/structures/User.ts:168</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/structures/User.ts#L168">src/structures/User.ts:168</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -208,17 +213,17 @@
 					<div class="tsd-signature tsd-kind-icon">RGB<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/utils/Color.ts#L1">src/utils/Color.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/utils/Color.ts#L1">src/utils/Color.ts:1</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="snowflake" class="tsd-anchor"></a>
 					<h3>Snowflake</h3>
-					<div class="tsd-signature tsd-kind-icon">Snowflake<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">`</span><span class="tsd-signature-symbol">${</span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">`</span></div>
+					<div class="tsd-signature tsd-kind-icon">Snowflake<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/utils/Snowflake.ts#L1">src/utils/Snowflake.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/utils/Snowflake.ts#L1">src/utils/Snowflake.ts:1</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -228,7 +233,7 @@
 					<div class="tsd-signature tsd-kind-icon">image<wbr>Formats<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;jpg&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;png&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;webp&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gif&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/utils/Utils.ts#L1">src/utils/Utils.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/utils/Utils.ts#L1">src/utils/Utils.ts:1</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -238,7 +243,7 @@
 					<div class="tsd-signature tsd-kind-icon">image<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">16</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">32</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">64</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">128</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">256</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">512</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">1024</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">2048</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">4096</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/utils/Utils.ts#L2">src/utils/Utils.ts:2</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/utils/Utils.ts#L2">src/utils/Utils.ts:2</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -251,7 +256,7 @@
 					<div class="tsd-signature tsd-kind-icon">API_<wbr>VERSION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 9</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/Constants.ts#L124">src/Constants.ts:124</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/Constants.ts#L166">src/Constants.ts:166</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -268,7 +273,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/utils/Permissions.ts#L157">src/utils/Permissions.ts:157</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/utils/Permissions.ts#L157">src/utils/Permissions.ts:157</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -294,7 +299,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/utils/Permissions.ts#L173">src/utils/Permissions.ts:173</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/utils/Permissions.ts#L173">src/utils/Permissions.ts:173</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -317,7 +322,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/utils/Snowflake.ts#L3">src/utils/Snowflake.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/utils/Snowflake.ts#L3">src/utils/Snowflake.ts:3</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -340,7 +345,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/utils/Permissions.ts#L150">src/utils/Permissions.ts:150</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/utils/Permissions.ts#L150">src/utils/Permissions.ts:150</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -366,7 +371,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/utils/Permissions.ts#L164">src/utils/Permissions.ts:164</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/utils/Permissions.ts#L164">src/utils/Permissions.ts:164</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -392,7 +397,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/d88b91b/src/Client.ts#L707">src/Client.ts:707</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/7dd767b/src/Client.ts#L751">src/Client.ts:751</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -428,6 +433,9 @@
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/channeltypes.html" class="tsd-kind-icon">Channel<wbr>Types</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/colors.html" class="tsd-kind-icon">Colors</a>
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/intents.html" class="tsd-kind-icon">Intents</a>
@@ -538,6 +546,12 @@
 						<a href="interfaces/authoroptions.html" class="tsd-kind-icon">Author<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/channelcreateoptions.html" class="tsd-kind-icon">Channel<wbr>Create<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/channeleditoptions.html" class="tsd-kind-icon">Channel<wbr>Edit<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/clientoptions.html" class="tsd-kind-icon">Client<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -557,6 +571,12 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/presence.html" class="tsd-kind-icon">Presence</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/rolecreateoptions.html" class="tsd-kind-icon">Role<wbr>Create<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/roleeditoptions.html" class="tsd-kind-icon">Role<wbr>Edit<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/thumbnailoptions.html" class="tsd-kind-icon">Thumbnail<wbr>Options</a>
