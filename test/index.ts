@@ -1,4 +1,5 @@
-import { ApplicationCommandType, Client, Embed } from "../src";
+import { ButtonStyle } from "discord-api-types";
+import { ActionRow, Button, Client, Colors, Embed, ApplicationCommandType } from "../src";
 import { token } from "./config.json";
 import { MessageContextMenuInteraction } from "../src/structures/interactions/MessageContextMenuInteraction";
 
@@ -22,9 +23,15 @@ client.on("interactionCreate", (interaction) => {
 });
 client.on("messageCreate", async (message) => {
   if (message.author?.bot) return;
-  if (message.content === "embed") {
-    message.reply(
-      new Embed().setColor("#7289da").setDescription("sent with libcord v2")
-    );
+  if(message.content === "test") {
+    const row = new ActionRow();
+    const button = new Button()
+      .setLabel("Test button")
+      .setStyle(ButtonStyle.Link)
+      // .setCustomId("testbtn")
+      .setUrl('https://github.com');
+      // .setEmoji("🔥");
+    row.addComponent(button);
+    message.reply({content: 'test', components: [row]})
   }
 });
