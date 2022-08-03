@@ -1,7 +1,10 @@
-import { APIApplicationCommandInteraction, Utils } from "discord-api-types/v9";
+import {
+  APIChatInputApplicationCommandInteraction,
+  MessageFlags,
+  Utils,
+} from "discord-api-types/v9";
 import { Client } from "../../Client";
 import { Snowflake } from "../../utils/Snowflake";
-import { Base } from "../Base";
 import { Channel } from "../channels/Channel";
 import { Guild } from "../Guild";
 import { Member } from "../Member";
@@ -10,11 +13,12 @@ import { RESPOND_INTERACTION } from "../../rest/EndPoints";
 import { MessageInteractionOptions } from "../Message";
 import { Embed } from "../Embed";
 import { ApplicationCommandOptionsTypes } from "../ApplicationCommand";
+import { Interaction } from "./Interaction";
 
 /**
  * @category Structures
  */
-export class CommandInteraction extends Base {
+export class CommandInteraction extends Interaction {
   public id: Snowflake;
   public channel: Channel | null;
   public guild: Guild | null;
@@ -22,10 +26,11 @@ export class CommandInteraction extends Base {
   public member: Member | null;
   public token: string;
   public options?: any | null;
-  public data: APIApplicationCommandInteraction;
+  public defered?: boolean;
+  public replied?: boolean;
 
-  constructor(client: Client, data: APIApplicationCommandInteraction) {
-    super(client);
+  constructor(client: Client, data: APIChatInputApplicationCommandInteraction) {
+    super(client, data);
     this.data = data;
     this.id = data.id as unknown as Snowflake;
     this.channel =
@@ -56,7 +61,21 @@ export class CommandInteraction extends Base {
         : undefined;
     }
   }
+  async defer(ephemeral: boolean) {
+    await this.client.requestHandler.request(
+      "POST",
+      RESPOND_INTERACTION(this.id, this.token),
+      {
+        type: 5,
+        data: {
+          flags: ephemeral ? MessageFlags.Ephemeral : undefined,
+        },
+      },
+      this.client.token
+    );
+  }
   async reply(content: MessageInteractionOptions | string) {
+    if (this.replied) throw new Error("[INTERACTIONS]: Already replied.");
     const payload = {
       content: "" as any,
       embeds: [] as any,

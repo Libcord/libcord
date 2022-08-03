@@ -212,7 +212,6 @@ export enum ChannelTypes {
 
   News = ChannelType.GuildNews,
   Stage = ChannelType.GuildStageVoice,
-  Store = ChannelType.GuildStore,
   UNKNOWN = 7,
 }
 

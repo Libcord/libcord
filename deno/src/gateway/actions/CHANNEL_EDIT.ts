@@ -1,6 +1,7 @@
 import {
   ChannelType,
   GatewayChannelModifyDispatchData,
+  APIGuildChannel,
 } from "discord-api-types/v9";
 import { Action } from "./Action";
 
@@ -15,7 +16,9 @@ import {
 export class CHANNEL_EDIT extends Action {
   async handle(d: GatewayChannelModifyDispatchData) {
     const newChan = this.detectType(d);
-    const guild = this.client.guilds.get(d.guild_id as string);
+    const guild = this.client.guilds.get(
+      (d as APIGuildChannel<any>).guild_id as string
+    );
     guild?.channels.cache.set(d.id, newChan);
 
     return this.emitter.emit(CLIENT_EVENTS.CHANNEL_EDIT, newChan);

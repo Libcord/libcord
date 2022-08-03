@@ -4,7 +4,7 @@ import { Snowflake } from "../utils/Snowflake";
 import { Base } from "./Base";
 import { User, TextChannel, Guild } from "./index";
 import { CustomMessageData } from "../gateway/actions/MESSAGE_CREATE";
-import { Member } from "..";
+import { ComponentsType, Member } from "..";
 import { Embed } from "./Embed";
 import { MESSAGES } from "../rest/EndPoints";
 
@@ -86,6 +86,7 @@ export class Message extends Base {
     const payload = {
       content: "" as any,
       embeds: [] as any,
+      components: [] as any,
       message_reference: {
         message_id: this.id,
       },
@@ -112,6 +113,11 @@ export class Message extends Base {
           }
         });
       }
+      if (msg.components?.length! > 0) {
+        msg.components?.forEach((comp: ComponentsType) => {
+          payload.components.push(comp);
+        });
+      }
     }
     const res: any = await this.client.requestHandler.request(
       "POST",
@@ -127,4 +133,5 @@ export class Message extends Base {
 export interface MessageInteractionOptions {
   content?: string | Embed;
   embeds?: Array<Embed> | Array<any>;
+  components?: Array<ComponentsType>;
 }

@@ -1,4 +1,7 @@
-import { APIGuild } from "discord-api-types/v9";
+import {
+  GatewayGuildCreateDispatchData,
+  GatewayGuildCreateDispatch,
+} from "discord-api-types/v9";
 import { Client } from "../Client";
 import { Collection } from "../utils/Collection";
 import { Snowflake } from "../utils/Snowflake";
@@ -7,7 +10,6 @@ import { Base } from "./Base";
 import { VoiceChannel } from "./channels/VoiceChannel";
 import { Member } from "./Member";
 import { User } from "./User";
-import { Role } from "./Role";
 import ChannelManager from "../managers/ChannelManager";
 import { ChannelTypes } from "../Constants";
 import RoleManager from "../managers/RoleManager";
@@ -29,10 +31,11 @@ export class Guild extends Base {
   public slashCommands = new Collection<Snowflake, ApplicationCommand>();
   public roles: RoleManager;
 
-  public data: APIGuild;
+  public data: GatewayGuildCreateDispatchData;
 
-  constructor(client: Client, data: APIGuild) {
+  constructor(client: Client, data: GatewayGuildCreateDispatchData) {
     super(client);
+
     this.id = data.id as unknown as Snowflake;
     this.name = data.name;
     this.icon = data.icon;
