@@ -4,6 +4,11 @@ import { Snowflake } from "../utils/Snowflake";
 import { Base } from "./Base";
 import { Guild } from "./Guild";
 
+export enum ApplicationCommandType {
+  CHAT_INPUT = 1,
+  USER = 2,
+  MESSAGE = 3,
+}
 export interface ApplicationCommandBase {
   /**
    * the name of the command
@@ -12,7 +17,9 @@ export interface ApplicationCommandBase {
   /**
    * the description of the command
    */
-  description: string;
+  description?: string;
+
+  type?: ApplicationCommandType;
   /**
    * the options of the command
    */

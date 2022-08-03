@@ -1,6 +1,7 @@
 import {
   ChannelType,
   GatewayChannelDeleteDispatchData,
+  APIGuildChannel,
 } from "discord-api-types/v9";
 import { Action } from "./Action";
 
@@ -14,9 +15,13 @@ import {
 
 export class CHANNEL_DELETE extends Action {
   async handle(d: GatewayChannelDeleteDispatchData) {
-    const guild = this.client.guilds.get(d.guild_id as string);
+    if ((d as APIGuildChannel<any>).guild_id) {
+      const guild = this.client.guilds.get(
+        (d as APIGuildChannel<any>).guild_id as string
+      );
 
-    guild?.channels.cache.delete(d.id);
+      guild?.channels.cache.delete(d.id);
+    }
     return this.emitter.emit(CLIENT_EVENTS.CHANNEL_DELETE, this.detectType(d));
   }
   detectType(d: GatewayChannelDeleteDispatchData) {

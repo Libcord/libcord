@@ -1,4 +1,4 @@
-import { APIChannel } from "discord-api-types/v9";
+import { APIGuildChannel } from "discord-api-types/v9";
 import { Client } from "../../Client";
 import { PermissionOverwrite } from "../../utils/PermissionOverwrite";
 import { Snowflake } from "../../utils/Snowflake";
@@ -13,7 +13,7 @@ export class GuildChannel extends Channel {
   public parentId: Snowflake | null;
   public permissionOverwrites: PermissionOverwrite[] = [];
 
-  constructor(client: Client, data: APIChannel) {
+  constructor(client: Client, data: APIGuildChannel<any>) {
     super(client, data);
     this.guild = client.guilds.get(data.guild_id as unknown as Snowflake)!;
     this.name = data.name!;
@@ -36,12 +36,16 @@ export class GuildChannel extends Channel {
     }
   }
 
-  update(data: APIChannel): GuildChannel {
+  update(data: APIGuildChannel<any>): GuildChannel {
     if (data.name !== this.name) this.name = data.name!;
     if (data.nsfw !== this.nsfw) this.nsfw = !!data.nsfw;
     if (data.position && this.position !== data.position)
       this.position = data.position;
-    if (data.parent_id && this.parentId && this.parentId !== data.parent_id as unknown as Snowflake)
+    if (
+      data.parent_id &&
+      this.parentId &&
+      this.parentId !== (data.parent_id as unknown as Snowflake)
+    )
       this.parentId = data.parent_id as unknown as Snowflake;
     this.permissionOverwrites = [];
     if (data.permission_overwrites) {

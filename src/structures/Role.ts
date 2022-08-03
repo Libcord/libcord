@@ -1,6 +1,6 @@
 import { Client } from "..";
 import { Base } from "./Base";
-import { APIRole, Snowflake } from "discord-api-types";
+import { APIRole, Snowflake } from "discord-api-types/v9";
 
 export class Role extends Base {
   public id!: Snowflake;
@@ -19,7 +19,6 @@ export class Role extends Base {
     this.hoisted = data.hoist;
     this.integrated = data.managed;
     this.color = data.color;
-    
   }
   get hex() {
     return this.color.toString(16);
