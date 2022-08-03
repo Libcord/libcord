@@ -21,5 +21,6 @@ export * from "./Message";
 export * from "./Role";
 export * from "./User";
 export * from "./Embed";
-export * from './components/ActionRow';
-export * from './components/Button';
+export * from "./components/ActionRow";
+export * from "./components/Button";
+export * from "./components/SelectMenu";

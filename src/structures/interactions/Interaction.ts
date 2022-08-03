@@ -1,10 +1,17 @@
 import { Base } from "../Base";
 import { Client } from "../../Client";
-import { APIBaseInteraction } from "discord-api-types/v9";
+import {
+  APIBaseInteraction,
+  APIMessageComponent,
+  APIMessageComponentInteractionData,
+  ComponentType,
+} from "discord-api-types/v9";
 import { ApplicationCommandType } from "../ApplicationCommand";
 import { MessageContextMenuInteraction } from "./MessageContextMenuInteraction";
 import { CommandInteraction } from "./CommandInteraction";
 import { UserContextMenuInteraction } from "./UserContextMenuInteraction";
+import { ButtonInteraction } from "./ButtonInteraction";
+import { SelectMenuInteraction } from "./SelectMenuInteraction";
 
 export class Interaction extends Base {
   public data: APIBaseInteraction<any, any>;
@@ -26,6 +33,22 @@ export class Interaction extends Base {
   }
   isUserContextMenu(): this is UserContextMenuInteraction {
     if (this.type === ApplicationCommandType.USER) return true;
+    return false;
+  }
+  isButton(): this is ButtonInteraction {
+    if (
+      (this.data.data as unknown as APIMessageComponentInteractionData)
+        .component_type === ComponentType.Button
+    )
+      return true;
+    return false;
+  }
+  isSelectMenu(): this is SelectMenuInteraction {
+    if (
+      (this.data.data as unknown as APIMessageComponentInteractionData)
+        .component_type === ComponentType.SelectMenu
+    )
+      return true;
     return false;
   }
 }

@@ -1,7 +1,11 @@
-import { APIMessageComponent, ComponentType } from "discord-api-types";
-import { Button } from "../..";
+import { APIMessageComponent, ComponentType } from "discord-api-types/v9";
+import { Button, SelectMenu } from "../..";
 
-export type ComponentsType = Button | APIMessageComponent | ActionRow;
+export type ComponentsType =
+  | Button
+  | SelectMenu
+  | APIMessageComponent
+  | ActionRow;
 
 export class ActionRow {
   private type: ComponentType = ComponentType.ActionRow;

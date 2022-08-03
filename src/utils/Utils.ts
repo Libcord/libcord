@@ -1,3 +1,5 @@
+import { ButtonStyle } from "discord-api-types/v9";
+
 export type imageFormats = "jpg" | "png" | "webp" | "gif";
 export type imageSize = 16 | 32 | 64 | 128 | 256 | 512 | 1024 | 2048 | 4096;
 
@@ -18,6 +20,12 @@ export interface ImageUrlOptions {
    */
   dynamic?: boolean;
 }
+export type ColorStrings =
+  | "LINK"
+  | "PRIMARY"
+  | "SECONDARY"
+  | "SUCCESS"
+  | "DANGER";
 
 // Adapted from discord.js
 
@@ -33,7 +41,30 @@ export const parseEmoji = (text: string) => {
     }
   );
 };
-
+export const ParseColor = (color: ColorStrings | ButtonStyle) => {
+  if (typeof color === "number") return color;
+  let value;
+  switch (color) {
+    case "DANGER":
+      value = ButtonStyle.Danger;
+      break;
+    case "PRIMARY":
+      value = ButtonStyle.Primary;
+      break;
+    case "SUCCESS":
+      value = ButtonStyle.Success;
+      break;
+    case "LINK":
+      value = ButtonStyle.Link;
+      break;
+    case "SECONDARY":
+      value = ButtonStyle.Secondary;
+      break;
+    default:
+      throw new Error("[COLORS] Invalid color");
+  }
+  return value;
+};
 
 export const resolvePartialEmoji = (emoji: any) => {
   if (!emoji) return null;

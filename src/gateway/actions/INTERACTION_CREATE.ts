@@ -1,16 +1,21 @@
 import {
   APIChatInputApplicationCommandInteraction,
+  APIMessageApplicationCommandInteraction,
+  APIMessageComponentButtonInteraction,
+  APIMessageComponentSelectMenuInteraction,
+  APIUserApplicationCommandInteraction,
+  ApplicationCommandType,
+  ComponentType,
   GatewayInteractionCreateDispatchData,
   InteractionType,
-  ApplicationCommandType,
-  APIUserApplicationCommandInteraction,
 } from "discord-api-types/v9";
 import { Action } from "./Action";
 import { CommandInteraction } from "../../structures";
 import { CLIENT_EVENTS } from "../../Constants";
 import { MessageContextMenuInteraction } from "../../structures/interactions/MessageContextMenuInteraction";
-import { APIMessageApplicationCommandInteraction } from "discord-api-types/v9";
 import { UserContextMenuInteraction } from "../../structures/interactions/UserContextMenuInteraction";
+import { ButtonInteraction } from "../../structures/interactions/ButtonInteraction";
+import { SelectMenuInteraction } from "../../structures/interactions/SelectMenuInteraction";
 
 export class INTERACTION_CREATE extends Action {
   async handle(d: GatewayInteractionCreateDispatchData) {
@@ -41,6 +46,27 @@ export class INTERACTION_CREATE extends Action {
               d as APIUserApplicationCommandInteraction
             )
           );
+      }
+    } else if (d.type === InteractionType.MessageComponent) {
+      switch (d.data.component_type) {
+        case ComponentType.Button:
+          this.emitter.emit(
+            CLIENT_EVENTS.INTERACTION_CREATE,
+            new ButtonInteraction(
+              this.client,
+              d as APIMessageComponentButtonInteraction
+            )
+          );
+          break;
+        case ComponentType.SelectMenu:
+          this.emitter.emit(
+            CLIENT_EVENTS.INTERACTION_CREATE,
+            new SelectMenuInteraction(
+              this.client,
+              d as APIMessageComponentSelectMenuInteraction
+            )
+          );
+          break;
       }
     }
   }

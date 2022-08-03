@@ -1,5 +1,6 @@
 import {
   APIChatInputApplicationCommandInteraction,
+  MessageFlags,
   Utils,
 } from "discord-api-types/v9";
 import { Client } from "../../Client";
@@ -25,6 +26,8 @@ export class CommandInteraction extends Interaction {
   public member: Member | null;
   public token: string;
   public options?: any | null;
+  public defered?: boolean;
+  public replied?: boolean;
 
   constructor(client: Client, data: APIChatInputApplicationCommandInteraction) {
     super(client, data);
@@ -58,7 +61,21 @@ export class CommandInteraction extends Interaction {
         : undefined;
     }
   }
+  async defer(ephemeral: boolean) {
+    await this.client.requestHandler.request(
+      "POST",
+      RESPOND_INTERACTION(this.id, this.token),
+      {
+        type: 5,
+        data: {
+          flags: ephemeral ? MessageFlags.Ephemeral : undefined,
+        },
+      },
+      this.client.token
+    );
+  }
   async reply(content: MessageInteractionOptions | string) {
+    if (this.replied) throw new Error("[INTERACTIONS]: Already replied.");
     const payload = {
       content: "" as any,
       embeds: [] as any,
