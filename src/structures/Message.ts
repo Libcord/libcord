@@ -77,16 +77,18 @@ export class Message extends Base {
     }
   }
 
-  public reply(msg: MessageOptions | string | Embed): Promise<Message>;
+  public reply(
+    msg: MessageInteractionOptions | string | Embed
+  ): Promise<Message>;
   public async reply(
-    msg: MessageOptions | string
+    msg: MessageInteractionOptions | string
   ): Promise<Message | undefined> {
     const payload = {
       content: "" as any,
       embeds: [] as any,
       message_reference: {
-        message_id: this.id
-      }
+        message_id: this.id,
+      },
     };
     if (msg instanceof Embed) {
       payload.embeds.push(msg.getJSON());
@@ -102,7 +104,7 @@ export class Message extends Base {
         payload.embeds.push(msg.content.getJSON());
       }
       if (msg.embeds) {
-        msg.embeds.forEach((em) => {
+        msg.embeds.forEach((em: any) => {
           if (em instanceof Embed) {
             payload.embeds.push((em as Embed).getJSON());
           } else {

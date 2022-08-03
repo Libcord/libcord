@@ -6,6 +6,7 @@ import { User, TextChannel, Guild } from "./index";
 import { CustomMessageData } from "../gateway/actions/MESSAGE_CREATE";
 import { Member } from "..";
 import { Embed } from "./Embed";
+import { MESSAGES } from "../rest/EndPoints";
 
 /**
  * @category Structures
@@ -74,6 +75,52 @@ export class Message extends Base {
         }
       }
     }
+  }
+
+  public reply(
+    msg: MessageInteractionOptions | string | Embed
+  ): Promise<Message>;
+  public async reply(
+    msg: MessageInteractionOptions | string
+  ): Promise<Message | undefined> {
+    const payload = {
+      content: "" as any,
+      embeds: [] as any,
+      message_reference: {
+        message_id: this.id,
+      },
+    };
+    if (msg instanceof Embed) {
+      payload.embeds.push(msg.getJSON());
+    }
+    if (typeof msg === "string") {
+      payload.content = msg;
+    }
+    if (typeof msg === "object") {
+      if (typeof msg?.content === "string") {
+        payload.content = msg?.content;
+      }
+      if (msg.content instanceof Embed) {
+        payload.embeds.push(msg.content.getJSON());
+      }
+      if (msg.embeds) {
+        msg.embeds.forEach((em: any) => {
+          if (em instanceof Embed) {
+            payload.embeds.push((em as Embed).getJSON());
+          } else {
+            throw new Error("[LIBCORD] Embeds must be an instance of <Embed>");
+          }
+        });
+      }
+    }
+    const res: any = await this.client.requestHandler.request(
+      "POST",
+      MESSAGES(this.channelID),
+      JSON.stringify(payload),
+      this.client.token
+    );
+    const data = { channel: this, ...res };
+    return new Message(this.client, data);
   }
 }
 
