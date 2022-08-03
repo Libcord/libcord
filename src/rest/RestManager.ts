@@ -39,17 +39,22 @@ export class RestManager {
 
   constructor() {
     this.agent = `DiscordBot (https://github.com/MrPrivacyCoder, ${version})`;
-    this.token = ""
+    this.token = "";
   }
   setToken(token: string): boolean {
-    this.token = token
-    return true
+    this.token = token;
+    return true;
   }
-  request(method: Method, url: string, data?: any, token?: string): Promise<any> {
+  request(
+    method: Method,
+    url: string,
+    data?: any,
+    token?: string
+  ): Promise<any> {
     return new Promise(async (resolve, reject) => {
       try {
-        if(data) {
-           const response = await axios({
+        if (data) {
+          const response = await axios({
             method: method,
             baseURL: BASE_URL,
             url: url,
@@ -60,8 +65,8 @@ export class RestManager {
               "User-Agent": this.agent,
             },
             timeout: 10000,
-          })
-          if(response) return resolve(response.data)
+          });
+          if (response) return resolve(response.data);
         } else {
           const response = await axios({
             method: method,
@@ -73,11 +78,10 @@ export class RestManager {
               "User-Agent": this.agent,
             },
             timeout: 10000,
-          })
-          if(response) return resolve(response.data)
+          });
+          if (response) return resolve(response.data);
         }
-      } catch(e: any)
-      { console.log(e);
+      } catch (e: any) {
         return reject(
           new RequestError(
             "API ERROR",
@@ -87,7 +91,8 @@ export class RestManager {
             e.response.status,
             e.response.statusText
           )
-        )}
+        );
+      }
     });
   }
 }

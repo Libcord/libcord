@@ -122,7 +122,7 @@ export class Message extends Base {
   }
 }
 
-export interface MessageOptions {
+export interface MessageInteractionOptions {
   content?: string | Embed;
-  embeds?: Array<Embed>;
+  embeds?: Array<Embed> | Array<any>;
 }
