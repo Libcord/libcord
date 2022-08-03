@@ -1,4 +1,4 @@
-import { Client, Colors } from "../src";
+import { Client, Colors, Embed } from "../src";
 import { token } from "./config.json";
 
 const client = new Client();
@@ -9,7 +9,7 @@ client.on("ready", () => {
 });
 client.on("messageCreate", async (message) => {
   if (message.author?.bot) return;
-  const role = await message.guild?.roles.fetch("1001859987624181801");
-
-  message.channel.send(`${role?.name}`);
+  if(message.content === "embed") {
+    message.reply(new Embed().setColor('#7289da').setDescription('sent with libcord v2'))
+  }
 });
