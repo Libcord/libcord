@@ -94,11 +94,13 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#channel" class="tsd-kind-icon">channel</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#client" class="tsd-kind-icon">client</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#data" class="tsd-kind-icon">data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#defered" class="tsd-kind-icon">defered</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#guild" class="tsd-kind-icon">guild</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="usercontextmenuinteraction.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#member" class="tsd-kind-icon">member</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#options" class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#replied" class="tsd-kind-icon">replied</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#token" class="tsd-kind-icon">token</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#type" class="tsd-kind-icon">type</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#user" class="tsd-kind-icon">user</a></li>
@@ -113,8 +115,11 @@
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#defer" class="tsd-kind-icon">defer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#isbutton" class="tsd-kind-icon">is<wbr>Button</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#iscommand" class="tsd-kind-icon">is<wbr>Command</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#ismessagecontextmenu" class="tsd-kind-icon">is<wbr>Message<wbr>Context<wbr>Menu</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#isselectmenu" class="tsd-kind-icon">is<wbr>Select<wbr>Menu</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#isusercontextmenu" class="tsd-kind-icon">is<wbr>User<wbr>Context<wbr>Menu</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="usercontextmenuinteraction.html#reply" class="tsd-kind-icon">reply</a></li>
 							</ul>
@@ -135,7 +140,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/UserContextMenuInteraction.ts#L14">src/structures/interactions/UserContextMenuInteraction.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/UserContextMenuInteraction.ts#L14">src/structures/interactions/UserContextMenuInteraction.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -161,7 +166,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#channel">channel</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/CommandInteraction.ts#L22">src/structures/interactions/CommandInteraction.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/CommandInteraction.ts#L23">src/structures/interactions/CommandInteraction.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -172,7 +177,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#client">client</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/Base.ts#L8">src/structures/Base.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/Base.ts#L8">src/structures/Base.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -183,7 +188,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#data">data</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/Interaction.ts#L10">src/structures/interactions/Interaction.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/Interaction.ts#L17">src/structures/interactions/Interaction.ts:17</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="defered" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> defered</h3>
+					<div class="tsd-signature tsd-kind-icon">defered<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#defered">defered</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/CommandInteraction.ts#L29">src/structures/interactions/CommandInteraction.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -194,7 +210,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#guild">guild</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/CommandInteraction.ts#L23">src/structures/interactions/CommandInteraction.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/CommandInteraction.ts#L24">src/structures/interactions/CommandInteraction.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -205,7 +221,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#id">id</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/UserContextMenuInteraction.ts#L14">src/structures/interactions/UserContextMenuInteraction.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/UserContextMenuInteraction.ts#L14">src/structures/interactions/UserContextMenuInteraction.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -216,7 +232,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#member">member</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/CommandInteraction.ts#L25">src/structures/interactions/CommandInteraction.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/CommandInteraction.ts#L26">src/structures/interactions/CommandInteraction.ts:26</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -227,7 +243,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#name">name</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/Interaction.ts#L11">src/structures/interactions/Interaction.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/Interaction.ts#L18">src/structures/interactions/Interaction.ts:18</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -238,7 +254,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#options">options</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/CommandInteraction.ts#L27">src/structures/interactions/CommandInteraction.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/CommandInteraction.ts#L28">src/structures/interactions/CommandInteraction.ts:28</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="replied" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> replied</h3>
+					<div class="tsd-signature tsd-kind-icon">replied<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#replied">replied</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/CommandInteraction.ts#L30">src/structures/interactions/CommandInteraction.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -249,7 +276,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#token">token</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/CommandInteraction.ts#L26">src/structures/interactions/CommandInteraction.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/CommandInteraction.ts#L27">src/structures/interactions/CommandInteraction.ts:27</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -260,7 +287,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#type">type</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/Interaction.ts#L12">src/structures/interactions/Interaction.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/Interaction.ts#L19">src/structures/interactions/Interaction.ts:19</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -271,7 +298,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#user">user</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/CommandInteraction.ts#L24">src/structures/interactions/CommandInteraction.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/CommandInteraction.ts#L25">src/structures/interactions/CommandInteraction.ts:25</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -288,7 +315,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/UserContextMenuInteraction.ts#L22">src/structures/interactions/UserContextMenuInteraction.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/UserContextMenuInteraction.ts#L22">src/structures/interactions/UserContextMenuInteraction.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="user.html" class="tsd-signature-type" data-tsd-kind="Class">User</a></h4>
@@ -298,6 +325,48 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="defer" class="tsd-anchor"></a>
+					<h3>defer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">defer<span class="tsd-signature-symbol">(</span>ephemeral<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#defer">defer</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/CommandInteraction.ts#L64">src/structures/interactions/CommandInteraction.ts:64</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ephemeral: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="isbutton" class="tsd-anchor"></a>
+					<h3>is<wbr>Button</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Button<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">ButtonInteraction</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#isbutton">isButton</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/Interaction.ts#L38">src/structures/interactions/Interaction.ts:38</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">ButtonInteraction</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="iscommand" class="tsd-anchor"></a>
 					<h3>is<wbr>Command</h3>
@@ -309,7 +378,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#iscommand">isCommand</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/Interaction.ts#L19">src/structures/interactions/Interaction.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/Interaction.ts#L26">src/structures/interactions/Interaction.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><a href="commandinteraction.html" class="tsd-signature-type" data-tsd-kind="Class">CommandInteraction</a></h4>
@@ -327,10 +396,28 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#ismessagecontextmenu">isMessageContextMenu</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/Interaction.ts#L23">src/structures/interactions/Interaction.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/Interaction.ts#L30">src/structures/interactions/Interaction.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><a href="messagecontextmenuinteraction.html" class="tsd-signature-type" data-tsd-kind="Class">MessageContextMenuInteraction</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="isselectmenu" class="tsd-anchor"></a>
+					<h3>is<wbr>Select<wbr>Menu</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Select<wbr>Menu<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">SelectMenuInteraction</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#isselectmenu">isSelectMenu</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/Interaction.ts#L46">src/structures/interactions/Interaction.ts:46</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">SelectMenuInteraction</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -345,7 +432,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#isusercontextmenu">isUserContextMenu</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/Interaction.ts#L27">src/structures/interactions/Interaction.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/Interaction.ts#L34">src/structures/interactions/Interaction.ts:34</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><a href="usercontextmenuinteraction.html" class="tsd-signature-type" data-tsd-kind="Class">UserContextMenuInteraction</a></h4>
@@ -363,7 +450,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="commandinteraction.html">CommandInteraction</a>.<a href="commandinteraction.html#reply">reply</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/tovade/libcord/blob/62ca00e/src/structures/interactions/CommandInteraction.ts#L61">src/structures/interactions/CommandInteraction.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/tovade/libcord/blob/9a5fff0/src/structures/interactions/CommandInteraction.ts#L77">src/structures/interactions/CommandInteraction.ts:77</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -406,6 +493,9 @@
 								<a href="usercontextmenuinteraction.html#data" class="tsd-kind-icon">data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="usercontextmenuinteraction.html#defered" class="tsd-kind-icon">defered</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="usercontextmenuinteraction.html#guild" class="tsd-kind-icon">guild</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
@@ -421,6 +511,9 @@
 								<a href="usercontextmenuinteraction.html#options" class="tsd-kind-icon">options</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="usercontextmenuinteraction.html#replied" class="tsd-kind-icon">replied</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="usercontextmenuinteraction.html#token" class="tsd-kind-icon">token</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -433,10 +526,19 @@
 								<a href="usercontextmenuinteraction.html#targetuser" class="tsd-kind-icon">target<wbr>User</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="usercontextmenuinteraction.html#defer" class="tsd-kind-icon">defer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="usercontextmenuinteraction.html#isbutton" class="tsd-kind-icon">is<wbr>Button</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="usercontextmenuinteraction.html#iscommand" class="tsd-kind-icon">is<wbr>Command</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="usercontextmenuinteraction.html#ismessagecontextmenu" class="tsd-kind-icon">is<wbr>Message<wbr>Context<wbr>Menu</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="usercontextmenuinteraction.html#isselectmenu" class="tsd-kind-icon">is<wbr>Select<wbr>Menu</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="usercontextmenuinteraction.html#isusercontextmenu" class="tsd-kind-icon">is<wbr>User<wbr>Context<wbr>Menu</a>
