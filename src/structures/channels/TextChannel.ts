@@ -43,6 +43,7 @@ export class TextChannel extends GuildChannel {
     const payload = {
       content: "" as any,
       embeds: [] as any,
+      components: [] as any,
     };
     if (msg instanceof Embed) {
       payload.embeds.push(msg.getJSON());
