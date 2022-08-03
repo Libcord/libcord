@@ -5,6 +5,7 @@ import {
   GatewayDispatchEvents,
   GatewayDispatchPayload,
   GatewayGuildCreateDispatch,
+  GatewayGuildCreateDispatchData,
   GatewayHelloData,
   GatewayIdentifyData,
   GatewayOpcodes,
@@ -102,9 +103,9 @@ export class Gateway {
     const data: GatewayIdentifyData = {
       token: this._token,
       properties: {
-        $os: platform,
-        $device: "Ubuntu",
-        $browser: "Libcord",
+        os: platform,
+        device: "Ubuntu",
+        browser: "Libcord",
       },
       compress: false,
       intents: this.intents,
@@ -172,8 +173,8 @@ export class Gateway {
           this.status === "waiting_for_guilds" &&
           t === <any>GatewayDispatchEvents.GuildCreate
         ) {
-          const guild = d as unknown as GatewayGuildCreateDispatch;
-          const g = new Guild(this.client, guild as unknown as APIGuild);
+          const guild = d as unknown as GatewayGuildCreateDispatchData;
+          const g = new Guild(this.client, guild);
 
           this.client.guilds.add(g);
         } else {

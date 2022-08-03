@@ -3,9 +3,8 @@ import {
   APIGuildMember,
   GatewayDispatchEvents,
 } from "discord-api-types/v9";
-import { Intents, CLIENT_EVENTS, ChannelTypes } from "./Constants";
+import { Intents, CLIENT_EVENTS } from "./Constants";
 import { Gateway, rawWSEvent } from "./gateway/Gateway";
-import { CustomMessageData } from "./gateway/actions/MESSAGE_CREATE";
 import {
   APPLICATION_GLOBAL_COMMAND,
   APPLICATION_GLOBAL_COMMANDS,
@@ -16,19 +15,16 @@ import {
   CHANNEL,
   GUILD_MEMBERS,
   GATEWAY_CONNECT,
-  MESSAGES,
 } from "./rest/EndPoints";
 import { RestManager } from "./rest/RestManager";
 import {
   ApplicationCommand,
   ApplicationCommandBase,
-  Channel,
   ClientUser,
   EditApplicationCommandOptions,
   Guild,
   Member,
   Message,
-  MessageInteractionOptions,
   Presence,
   PrivateChannel,
   resolveApplicationCommandForApi,
@@ -42,6 +38,8 @@ import { Collection } from "./utils/Collection";
 import { EventEmitter } from "./utils/EventEmitter";
 import { Snowflake } from "./utils/Snowflake";
 import { RequestError } from "./utils/Errors";
+import { Interaction } from "./structures/interactions/Interaction";
+import { MessageContextMenuInteraction } from "./structures/interactions/MessageContextMenuInteraction";
 
 export interface ClientOptions {
   /**
@@ -99,7 +97,12 @@ export declare interface Client extends EventEmitter {
    */
   on(
     event: CLIENT_EVENTS.INTERACTION_CREATE | "interactionCreate",
-    listener: (interaction: CommandInteraction) => void | Promise<void>
+    listener: (
+      interaction:
+        | Interaction
+        | MessageContextMenuInteraction
+        | CommandInteraction
+    ) => void | Promise<void>
   ): this;
   /**
    * emitted when there is an error
@@ -165,7 +168,6 @@ export class Client extends EventEmitter {
    */
   public options: ClientOptions;
   /**
-   * @param token the token of the bot
    * @param options options of the bot
    */
   constructor(options: ClientOptions = {}) {
