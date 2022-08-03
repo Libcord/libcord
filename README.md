@@ -8,6 +8,6 @@
 
 <br>Libcord is a library written in typescript to interact with the Discord API <br><br>
 
-This package is in developement.
+This package is in development.
 
 </div>
