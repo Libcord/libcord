@@ -58,4 +58,9 @@ export const USER_AVATAR = (
   format: imageFormats,
   size: imageSize
 ) => `${IMAGE_BASE_URL}/avatars/${user}/${hash}.${format}?size${size}`;
+
+//webhooks
+
+export const EXECUTE_WEBHOOK = (Id: string, token: string) =>
+  `/webhooks/${Id}/${token}`;
 // @formatter:on
