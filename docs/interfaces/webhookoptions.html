@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ChannelEditOptions | libcord</title>
+	<title>WebhookOptions | libcord</title>
 	<meta name="description" content="Documentation for libcord">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">libcord</a>
 				</li>
 				<li>
-					<a href="channeleditoptions.html">ChannelEditOptions</a>
+					<a href="webhookoptions.html">WebhookOptions</a>
 				</li>
 			</ul>
-			<h1>Interface ChannelEditOptions</h1>
+			<h1>Interface WebhookOptions</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ChannelEditOptions</span>
+						<span class="target">WebhookOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -80,12 +80,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="channeleditoptions.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="channeleditoptions.html#nsfw" class="tsd-kind-icon">nsfw</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="channeleditoptions.html#parent" class="tsd-kind-icon">parent</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="channeleditoptions.html#rate_limit_per_user" class="tsd-kind-icon">rate_<wbr>limit_<wbr>per_<wbr>user</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="channeleditoptions.html#topic" class="tsd-kind-icon">topic</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="channeleditoptions.html#user_limit" class="tsd-kind-icon">user_<wbr>limit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="webhookoptions.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="webhookoptions.html#token" class="tsd-kind-icon">token</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,62 +90,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="name" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/2e8c7b5/src/Constants.ts#L229">src/Constants.ts:229</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/2e8c7b5/src/structures/Webhook.ts#L12">src/structures/Webhook.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="nsfw" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> nsfw</h3>
-					<div class="tsd-signature tsd-kind-icon">nsfw<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="token" class="tsd-anchor"></a>
+					<h3>token</h3>
+					<div class="tsd-signature tsd-kind-icon">token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/2e8c7b5/src/Constants.ts#L232">src/Constants.ts:232</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="parent" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> parent</h3>
-					<div class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/2e8c7b5/src/Constants.ts#L231">src/Constants.ts:231</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="rate_limit_per_user" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> rate_<wbr>limit_<wbr>per_<wbr>user</h3>
-					<div class="tsd-signature tsd-kind-icon">rate_<wbr>limit_<wbr>per_<wbr>user<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/2e8c7b5/src/Constants.ts#L233">src/Constants.ts:233</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="topic" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> topic</h3>
-					<div class="tsd-signature tsd-kind-icon">topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/2e8c7b5/src/Constants.ts#L230">src/Constants.ts:230</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="user_limit" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> user_<wbr>limit</h3>
-					<div class="tsd-signature tsd-kind-icon">user_<wbr>limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/tovade/libcord/blob/2e8c7b5/src/Constants.ts#L234">src/Constants.ts:234</a></li>
+							<li>Defined in <a href="https://github.com/tovade/libcord/blob/2e8c7b5/src/structures/Webhook.ts#L13">src/structures/Webhook.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -168,25 +124,13 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="channeleditoptions.html" class="tsd-kind-icon">Channel<wbr>Edit<wbr>Options</a>
+						<a href="webhookoptions.html" class="tsd-kind-icon">Webhook<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="channeleditoptions.html#name" class="tsd-kind-icon">name</a>
+								<a href="webhookoptions.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="channeleditoptions.html#nsfw" class="tsd-kind-icon">nsfw</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="channeleditoptions.html#parent" class="tsd-kind-icon">parent</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="channeleditoptions.html#rate_limit_per_user" class="tsd-kind-icon">rate_<wbr>limit_<wbr>per_<wbr>user</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="channeleditoptions.html#topic" class="tsd-kind-icon">topic</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="channeleditoptions.html#user_limit" class="tsd-kind-icon">user_<wbr>limit</a>
+								<a href="webhookoptions.html#token" class="tsd-kind-icon">token</a>
 							</li>
 						</ul>
 					</li>

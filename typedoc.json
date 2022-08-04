@@ -9,6 +9,7 @@
     "typedoc-plugin-as-member-of",
     "typedoc-plugin-cname"
   ],
+  "cname": "libcord.js.org",
   "categorizeByGroup": true,
   "defaultCategory": "Other",
   "tsconfig": "tsconfig.json"
