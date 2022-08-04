@@ -9,11 +9,14 @@ import { Channel } from "../channels/Channel";
 import { Guild } from "../Guild";
 import { Member } from "../Member";
 import { User } from "../User";
-import { RESPOND_INTERACTION } from "../../rest/EndPoints";
-import { MessageInteractionOptions } from "../Message";
+import { MESSAGES, RESPOND_INTERACTION } from "../../rest/EndPoints";
+import { Message, MessageInteractionOptions } from "../Message";
 import { Embed } from "../Embed";
 import { ApplicationCommandOptionsTypes } from "../ApplicationCommand";
 import { Interaction } from "./Interaction";
+import * as FormData from "form-data";
+import { FileUtils } from "../../utils/FileUtils";
+import { ComponentsType } from "../components/ActionRow";
 
 /**
  * @category Structures
@@ -74,33 +77,77 @@ export class CommandInteraction extends Interaction {
       this.client.token
     );
   }
-  async reply(content: MessageInteractionOptions | string) {
+  async reply(interactionOptions: MessageInteractionOptions | string) {
     if (this.replied) throw new Error("[INTERACTIONS]: Already replied.");
     const payload = {
       content: "" as any,
       embeds: [] as any,
+      attachments: [] as any,
+      components: [] as any,
     };
-    if (content instanceof Embed) {
-      payload.embeds.push(content.getJSON());
+    if (interactionOptions instanceof Embed) {
+      payload.embeds.push(interactionOptions.getJSON());
     }
-    if (typeof content === "string") {
-      payload.content = content;
+    if (typeof interactionOptions === "string") {
+      payload.content = interactionOptions;
     }
-    if (typeof content === "object") {
-      if (content?.content === "string") {
-        payload.content = content?.content;
+    if (typeof interactionOptions === "object") {
+      if (typeof interactionOptions?.content === "string") {
+        payload.content = interactionOptions?.content;
       }
-      if (content.content instanceof Embed) {
-        payload.embeds.push(content.content.getJSON());
+      if (interactionOptions.content instanceof Embed) {
+        payload.embeds.push(interactionOptions.content.getJSON());
       }
-      if (content.embeds) {
-        content.embeds.forEach((em) => {
+      if (interactionOptions.embeds) {
+        interactionOptions.embeds.forEach((em) => {
           if (em instanceof Embed) {
             payload.embeds.push((em as Embed).getJSON());
           } else {
             payload.embeds.push(em);
           }
         });
+      }
+      if (interactionOptions.components?.length! > 0) {
+        interactionOptions.components?.forEach((comp: ComponentsType) => {
+          payload.components.push(comp);
+        });
+      }
+      if (interactionOptions.files) {
+        let temp = new FormData();
+        const { files } = await FileUtils.resolveFiles(
+          interactionOptions.files,
+          payload
+        );
+        const attachment = files.map((file: any, i: any) => {
+          const filee = interactionOptions.files?.[i];
+          for (const file of files) {
+            temp.append(`files[${i}]`, file.file, {
+              filename: file.name,
+              contentType: file.contentType,
+            });
+          }
+          return {
+            id: i.toString(),
+            description: filee?.description,
+            filename: file.name,
+          };
+        });
+        if (Array.isArray(attachment)) {
+          payload.attachments.push(...(attachment ?? []));
+        } else {
+          payload.attachments = attachment;
+        }
+        const JSONPayload = JSON.stringify({ type: 4, data: payload });
+        temp.append("payload_json", JSONPayload, {
+          contentType: "application/json",
+        });
+        const res: any = await this.client.requestHandler.request(
+          "POST",
+          RESPOND_INTERACTION(this.id, this.token),
+          temp,
+          this.client.token
+        );
+        return this;
       }
     }
     await this.client.requestHandler.request(
@@ -109,5 +156,6 @@ export class CommandInteraction extends Interaction {
       JSON.stringify({ type: 4, data: payload }),
       this.client.token
     );
+    return this;
   }
 }

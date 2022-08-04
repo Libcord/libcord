@@ -1,26 +1,18 @@
 import axios from "axios";
-import { Client } from "../Client";
 import { RequestError } from "../utils/Errors";
 import { BASE_URL } from "./EndPoints";
 import { version } from "../../package.json";
+
+import * as FormData from "form-data";
 export type Method =
-  | "get"
   | "GET"
-  | "delete"
   | "DELETE"
-  | "head"
   | "HEAD"
-  | "options"
   | "OPTIONS"
-  | "post"
   | "POST"
-  | "put"
   | "PUT"
-  | "patch"
   | "PATCH"
-  | "purge"
   | "PURGE"
-  | "link"
   | "LINK"
   | "unlink"
   | "UNLINK";
@@ -38,7 +30,7 @@ export class RestManager {
   private token: string;
 
   constructor() {
-    this.agent = `DiscordBot (https://github.com/MrPrivacyCoder, ${version})`;
+    this.agent = `DiscordBot (https://github.com/Libcord, ${version})`;
     this.token = "";
   }
   setToken(token: string): boolean {
@@ -53,12 +45,29 @@ export class RestManager {
   ): Promise<any> {
     return new Promise(async (resolve, reject) => {
       try {
-        if (data) {
+        if (data instanceof FormData || data?.data instanceof FormData) {
+          const userHeaders = {
+            "User-Agent": this.agent,
+            Authorization: `Bot ${this.token}`,
+          };
           const response = await axios({
             method: method,
             baseURL: BASE_URL,
             url: url,
-            data: await data,
+            data: data,
+            headers:
+              data instanceof FormData
+                ? data.getHeaders(userHeaders)
+                : data.data.getHeaders(userHeaders),
+            timeout: 10000,
+          });
+          if (response) return resolve({ ...response.data });
+        } else if (data) {
+          const response = await axios({
+            method: method,
+            baseURL: BASE_URL,
+            url: url,
+            data,
             headers: {
               Authorization: `Bot ${this.token}`,
               "Content-Type": "application/json",
@@ -89,7 +98,7 @@ export class RestManager {
             url,
             await data,
             e.response.status,
-            e.response.statusText
+            e.response.data.message
           )
         );
       }

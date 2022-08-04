@@ -7,6 +7,9 @@ import { CustomMessageData } from "../gateway/actions/MESSAGE_CREATE";
 import { ComponentsType, Member } from "..";
 import { Embed } from "./Embed";
 import { MESSAGES } from "../rest/EndPoints";
+import { Stream } from "stream";
+import * as FormData from "form-data";
+import { FileUtils } from "../utils/FileUtils";
 
 /**
  * @category Structures
@@ -90,6 +93,7 @@ export class Message extends Base {
       message_reference: {
         message_id: this.id,
       },
+      attachments: [] as any,
     };
     if (msg instanceof Embed) {
       payload.embeds.push(msg.getJSON());
@@ -118,6 +122,37 @@ export class Message extends Base {
           payload.components.push(comp);
         });
       }
+      if (msg.files) {
+        let temp = new FormData();
+        const { files } = await FileUtils.resolveFiles(msg.files, payload);
+        const attachment = files.map((file: any, i: any) => {
+          const filee = msg.files?.[i];
+          for (const file of files) {
+            temp.append(`files[${i}]`, file.file, file.name);
+          }
+          return {
+            id: i.toString(),
+            description: filee?.description,
+            filename: file.name,
+          };
+        });
+        if (Array.isArray(attachment)) {
+          payload.attachments.push(...(attachment ?? []));
+        } else {
+          payload.attachments = attachment;
+        }
+        const JSONPayload = JSON.stringify(payload);
+        temp.append("payload_json", JSONPayload);
+
+        const res: any = await this.client.requestHandler.request(
+          "POST",
+          MESSAGES(this.channelID),
+          temp,
+          this.client.token
+        );
+        const data = { channel: this, ...res };
+        return new Message(this.client, data);
+      }
     }
     const res: any = await this.client.requestHandler.request(
       "POST",
@@ -129,9 +164,15 @@ export class Message extends Base {
     return new Message(this.client, data);
   }
 }
+export interface FileOption {
+  name?: string;
+  description?: string;
+  file?: Buffer | string | Stream;
+}
 
 export interface MessageInteractionOptions {
   content?: string | Embed;
   embeds?: Array<Embed> | Array<any>;
   components?: Array<ComponentsType>;
+  files?: FileOption[];
 }

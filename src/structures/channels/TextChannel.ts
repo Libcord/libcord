@@ -1,5 +1,5 @@
 import { APIChannel, APITextChannel } from "discord-api-types/v9";
-import { Collection } from "../..";
+import { Collection, ComponentsType } from "../..";
 import { Client } from "../../Client";
 import { Snowflake } from "../../utils/Snowflake";
 import { ChannelTypes } from "../../Constants";
@@ -8,6 +8,8 @@ import { Message, MessageInteractionOptions } from "../Message";
 import { Embed } from "../Embed";
 
 import { MESSAGES } from "../../rest/EndPoints";
+import { FileUtils } from "../../utils/FileUtils";
+import * as FormData from "form-data";
 
 export class TextChannel extends GuildChannel {
   // @ts-ignore
@@ -40,10 +42,11 @@ export class TextChannel extends GuildChannel {
   public async send(
     msg: MessageInteractionOptions | string
   ): Promise<Message | undefined> {
-    const payload = {
+    let payload = {
       content: "" as any,
       embeds: [] as any,
       components: [] as any,
+      attachments: [] as any,
     };
     if (msg instanceof Embed) {
       payload.embeds.push(msg.getJSON());
@@ -67,11 +70,47 @@ export class TextChannel extends GuildChannel {
           }
         });
       }
+      if (msg.components?.length! > 0) {
+        msg.components?.forEach((comp: ComponentsType) => {
+          payload.components.push(comp);
+        });
+      }
+      if (msg.files) {
+        let temp = new FormData();
+        const { files } = await FileUtils.resolveFiles(msg.files, payload);
+        const attachment = files.map((file: any, i: any) => {
+          const filee = msg.files?.[i];
+          for (const file of files) {
+            temp.append(`files[${i}]`, file.file, file.name);
+          }
+          return {
+            id: i.toString(),
+            description: filee?.description,
+            filename: file.name,
+          };
+        });
+        if (Array.isArray(attachment)) {
+          payload.attachments.push(...(attachment ?? []));
+        } else {
+          payload.attachments = attachment;
+        }
+        const JSONPayload = JSON.stringify(payload);
+        temp.append("payload_json", JSONPayload);
+
+        const res: any = await this.client.requestHandler.request(
+          "POST",
+          MESSAGES(this.id),
+          temp,
+          this.client.token
+        );
+        const data = { channel: this, ...res };
+        return new Message(this.client, data);
+      }
     }
     const res: any = await this.client.requestHandler.request(
       "POST",
       MESSAGES(this.id),
-      JSON.stringify(payload),
+      payload,
       this.client.token
     );
     const data = { channel: this, ...res };

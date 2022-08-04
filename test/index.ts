@@ -1,4 +1,4 @@
-import { ActionRow, SelectMenu, Client } from "../src";
+import { ActionRow, Button, Client } from "../src";
 import { token } from "./config.json";
 const client = new Client();
 
@@ -7,25 +7,35 @@ client.on("ready", async () => {
   console.log(client.user?.username);
 });
 client.on("interactionCreate", async (interaction) => {
-  if (interaction.isButton()) {
-    interaction.reply(`Button ID: ${interaction.customId}`);
-  } else if (interaction.isSelectMenu()) {
-    interaction.reply(`Select values: ${interaction.values}`);
+  if (interaction.isCommand()) {
+    const btn = new Button()
+      .setCustomId("Hehe")
+      .setStyle("PRIMARY")
+      .setLabel("Hai");
+    const row = new ActionRow().addComponent(btn);
+    interaction.reply({
+      content: "funny",
+      components: [row],
+      files: [
+        {
+          description: "Hehe",
+          file: "https://github.com/FireDiscordBot.png",
+        },
+      ],
+    });
   }
 });
 client.on("messageCreate", async (message) => {
   if (message.author?.bot) return;
   if (message.content === "test") {
-    const row = new ActionRow();
-    const select = new SelectMenu()
-      .setCustomID("Select_boi")
-      .addOption({
-        label: "Hehe",
-        value: "Hai",
-        description: "shgould test",
-      })
-      .setPlaceholder("Hehe");
-    row.addComponent(select);
-    message.reply({ content: "test", components: [row] });
+    message.reply({
+      content: "test",
+      files: [
+        {
+          description: "Hehe",
+          file: "https://github.com/FireDiscordBot.png",
+        },
+      ],
+    });
   }
 });
