@@ -1,0 +1,14 @@
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "outDir": "./lib",
+    "typeRoots": ["src/typing", "node_modules/@types"],
+    "experimentalDecorators": true,
+    "resolveJsonModule": true
+  }
+}

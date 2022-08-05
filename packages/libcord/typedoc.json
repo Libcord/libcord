@@ -1,0 +1,12 @@
+{
+  "entryPoints": [
+    "src/index.ts"
+  ],
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeInternal": true,
+  "theme": "markdown",
+  "categorizeByGroup": true,
+  "defaultCategory": "Other",
+  "tsconfig": "tsconfig.json"
+}
