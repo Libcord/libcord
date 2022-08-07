@@ -11,8 +11,7 @@
     "test": "ts-node ./test/index.ts",
     "build": "tsc",
     "docs": "typedoc --tsconfig typedoc.json",
-    "deno": "node scripts/deno",
-    "publish": "tsc && npm publish"
+    "deno": "node scripts/deno"
   },
   "author": "tovade",
   "license": "GPL-3.0",
