@@ -16,7 +16,7 @@ The activity's name
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:182
+[packages/libcord/src/structures/User.ts:185](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L185)
 
 ___
 
@@ -36,7 +36,7 @@ https://discord.com/developers/docs/topics/gateway#activity-object-activity-type
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:189
+[packages/libcord/src/structures/User.ts:192](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L192)
 
 ___
 
@@ -48,4 +48,4 @@ Stream url (only with type Streaming)
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:193
+[packages/libcord/src/structures/User.ts:196](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L196)

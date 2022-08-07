@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-packages/libcord/src/structures/Message.ts:169
+[packages/libcord/src/structures/Message.ts:167](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Message.ts#L167)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/Message.ts:170
+[packages/libcord/src/structures/Message.ts:168](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Message.ts#L168)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/Message.ts:168
+[packages/libcord/src/structures/Message.ts:166](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Message.ts#L166)

@@ -20,7 +20,7 @@ custom_edit_url: null
 
 #### Defined in
 
-packages/libcord/src/structures/components/ActionRow.ts:12
+[packages/libcord/src/structures/components/ActionRow.ts:12](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/components/ActionRow.ts#L12)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/components/ActionRow.ts:11
+[packages/libcord/src/structures/components/ActionRow.ts:11](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/components/ActionRow.ts#L11)
 
 ## Methods
 
@@ -50,4 +50,4 @@ packages/libcord/src/structures/components/ActionRow.ts:11
 
 #### Defined in
 
-packages/libcord/src/structures/components/ActionRow.ts:14
+[packages/libcord/src/structures/components/ActionRow.ts:14](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/components/ActionRow.ts#L14)

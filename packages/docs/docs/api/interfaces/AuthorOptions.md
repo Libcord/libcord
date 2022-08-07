@@ -16,7 +16,7 @@ Author name
 
 #### Defined in
 
-packages/libcord/src/Constants.ts:173
+[packages/libcord/src/Constants.ts:175](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L175)
 
 ___
 
@@ -28,4 +28,4 @@ Author URL
 
 #### Defined in
 
-packages/libcord/src/Constants.ts:178
+[packages/libcord/src/Constants.ts:180](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L180)

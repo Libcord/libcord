@@ -91,7 +91,7 @@ custom_edit_url: null
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:143
+[packages/libcord/src/structures/User.ts:146](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L146)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/ApplicationCommand.ts:112
+[packages/libcord/src/structures/ApplicationCommand.ts:112](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/ApplicationCommand.ts#L112)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Utils.ts:23
+[packages/libcord/src/utils/Utils.ts:23](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Utils.ts#L23)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/components/ActionRow.ts:4
+[packages/libcord/src/structures/components/ActionRow.ts:4](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/components/ActionRow.ts#L4)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Permissions.ts:148
+[packages/libcord/src/utils/Permissions.ts:148](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Permissions.ts#L148)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:168
+[packages/libcord/src/structures/User.ts:171](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L171)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Color.ts:1
+[packages/libcord/src/utils/Color.ts:1](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Color.ts#L1)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Snowflake.ts:1
+[packages/libcord/src/utils/Snowflake.ts:1](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Snowflake.ts#L1)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Utils.ts:3
+[packages/libcord/src/utils/Utils.ts:3](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Utils.ts#L3)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Utils.ts:4
+[packages/libcord/src/utils/Utils.ts:4](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Utils.ts#L4)
 
 ## Variables
 
@@ -191,7 +191,7 @@ packages/libcord/src/utils/Utils.ts:4
 
 #### Defined in
 
-packages/libcord/src/Constants.ts:167
+[packages/libcord/src/Constants.ts:169](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L169)
 
 ## Functions
 
@@ -211,7 +211,7 @@ packages/libcord/src/Constants.ts:167
 
 #### Defined in
 
-packages/libcord/src/utils/Utils.ts:44
+[packages/libcord/src/utils/Utils.ts:44](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Utils.ts#L44)
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Permissions.ts:157
+[packages/libcord/src/utils/Permissions.ts:157](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Permissions.ts#L157)
 
 ___
 
@@ -252,7 +252,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Permissions.ts:173
+[packages/libcord/src/utils/Permissions.ts:173](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Permissions.ts#L173)
 
 ___
 
@@ -272,7 +272,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Snowflake.ts:3
+[packages/libcord/src/utils/Snowflake.ts:3](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Snowflake.ts#L3)
 
 ___
 
@@ -293,7 +293,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Permissions.ts:150
+[packages/libcord/src/utils/Permissions.ts:150](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Permissions.ts#L150)
 
 ___
 
@@ -313,7 +313,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Utils.ts:32
+[packages/libcord/src/utils/Utils.ts:32](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Utils.ts#L32)
 
 ___
 
@@ -334,7 +334,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Permissions.ts:164
+[packages/libcord/src/utils/Permissions.ts:164](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Permissions.ts#L164)
 
 ___
 
@@ -354,7 +354,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/ApplicationCommand.ts:219
+[packages/libcord/src/structures/ApplicationCommand.ts:219](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/ApplicationCommand.ts#L219)
 
 ___
 
@@ -374,7 +374,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Utils.ts:69
+[packages/libcord/src/utils/Utils.ts:69](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Utils.ts#L69)
 
 ___
 
@@ -394,7 +394,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/Client.ts:764
+[packages/libcord/src/Client.ts:819](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L819)
 
 ## Events
 
@@ -415,7 +415,7 @@ Client
 
 #### Defined in
 
-packages/libcord/src/Client.ts:754
+[packages/libcord/src/Client.ts:809](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L809)
 
 ___
 
@@ -442,7 +442,7 @@ Client
 
 #### Defined in
 
-packages/libcord/src/Client.ts:762
+[packages/libcord/src/Client.ts:817](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L817)
 
 ___
 
@@ -469,7 +469,7 @@ Client
 
 #### Defined in
 
-packages/libcord/src/Client.ts:747
+[packages/libcord/src/Client.ts:802](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L802)
 
 ___
 
@@ -490,4 +490,4 @@ Client
 
 #### Defined in
 
-packages/libcord/src/Client.ts:739
+[packages/libcord/src/Client.ts:794](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L794)

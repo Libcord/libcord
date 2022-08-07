@@ -30,7 +30,7 @@ custom_edit_url: null
 
 #### Defined in
 
-packages/libcord/src/utils/Color.ts:17
+[packages/libcord/src/utils/Color.ts:17](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Color.ts#L17)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Color.ts:4
+[packages/libcord/src/utils/Color.ts:4](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Color.ts#L4)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Color.ts:13
+[packages/libcord/src/utils/Color.ts:13](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Color.ts#L13)
 
 ___
 
@@ -90,4 +90,4 @@ ___
 
 #### Defined in
 
-packages/libcord/src/utils/Color.ts:8
+[packages/libcord/src/utils/Color.ts:8](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Color.ts#L8)

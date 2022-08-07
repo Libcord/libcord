@@ -33,7 +33,7 @@ custom_edit_url: null
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:63
+[packages/libcord/src/structures/User.ts:62](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L62)
 
 ## Properties
 
@@ -45,7 +45,7 @@ hash of user avatar
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:21
+[packages/libcord/src/structures/User.ts:20](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L20)
 
 ___
 
@@ -57,7 +57,7 @@ if the user is a bot
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:41
+[packages/libcord/src/structures/User.ts:40](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L40)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/Base.ts:8
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -83,7 +83,7 @@ the date of the user account was created in timestamp
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:51
+[packages/libcord/src/structures/User.ts:50](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L50)
 
 ___
 
@@ -95,7 +95,7 @@ discriminator of the user
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:31
+[packages/libcord/src/structures/User.ts:30](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L30)
 
 ___
 
@@ -107,7 +107,7 @@ the id of the user
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:16
+[packages/libcord/src/structures/User.ts:15](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L15)
 
 ___
 
@@ -119,7 +119,7 @@ user public's flags
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:56
+[packages/libcord/src/structures/User.ts:55](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L55)
 
 ___
 
@@ -131,7 +131,7 @@ if the user are a official discord system user
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:46
+[packages/libcord/src/structures/User.ts:45](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L45)
 
 ___
 
@@ -143,7 +143,7 @@ tag of the user (username#descriminator)
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:36
+[packages/libcord/src/structures/User.ts:35](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L35)
 
 ___
 
@@ -155,7 +155,7 @@ username of the user
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:26
+[packages/libcord/src/structures/User.ts:25](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L25)
 
 ## Methods
 
@@ -177,7 +177,7 @@ get avatar URL
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:84
+[packages/libcord/src/structures/User.ts:83](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L83)
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:98
+[packages/libcord/src/structures/User.ts:97](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L97)
 
 ___
 
@@ -211,4 +211,4 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:94
+[packages/libcord/src/structures/User.ts:93](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L93)

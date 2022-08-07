@@ -16,7 +16,7 @@ list of intents to disable [list-of-intents](https://discord.com/developers/docs
 
 #### Defined in
 
-packages/libcord/src/Client.ts:56
+[packages/libcord/src/Client.ts:58](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L58)
 
 ___
 
@@ -28,7 +28,7 @@ list of events that the client don't must emit
 
 #### Defined in
 
-packages/libcord/src/Client.ts:52
+[packages/libcord/src/Client.ts:54](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L54)
 
 ___
 
@@ -44,7 +44,7 @@ false
 
 #### Defined in
 
-packages/libcord/src/Client.ts:62
+[packages/libcord/src/Client.ts:64](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L64)
 
 ___
 
@@ -60,7 +60,7 @@ true
 
 #### Defined in
 
-packages/libcord/src/Client.ts:68
+[packages/libcord/src/Client.ts:70](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L70)
 
 ___
 
@@ -72,7 +72,7 @@ a object of presence
 
 #### Defined in
 
-packages/libcord/src/Client.ts:48
+[packages/libcord/src/Client.ts:50](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L50)
 
 ___
 
@@ -88,7 +88,7 @@ true
 
 #### Defined in
 
-packages/libcord/src/Client.ts:73
+[packages/libcord/src/Client.ts:75](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L75)
 
 ___
 
@@ -100,4 +100,4 @@ The token for the bot is required
 
 #### Defined in
 
-packages/libcord/src/Client.ts:78
+[packages/libcord/src/Client.ts:80](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L80)

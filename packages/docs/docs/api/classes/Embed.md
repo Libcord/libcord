@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:58
+[packages/libcord/src/structures/Embed.ts:58](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L58)
 
 ## Properties
 
@@ -26,7 +26,7 @@ The author
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:51
+[packages/libcord/src/structures/Embed.ts:51](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L51)
 
 ___
 
@@ -38,7 +38,7 @@ The color
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:31
+[packages/libcord/src/structures/Embed.ts:31](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L31)
 
 ___
 
@@ -50,7 +50,7 @@ The description
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:16
+[packages/libcord/src/structures/Embed.ts:16](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L16)
 
 ___
 
@@ -62,7 +62,7 @@ Embed fields
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:56
+[packages/libcord/src/structures/Embed.ts:56](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L56)
 
 ___
 
@@ -74,7 +74,7 @@ The footer
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:36
+[packages/libcord/src/structures/Embed.ts:36](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L36)
 
 ___
 
@@ -86,7 +86,7 @@ The image
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:41
+[packages/libcord/src/structures/Embed.ts:41](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L41)
 
 ___
 
@@ -98,7 +98,7 @@ The thumbnail
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:46
+[packages/libcord/src/structures/Embed.ts:46](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L46)
 
 ___
 
@@ -110,7 +110,7 @@ The timestamp
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:26
+[packages/libcord/src/structures/Embed.ts:26](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L26)
 
 ___
 
@@ -122,7 +122,7 @@ The title
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:11
+[packages/libcord/src/structures/Embed.ts:11](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L11)
 
 ___
 
@@ -134,7 +134,7 @@ The URL
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:21
+[packages/libcord/src/structures/Embed.ts:21](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L21)
 
 ## Methods
 
@@ -158,7 +158,7 @@ The embed
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:180
+[packages/libcord/src/structures/Embed.ts:180](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L180)
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:232
+[packages/libcord/src/structures/Embed.ts:232](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L232)
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:237
+[packages/libcord/src/structures/Embed.ts:237](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L237)
 
 ___
 
@@ -214,7 +214,7 @@ The embed
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:75
+[packages/libcord/src/structures/Embed.ts:75](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L75)
 
 ___
 
@@ -236,7 +236,7 @@ The embed
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:156
+[packages/libcord/src/structures/Embed.ts:156](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L156)
 
 ___
 
@@ -258,7 +258,7 @@ The embed
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:167
+[packages/libcord/src/structures/Embed.ts:167](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L167)
 
 ___
 
@@ -280,7 +280,7 @@ The embed
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:201
+[packages/libcord/src/structures/Embed.ts:201](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L201)
 
 ___
 
@@ -302,7 +302,7 @@ The embed
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:144
+[packages/libcord/src/structures/Embed.ts:144](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L144)
 
 ___
 
@@ -324,7 +324,7 @@ The embed
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:116
+[packages/libcord/src/structures/Embed.ts:116](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L116)
 
 ___
 
@@ -346,7 +346,7 @@ The embed
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:131
+[packages/libcord/src/structures/Embed.ts:131](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L131)
 
 ___
 
@@ -368,7 +368,7 @@ The embed
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:94
+[packages/libcord/src/structures/Embed.ts:94](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L94)
 
 ___
 
@@ -390,7 +390,7 @@ The embed
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:105
+[packages/libcord/src/structures/Embed.ts:105](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L105)
 
 ___
 
@@ -410,4 +410,4 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/Embed.ts:220
+[packages/libcord/src/structures/Embed.ts:220](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Embed.ts#L220)

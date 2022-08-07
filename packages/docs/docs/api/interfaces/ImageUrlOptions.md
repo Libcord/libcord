@@ -20,7 +20,7 @@ false
 
 #### Defined in
 
-packages/libcord/src/utils/Utils.ts:21
+[packages/libcord/src/utils/Utils.ts:21](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Utils.ts#L21)
 
 ___
 
@@ -36,7 +36,7 @@ jpg
 
 #### Defined in
 
-packages/libcord/src/utils/Utils.ts:11
+[packages/libcord/src/utils/Utils.ts:11](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Utils.ts#L11)
 
 ___
 
@@ -52,4 +52,4 @@ the size of the image
 
 #### Defined in
 
-packages/libcord/src/utils/Utils.ts:16
+[packages/libcord/src/utils/Utils.ts:16](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Utils.ts#L16)

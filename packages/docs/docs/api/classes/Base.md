@@ -42,7 +42,7 @@ custom_edit_url: null
 
 #### Defined in
 
-packages/libcord/src/structures/Base.ts:10
+[packages/libcord/src/structures/Base.ts:10](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Base.ts#L10)
 
 ## Properties
 
@@ -52,4 +52,4 @@ packages/libcord/src/structures/Base.ts:10
 
 #### Defined in
 
-packages/libcord/src/structures/Base.ts:8
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Base.ts#L8)

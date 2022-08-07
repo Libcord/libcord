@@ -37,7 +37,7 @@ custom_edit_url: null
 
 #### Defined in
 
-packages/libcord/src/structures/channels/Thread.ts:11
+[packages/libcord/src/structures/channels/Thread.ts:29](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L29)
 
 ## Properties
 
@@ -47,7 +47,17 @@ packages/libcord/src/structures/channels/Thread.ts:11
 
 #### Defined in
 
-packages/libcord/src/structures/channels/Thread.ts:8
+[packages/libcord/src/structures/channels/Thread.ts:17](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L17)
+
+___
+
+### channel
+
+• `Readonly` **channel**: `undefined` \| `Promise`<`undefined` \| [`TextChannel`](TextChannel.md) \| [`NewsChannel`](NewsChannel.md)\>
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:25](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L25)
 
 ___
 
@@ -61,7 +71,17 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/Base.ts:8
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Base.ts#L8)
+
+___
+
+### data
+
+• `Readonly` **data**: `APIThreadChannel`
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:28](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L28)
 
 ___
 
@@ -71,7 +91,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/channels/Thread.ts:7
+[packages/libcord/src/structures/channels/Thread.ts:16](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L16)
 
 ___
 
@@ -81,4 +101,84 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/channels/Thread.ts:9
+[packages/libcord/src/structures/channels/Thread.ts:18](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L18)
+
+___
+
+### member\_count
+
+• `Readonly` **member\_count**: `undefined` \| `number`
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:24](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L24)
+
+___
+
+### rate\_limit
+
+• `Readonly` **rate\_limit**: `undefined` \| `number`
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:23](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L23)
+
+___
+
+### type
+
+• `Readonly` **type**: `GuildNewsThread` \| `GuildPublicThread` \| `GuildPrivateThread`
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:19](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L19)
+
+## Methods
+
+### delete
+
+▸ **delete**(): `Promise`<`default`\>
+
+#### Returns
+
+`Promise`<`default`\>
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:43](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L43)
+
+___
+
+### send
+
+▸ **send**(`content`): `Promise`<[`Message`](Message.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `content` | `string` \| [`Embed`](Embed.md) \| [`MessageInteractionOptions`](../interfaces/MessageInteractionOptions.md) |
+
+#### Returns
+
+`Promise`<[`Message`](Message.md)\>
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:46](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L46)
+
+▸ **send**(`msg`): `Promise`<[`Message`](Message.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `msg` | `string` \| [`Embed`](Embed.md) \| [`MessageInteractionOptions`](../interfaces/MessageInteractionOptions.md) |
+
+#### Returns
+
+`Promise`<[`Message`](Message.md)\>
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:49](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L49)

@@ -16,4 +16,4 @@ Image URL
 
 #### Defined in
 
-packages/libcord/src/Constants.ts:192
+[packages/libcord/src/Constants.ts:194](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L194)

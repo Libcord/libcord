@@ -22,7 +22,7 @@ choices of the command option,You can specify a maximum of 25 choices per option
 
 #### Defined in
 
-packages/libcord/src/structures/ApplicationCommand.ts:78
+[packages/libcord/src/structures/ApplicationCommand.ts:78](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/ApplicationCommand.ts#L78)
 
 ___
 
@@ -34,7 +34,7 @@ description of the command option (1 to 100 characters)
 
 #### Defined in
 
-packages/libcord/src/structures/ApplicationCommand.ts:68
+[packages/libcord/src/structures/ApplicationCommand.ts:68](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/ApplicationCommand.ts#L68)
 
 ___
 
@@ -46,7 +46,7 @@ name of the command option (1 to 32 characters that match `^[\w-]{1,32}$`)
 
 #### Defined in
 
-packages/libcord/src/structures/ApplicationCommand.ts:64
+[packages/libcord/src/structures/ApplicationCommand.ts:64](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/ApplicationCommand.ts#L64)
 
 ___
 
@@ -62,7 +62,7 @@ false
 
 #### Defined in
 
-packages/libcord/src/structures/ApplicationCommand.ts:73
+[packages/libcord/src/structures/ApplicationCommand.ts:73](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/ApplicationCommand.ts#L73)
 
 ___
 
@@ -74,4 +74,4 @@ the type of the command option
 
 #### Defined in
 
-packages/libcord/src/structures/ApplicationCommand.ts:60
+[packages/libcord/src/structures/ApplicationCommand.ts:60](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/ApplicationCommand.ts#L60)

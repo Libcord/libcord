@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-packages/libcord/src/structures/Webhook.ts:18
+[packages/libcord/src/structures/Webhook.ts:18](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Webhook.ts#L18)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/Webhook.ts:16
+[packages/libcord/src/structures/Webhook.ts:16](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Webhook.ts#L16)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/Webhook.ts:17
+[packages/libcord/src/structures/Webhook.ts:17](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Webhook.ts#L17)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/Webhook.ts:19
+[packages/libcord/src/structures/Webhook.ts:19](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Webhook.ts#L19)

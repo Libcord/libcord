@@ -18,7 +18,7 @@ Competing in {name}
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:140
+[packages/libcord/src/structures/User.ts:143](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L143)
 
 ___
 
@@ -31,7 +31,7 @@ WARNING : don't work for bots
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:136
+[packages/libcord/src/structures/User.ts:139](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L139)
 
 ___
 
@@ -43,7 +43,7 @@ Playing {game}
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:119
+[packages/libcord/src/structures/User.ts:122](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L122)
 
 ___
 
@@ -55,7 +55,7 @@ Listening to {name}
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:127
+[packages/libcord/src/structures/User.ts:130](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L130)
 
 ___
 
@@ -67,7 +67,7 @@ Streaming {details}
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:123
+[packages/libcord/src/structures/User.ts:126](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L126)
 
 ___
 
@@ -79,4 +79,4 @@ Watching {details}
 
 #### Defined in
 
-packages/libcord/src/structures/User.ts:131
+[packages/libcord/src/structures/User.ts:134](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/User.ts#L134)

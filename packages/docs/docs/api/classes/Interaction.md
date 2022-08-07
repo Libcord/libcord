@@ -33,7 +33,7 @@ custom_edit_url: null
 
 #### Defined in
 
-packages/libcord/src/structures/interactions/Interaction.ts:20
+[packages/libcord/src/structures/interactions/Interaction.ts:20](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/interactions/Interaction.ts#L20)
 
 ## Properties
 
@@ -47,7 +47,7 @@ packages/libcord/src/structures/interactions/Interaction.ts:20
 
 #### Defined in
 
-packages/libcord/src/structures/Base.ts:8
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/interactions/Interaction.ts:17
+[packages/libcord/src/structures/interactions/Interaction.ts:17](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/interactions/Interaction.ts#L17)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/interactions/Interaction.ts:18
+[packages/libcord/src/structures/interactions/Interaction.ts:18](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/interactions/Interaction.ts#L18)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-packages/libcord/src/structures/interactions/Interaction.ts:19
+[packages/libcord/src/structures/interactions/Interaction.ts:19](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/interactions/Interaction.ts#L19)
 
 ## Methods
 
@@ -91,7 +91,7 @@ this is ButtonInteraction
 
 #### Defined in
 
-packages/libcord/src/structures/interactions/Interaction.ts:38
+[packages/libcord/src/structures/interactions/Interaction.ts:38](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/interactions/Interaction.ts#L38)
 
 ___
 
@@ -105,7 +105,7 @@ this is CommandInteraction
 
 #### Defined in
 
-packages/libcord/src/structures/interactions/Interaction.ts:26
+[packages/libcord/src/structures/interactions/Interaction.ts:26](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/interactions/Interaction.ts#L26)
 
 ___
 
@@ -119,7 +119,7 @@ this is MessageContextMenuInteraction
 
 #### Defined in
 
-packages/libcord/src/structures/interactions/Interaction.ts:30
+[packages/libcord/src/structures/interactions/Interaction.ts:30](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/interactions/Interaction.ts#L30)
 
 ___
 
@@ -133,7 +133,7 @@ this is SelectMenuInteraction
 
 #### Defined in
 
-packages/libcord/src/structures/interactions/Interaction.ts:46
+[packages/libcord/src/structures/interactions/Interaction.ts:46](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/interactions/Interaction.ts#L46)
 
 ___
 
@@ -147,4 +147,4 @@ this is UserContextMenuInteraction
 
 #### Defined in
 
-packages/libcord/src/structures/interactions/Interaction.ts:34
+[packages/libcord/src/structures/interactions/Interaction.ts:34](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/interactions/Interaction.ts#L34)
