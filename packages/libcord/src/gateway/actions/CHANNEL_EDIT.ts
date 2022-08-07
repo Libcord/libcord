@@ -9,6 +9,7 @@ import { CLIENT_EVENTS } from "../../Constants";
 import {
   CategoryChannel,
   Channel,
+  GuildChannel,
   TextChannel,
   VoiceChannel,
 } from "../../structures";
@@ -19,7 +20,7 @@ export class CHANNEL_EDIT extends Action {
     const guild = this.client.guilds.get(
       (d as APIGuildChannel<any>).guild_id as string
     );
-    guild?.channels.cache.set(d.id, newChan);
+    guild?.channels.cache.set(d.id, newChan as GuildChannel);
 
     return this.emitter.emit(CLIENT_EVENTS.CHANNEL_EDIT, newChan);
   }
