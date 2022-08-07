@@ -10,6 +10,7 @@ import { Embed } from "../Embed";
 import { MESSAGES } from "../../rest/EndPoints";
 import { FileUtils } from "../../utils/FileUtils";
 import * as FormData from "form-data";
+import ThreadManager from "../../managers/ThreadManager";
 
 export class TextChannel extends GuildChannel {
   // @ts-ignore
@@ -18,6 +19,7 @@ export class TextChannel extends GuildChannel {
   public rateLimitPerUser: number | null;
   public lastMessageId: Snowflake | null;
   public messages: Collection<Snowflake, Message>;
+  public threads: ThreadManager
 
   constructor(client: Client, data: APITextChannel) {
     super(client, data);
@@ -25,6 +27,7 @@ export class TextChannel extends GuildChannel {
     this.rateLimitPerUser = data.rate_limit_per_user || null;
     this.lastMessageId = (data.last_message_id as unknown as Snowflake) || null;
     this.messages = new Collection();
+    this.threads = new ThreadManager(this.client, this)
   }
 
   update(data: APITextChannel): GuildChannel {
@@ -100,8 +103,7 @@ export class TextChannel extends GuildChannel {
         const res: any = await this.client.requestHandler.request(
           "POST",
           MESSAGES(this.id),
-          temp,
-          this.client.token
+          temp
         );
         const data = { channel: this, ...res };
         return new Message(this.client, data);
@@ -110,8 +112,7 @@ export class TextChannel extends GuildChannel {
     const res: any = await this.client.requestHandler.request(
       "POST",
       MESSAGES(this.id),
-      payload,
-      this.client.token
+      payload
     );
     const data = { channel: this, ...res };
     return new Message(this.client, data);

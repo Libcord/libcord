@@ -33,6 +33,7 @@ export const ROLE = (guildId: Snowflake, roleId: Snowflake) =>
 export const ROLES = (guildId: Snowflake) => `/guilds/${guildId}/roles`;
 export const CREATE_THREAD = (channelId: Snowflake) =>
   `/channels/${channelId}/threads`;
+export const CREATE_MESSAGE_THREAD = (channelId: Snowflake, messageId: Snowflake) => `/channels/${channelId}/messages/${messageId}/threads`
 
 export const MESSAGES = (channelId: Snowflake) =>
   `/channels/${channelId}/messages`;
@@ -40,6 +41,9 @@ export const USER_ME = "/users/@me";
 
 // Guild
 export const GUILD = (guildId: Snowflake) => `/guilds/${guildId}`;
+export const GUILD_BANS = (guildId: Snowflake) => `/guilds/${guildId}/bans`
+export const GET_GUILD_BAN = (guildId: Snowflake, userId: Snowflake) => `/guilds/${guildId}/bans/${userId}`
+export const GUILD_THREADS = (guildId: Snowflake) => `/guilds/${guildId}/threads/active`
 export const GUILD_MEMBERS = (
   guildId: Snowflake,
   limit: number,

@@ -4,6 +4,10 @@ import { PermissionOverwrite } from "../../utils/PermissionOverwrite";
 import { Snowflake } from "../../utils/Snowflake";
 import { Guild } from "../Guild";
 import { Channel } from "./Channel";
+import { ChannelEditOptions } from "../../Constants";
+import { TextChannel } from "./TextChannel";
+import { VoiceChannel } from "./VoiceChannel";
+import { CategoryChannel } from "./CategoryChannel";
 
 export class GuildChannel extends Channel {
   public name: string;
@@ -63,5 +67,12 @@ export class GuildChannel extends Channel {
       }
     }
     return this;
+  }
+  async edit(
+    options: ChannelEditOptions
+  ): Promise<
+    GuildChannel | TextChannel | VoiceChannel | CategoryChannel | undefined
+  > {
+    return this.guild.channels.cache.get(this.id)?.edit(options);
   }
 }

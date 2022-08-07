@@ -147,8 +147,7 @@ export class Message extends Base {
         const res: any = await this.client.requestHandler.request(
           "POST",
           MESSAGES(this.channelID),
-          temp,
-          this.client.token
+          temp
         );
         const data = { channel: this, ...res };
         return new Message(this.client, data);
@@ -157,8 +156,7 @@ export class Message extends Base {
     const res: any = await this.client.requestHandler.request(
       "POST",
       MESSAGES(this.channelID),
-      JSON.stringify(payload),
-      this.client.token
+      JSON.stringify(payload)
     );
     const data = { channel: this, ...res };
     return new Message(this.client, data);

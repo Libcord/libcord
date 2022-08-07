@@ -13,6 +13,7 @@ import { User } from "./User";
 import ChannelManager from "../managers/ChannelManager";
 import { ChannelTypes } from "../Constants";
 import RoleManager from "../managers/RoleManager";
+import { GuildBanManager } from "../managers/GuildBanManager";
 
 /**
  * @category Structures
@@ -27,6 +28,7 @@ export class Guild extends Base {
   public owner: User;
   public afkChannelId: Snowflake | null;
   public channels: ChannelManager;
+  public bans: GuildBanManager;
   public members = new Collection<Snowflake, Member>();
   public slashCommands = new Collection<Snowflake, ApplicationCommand>();
   public roles: RoleManager;
@@ -52,6 +54,7 @@ export class Guild extends Base {
         this.members.add(new Member(this.client, this, member));
       }
     }
+    this.bans = new GuildBanManager(client, this);
   }
 
   get afkChannel(): VoiceChannel | null {

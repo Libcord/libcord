@@ -33,8 +33,6 @@ export default class RoleManager extends Manager {
       const res = await this.client.requestHandler.request(
         "GET",
         ROLE(this.guild.id, roleId),
-        {},
-        this.client.token
       );
       return this._addCache(res);
     }
@@ -44,7 +42,6 @@ export default class RoleManager extends Manager {
       "POST",
       CREATE_ROLE(this.guild.id),
       JSON.stringify(options),
-      this.client.token
     );
     return this._addCache(res);
   }
@@ -56,8 +53,7 @@ export default class RoleManager extends Manager {
         JSON.stringify({
           id: roleId,
           position: options.position,
-        }),
-        this.client.token
+        })
       );
     }
     if (!options.name)
@@ -67,7 +63,6 @@ export default class RoleManager extends Manager {
       "PATCH",
       CREATE_ROLE(roleId),
       JSON.stringify(options),
-      this.client.token
     );
     return this._addCache(d);
   }
@@ -77,7 +72,6 @@ export default class RoleManager extends Manager {
       "DELETE",
       ROLE(this.guild.id, roleId),
       {},
-      this.client.token
     );
     return true;
   }

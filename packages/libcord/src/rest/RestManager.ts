@@ -41,15 +41,22 @@ export class RestManager {
     method: Method,
     url: string,
     data?: any,
-    token?: string
+    additionalHeaders?: any
   ): Promise<any> {
     return new Promise(async (resolve, reject) => {
       try {
         if (data instanceof FormData || data?.data instanceof FormData) {
-          const userHeaders = {
-            "User-Agent": this.agent,
-            Authorization: `Bot ${this.token}`,
-          };
+          let userHeaders = {};
+          additionalHeaders
+            ? (userHeaders = {
+                "User-Agent": this.agent,
+                Authorization: `Bot ${this.token}`,
+                ...additionalHeaders,
+              })
+            : (userHeaders = {
+                "User-Agent": this.agent,
+                Authorization: `Bot ${this.token}`,
+              });
           const response = await axios({
             method: method,
             baseURL: BASE_URL,
@@ -63,16 +70,24 @@ export class RestManager {
           });
           if (response) return resolve({ ...response.data });
         } else if (data) {
+          let userHeaders = {};
+          additionalHeaders
+            ? (userHeaders = {
+                "User-Agent": this.agent,
+                Authorization: `Bot ${this.token}`,
+                ...additionalHeaders,
+              })
+            : (userHeaders = {
+                Authorization: `Bot ${this.token}`,
+                "Content-Type": "application/json",
+                "User-Agent": this.agent,
+              });
           const response = await axios({
             method: method,
             baseURL: BASE_URL,
             url: url,
             data,
-            headers: {
-              Authorization: `Bot ${this.token}`,
-              "Content-Type": "application/json",
-              "User-Agent": this.agent,
-            },
+            headers: userHeaders,
             timeout: 10000,
           });
           if (response) return resolve(response.data);
@@ -91,6 +106,7 @@ export class RestManager {
           if (response) return resolve(response.data);
         }
       } catch (e: any) {
+        console.log(e);
         return reject(
           new RequestError(
             "API ERROR",
@@ -98,7 +114,7 @@ export class RestManager {
             url,
             await data,
             e.response.status,
-            e.response.data.message
+            e.response.data
           )
         );
       }

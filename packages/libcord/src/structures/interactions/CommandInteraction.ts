@@ -40,7 +40,7 @@ export class CommandInteraction extends Interaction {
       client.channels.get(data.channel_id as unknown as Snowflake) || null;
     this.token = data.token;
     if (data.data.options) {
-      this.options = data.data.options.map((d: any) => {
+     this.options = data.data.options.map((d: any) => {
         return {
           value: d.value,
           name: d.value,
@@ -73,8 +73,7 @@ export class CommandInteraction extends Interaction {
         data: {
           flags: ephemeral ? MessageFlags.Ephemeral : undefined,
         },
-      },
-      this.client.token
+      }
     );
   }
   async reply(interactionOptions: MessageInteractionOptions | string) {
@@ -144,8 +143,7 @@ export class CommandInteraction extends Interaction {
         const res: any = await this.client.requestHandler.request(
           "POST",
           RESPOND_INTERACTION(this.id, this.token),
-          temp,
-          this.client.token
+          temp
         );
         return this;
       }
@@ -153,8 +151,7 @@ export class CommandInteraction extends Interaction {
     await this.client.requestHandler.request(
       "POST",
       RESPOND_INTERACTION(this.id, this.token),
-      JSON.stringify({ type: 4, data: payload }),
-      this.client.token
+      JSON.stringify({ type: 4, data: payload })
     );
     return this;
   }

@@ -79,6 +79,14 @@ export interface ClientOptions {
 }
 export declare interface Client extends EventEmitter {
   /**
+   * raw packets emitted by the Gateway
+   * @event Client#raw
+   */
+  on(
+    event: CLIENT_EVENTS.RAW | "raw",
+    listener: (eventName: string, data: any) => void
+  ): this;
+  /**
    * emitted when the client is ready
    * @event Client#ready
    */
@@ -223,7 +231,7 @@ export class Client extends EventEmitter {
     if (checkCache && this.guilds.has(id)) return this.guilds.get(id)!;
 
     const g = await this.requestHandler
-      .request("GET", GUILD(id), {}, this.token)
+      .request("GET", GUILD(id), {})
       .catch((e) => {
         return e;
       });
@@ -297,14 +305,9 @@ export class Client extends EventEmitter {
   }
 
   public async createDM(userId: Snowflake): Promise<PrivateChannel> {
-    let r: APIChannel = await this.requestHandler.request(
-      "POST",
-      DM_CHANNEL,
-      {
-        recipient_id: userId,
-      },
-      this.token
-    );
+    let r: APIChannel = await this.requestHandler.request("POST", DM_CHANNEL, {
+      recipient_id: userId,
+    });
     const channel = new PrivateChannel(this, r);
 
     if (!this.channels.get(channel.id)) this.channels.set(channel.id, channel);
@@ -358,8 +361,7 @@ export class Client extends EventEmitter {
             await this.requestHandler.request(
               "POST",
               APPLICATION_GLOBAL_COMMANDS(this.user.id),
-              resolvedData,
-              this.token
+              resolvedData
             )
           );
           if (cache) this.slashCommands.set(command.id, command);
@@ -374,8 +376,7 @@ export class Client extends EventEmitter {
           await this.requestHandler.request(
             "POST",
             APPLICATION_GLOBAL_COMMANDS(this.user.id),
-            data,
-            this.token
+            data
           )
         );
         if (cache) this.slashCommands.set(command.id, command);
@@ -404,8 +405,7 @@ export class Client extends EventEmitter {
         await this.requestHandler.request(
           "GET",
           APPLICATION_GLOBAL_COMMAND(this.user.id, commandId),
-          {},
-          this.token
+          {}
         )
       );
       if (cache) this.slashCommands.set(command.id, command);
@@ -441,8 +441,7 @@ export class Client extends EventEmitter {
       const cmd = await this.requestHandler.request(
         "PATCH",
         APPLICATION_GLOBAL_COMMAND(this.user.id, commandId),
-        data,
-        this.token
+        data
       );
       const command = this.slashCommands.has(commandId)
         ? this.slashCommands.get(commandId)!.updateData(cmd)
@@ -461,9 +460,7 @@ export class Client extends EventEmitter {
       if (!this.user) return reject(new Error("client isn't connected"));
       await this.requestHandler.request(
         "DELETE",
-        APPLICATION_GLOBAL_COMMAND(this.user.id, commandId),
-        {},
-        this.token
+        APPLICATION_GLOBAL_COMMAND(this.user.id, commandId)
       );
       this.slashCommands.delete(commandId);
       resolve();
@@ -488,8 +485,7 @@ export class Client extends EventEmitter {
       for (const cmd of await this.requestHandler.request(
         "PUT",
         APPLICATION_GLOBAL_COMMANDS(this.user.id),
-        commands,
-        this.token
+        commands
       )) {
         const command = new ApplicationCommand(this, cmd);
         cmds.push(command);
@@ -516,8 +512,7 @@ export class Client extends EventEmitter {
       for (const cmd of await this.requestHandler.request(
         "GET",
         APPLICATION_GUILD_COMMANDS(this.user.id, guildID),
-        {},
-        this.token
+        {}
       )) {
         if (!this.guilds.has(cmd.guild_id)) await this.fetchGuild(cmd.guild_id);
         const command = new ApplicationCommand(this, cmd);
@@ -556,8 +551,7 @@ export class Client extends EventEmitter {
             await this.requestHandler.request(
               "POST",
               APPLICATION_GUILD_COMMANDS(this.user.id, guildId),
-              fetchedData,
-              this.token
+              fetchedData
             )
           );
           if (cache)
@@ -575,8 +569,7 @@ export class Client extends EventEmitter {
           await this.requestHandler.request(
             "POST",
             APPLICATION_GUILD_COMMANDS(this.user.id, guildId),
-            fetchedData,
-            this.token
+            fetchedData
           )
         );
         if (cache)
@@ -607,8 +600,7 @@ export class Client extends EventEmitter {
       const cmd = await this.requestHandler.request(
         "GET",
         APPLICATION_GUILD_COMMAND(this.user.id, guildId, commandId),
-        {},
-        this.token
+        {}
       );
       const command = new ApplicationCommand(this, cmd);
       if (cache)
@@ -647,8 +639,7 @@ export class Client extends EventEmitter {
       const cmd = await this.requestHandler.request(
         "PATCH",
         APPLICATION_GUILD_COMMAND(this.user.id, guildId, commandId),
-        data,
-        this.token
+        data
       );
       if (!this.guilds.has(guildId)) await this.fetchGuild(guildId);
       const command = this.guilds.get(guildId)!.slashCommands.has(commandId)
@@ -677,8 +668,7 @@ export class Client extends EventEmitter {
       await this.requestHandler.request(
         "DELETE",
         APPLICATION_GUILD_COMMAND(this.user.id, guildId, commandId),
-        {},
-        this.token
+        {}
       );
       if (this.guilds.has(guildId))
         this.guilds.get(guildId)!.slashCommands.delete(commandId);
@@ -707,8 +697,7 @@ export class Client extends EventEmitter {
       for (const cmd of await this.requestHandler.request(
         "PUT",
         APPLICATION_GUILD_COMMANDS(this.user.id, guildId),
-        commands,
-        this.token
+        commands
       )) {
         const command = new ApplicationCommand(this, cmd);
         cmds.push(command);

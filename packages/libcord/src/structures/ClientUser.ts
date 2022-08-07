@@ -61,7 +61,7 @@ export class ClientUser extends User {
 
   public edit(data: { username?: string; avatar?: string }) {
     this.client.requestHandler
-      .request("PATCH", USER_ME, data, this.client.token)
+      .request("PATCH", USER_ME, data)
       .then((r) => {
         this.username = r.username;
         this.avatar = r.avatar;

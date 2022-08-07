@@ -154,6 +154,8 @@ export enum CLIENT_EVENTS {
   MESSAGE = "messageCreate",
   READY = "ready",
   CHANNEL_CREATE = "channelCreate",
+  GUILD_CREATE = "guildCreate",
+  GUILD_DELETE = "guildDelete",
   CHANNEL_EDIT = "channelUpdate",
   CHANNEL_DELETE = "channelDeleted",
   ROLE_CREATE = "roleCreated",
@@ -204,14 +206,17 @@ export interface FooterOptions {
   icon_url?: string;
 }
 export enum ChannelTypes {
-  Text = ChannelType.GuildText,
+  Text = 0,
 
-  Voice = ChannelType.GuildVoice,
+  Voice = 2,
 
-  Category = ChannelType.GuildCategory,
+  Category = 4,
 
-  News = ChannelType.GuildNews,
-  Stage = ChannelType.GuildStageVoice,
+  News = 5,
+  NewsThread = 10,
+  PublicThread = 11,
+  Stage = 13,
+  PrivateThread = 12,
   UNKNOWN = 7,
 }
 

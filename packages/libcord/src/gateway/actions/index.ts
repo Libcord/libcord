@@ -11,3 +11,6 @@ export * from "./ROLE_EDIT";
 export * from "./ROLE_DELETE";
 
 export * from "./INTERACTION_CREATE";
+
+export * from "./GUILD_CREATE";
+export * from "./GUILD_DELETE";

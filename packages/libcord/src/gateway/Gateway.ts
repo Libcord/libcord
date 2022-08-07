@@ -37,6 +37,8 @@ interface Actions {
   ROLE_EDIT?: ACTIONS.ROLE_EDIT;
   ROLE_DELETE?: ACTIONS.ROLE_DELETE;
   INTERACTION_CREATE?: ACTIONS.INTERACTION_CREATE;
+  GUILD_CREATE?: ACTIONS.GUILD_CREATE;
+  GUILD_DELETE?: ACTIONS.GUILD_DELETE;
 }
 
 export type GatewayStatus =
@@ -94,6 +96,14 @@ export class Gateway {
       this.client
     );
     this.actions.CHANNEL_DELETE = new ACTIONS.CHANNEL_DELETE(
+      this.client,
+      this.client
+    );
+    this.actions.GUILD_CREATE = new ACTIONS.GUILD_CREATE(
+      this.client,
+      this.client
+    );
+    this.actions.GUILD_DELETE = new ACTIONS.GUILD_DELETE(
       this.client,
       this.client
     );
@@ -229,6 +239,14 @@ export class Gateway {
         this.heartbeat();
         await this.actions.INTERACTION_CREATE!.handle(msg.d);
         break;
+      case GatewayDispatchEvents.GuildCreate:
+        this.heartbeat();
+        await this.actions.GUILD_CREATE!.handle(msg.d);
+        break;
+      case GatewayDispatchEvents.GuildDelete:
+        this.heartbeat();
+        await this.actions.GUILD_DELETE!.handle(msg.d);
+        break;
     }
   }
 
@@ -244,9 +262,15 @@ export class Gateway {
   }
 
   resolvePresence(presence: Presence): any {
-    const data: { activities: any[]; afk: boolean; status: string } = {
+    const data: {
+      activities: any[];
+      since: null;
+      afk: boolean;
+      status: string;
+    } = {
       status: presence.status || "online",
       afk: !!presence.afk,
+      since: null,
       activities: [],
     };
     if (presence.activity) {
