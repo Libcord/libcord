@@ -33,6 +33,8 @@ import {
   VoiceChannel,
   CategoryChannel,
   CommandInteraction,
+  PublicThread,
+  PrivateThread,
 } from "./structures";
 import { Collection } from "./utils/Collection";
 import { EventEmitter } from "./utils/EventEmitter";
@@ -112,6 +114,25 @@ export declare interface Client extends EventEmitter {
         | CommandInteraction
     ) => void | Promise<void>
   ): this;
+  /**
+   * emitted when theres a thread creator
+   * @event Client#threadCreate
+   */
+
+  on(
+    event: CLIENT_EVENTS.THREAD_CREATE | "threadCreate",
+    listener: (thread: PublicThread | PrivateThread) => void
+  ): this;
+
+  /**
+   * emitted when theres a thread deleted
+   * @event Client#threadDelete
+   */
+  on(
+    event: CLIENT_EVENTS.THREAD_DELETE | "threadDelete",
+    listener: (thread: PublicThread | PrivateThread) => void
+  ): this;
+
   /**
    * emitted when there is an error
    * @event Client#error
@@ -217,7 +238,7 @@ export class Client extends EventEmitter {
         throw r;
       }
       this.token = token;
-      let url: string = r.url;
+      let url: string = `${r.url}/?v=9`;
       this.gateway.connect(token, url);
     });
     return this;
