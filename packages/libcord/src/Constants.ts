@@ -154,6 +154,8 @@ export enum CLIENT_EVENTS {
   MESSAGE = "messageCreate",
   READY = "ready",
   CHANNEL_CREATE = "channelCreate",
+  THREAD_CREATE = "threadCreate",
+  THREAD_DELETE = "threadDelete",
   GUILD_CREATE = "guildCreate",
   GUILD_DELETE = "guildDelete",
   CHANNEL_EDIT = "channelUpdate",

@@ -1,16 +1,15 @@
 import {
-  APIGuild,
   APIUnavailableGuild,
   GatewayChannelModifyDispatchData,
   GatewayDispatchEvents,
   GatewayDispatchPayload,
-  GatewayGuildCreateDispatch,
   GatewayGuildCreateDispatchData,
   GatewayHelloData,
   GatewayIdentifyData,
   GatewayOpcodes,
   GatewayPresenceUpdateData,
   GatewayReceivePayload,
+  GatewayThreadCreateDispatchData,
 } from "discord-api-types/v9";
 import { EventEmitter } from "events";
 import { Client } from "../Client";
@@ -39,6 +38,8 @@ interface Actions {
   INTERACTION_CREATE?: ACTIONS.INTERACTION_CREATE;
   GUILD_CREATE?: ACTIONS.GUILD_CREATE;
   GUILD_DELETE?: ACTIONS.GUILD_DELETE;
+  THREAD_CREATE?: ACTIONS.THREAD_CREATE;
+  THREAD_DELETE?: ACTIONS.THREAD_DELETE;
 }
 
 export type GatewayStatus =
@@ -104,6 +105,14 @@ export class Gateway {
       this.client
     );
     this.actions.GUILD_DELETE = new ACTIONS.GUILD_DELETE(
+      this.client,
+      this.client
+    );
+    this.actions.THREAD_CREATE = new ACTIONS.THREAD_CREATE(
+      this.client,
+      this.client
+    );
+    this.actions.THREAD_DELETE = new ACTIONS.THREAD_DELETE(
       this.client,
       this.client
     );
@@ -222,6 +231,16 @@ export class Gateway {
       case GatewayDispatchEvents.ChannelDelete:
         this.heartbeat();
         await this.actions.CHANNEL_DELETE!.handle(msg.d);
+        break;
+      case GatewayDispatchEvents.ThreadCreate:
+        this.heartbeat();
+        await this.actions.THREAD_CREATE!.handle(
+          msg.d as GatewayThreadCreateDispatchData
+        );
+        break;
+      case GatewayDispatchEvents.ThreadDelete:
+        this.heartbeat();
+        await this.actions.THREAD_DELETE!.handle(msg.d);
         break;
       case GatewayDispatchEvents.GuildRoleCreate:
         this.heartbeat();
