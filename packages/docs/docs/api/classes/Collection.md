@@ -45,7 +45,7 @@ Map&lt;K, V\&gt;.constructor
 
 #### Defined in
 
-[packages/libcord/src/utils/Collection.ts:9](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Collection.ts#L9)
+[packages/libcord/src/utils/Collection.ts:9](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/utils/Collection.ts#L9)
 
 ## Properties
 
@@ -75,7 +75,7 @@ limit of size of the collection, 0 = no limit
 
 #### Defined in
 
-[packages/libcord/src/utils/Collection.ts:7](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Collection.ts#L7)
+[packages/libcord/src/utils/Collection.ts:7](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/utils/Collection.ts#L7)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/utils/Collection.ts:20](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Collection.ts#L20)
+[packages/libcord/src/utils/Collection.ts:20](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/utils/Collection.ts#L20)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/utils/Collection.ts:82](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Collection.ts#L82)
+[packages/libcord/src/utils/Collection.ts:82](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/utils/Collection.ts#L82)
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/utils/Collection.ts:48](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Collection.ts#L48)
+[packages/libcord/src/utils/Collection.ts:48](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/utils/Collection.ts#L48)
 
 ___
 
@@ -267,7 +267,7 @@ client.guilds.find(guild => guild.name === 'cool name');
 
 #### Defined in
 
-[packages/libcord/src/utils/Collection.ts:42](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Collection.ts#L42)
+[packages/libcord/src/utils/Collection.ts:42](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/utils/Collection.ts#L42)
 
 ___
 
@@ -385,7 +385,7 @@ Map.set
 
 #### Defined in
 
-[packages/libcord/src/utils/Collection.ts:14](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Collection.ts#L14)
+[packages/libcord/src/utils/Collection.ts:14](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/utils/Collection.ts#L14)
 
 ___
 
@@ -405,7 +405,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/utils/Collection.ts:70](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Collection.ts#L70)
+[packages/libcord/src/utils/Collection.ts:70](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/utils/Collection.ts#L70)
 
 ___
 
@@ -419,7 +419,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/utils/Collection.ts:56](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/utils/Collection.ts#L56)
+[packages/libcord/src/utils/Collection.ts:56](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/utils/Collection.ts#L56)
 
 ___
 

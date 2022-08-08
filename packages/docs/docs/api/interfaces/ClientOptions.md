@@ -16,7 +16,7 @@ list of intents to disable [list-of-intents](https://discord.com/developers/docs
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:58](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L58)
+[packages/libcord/src/Client.ts:59](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Client.ts#L59)
 
 ___
 
@@ -28,7 +28,7 @@ list of events that the client don't must emit
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:54](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L54)
+[packages/libcord/src/Client.ts:55](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Client.ts#L55)
 
 ___
 
@@ -44,7 +44,7 @@ false
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:64](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L64)
+[packages/libcord/src/Client.ts:65](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Client.ts#L65)
 
 ___
 
@@ -60,7 +60,7 @@ true
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:70](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L70)
+[packages/libcord/src/Client.ts:71](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Client.ts#L71)
 
 ___
 
@@ -72,7 +72,7 @@ a object of presence
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:50](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L50)
+[packages/libcord/src/Client.ts:51](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Client.ts#L51)
 
 ___
 
@@ -88,7 +88,7 @@ true
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:75](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L75)
+[packages/libcord/src/Client.ts:76](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Client.ts#L76)
 
 ___
 
@@ -100,4 +100,4 @@ The token for the bot is required
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:80](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Client.ts#L80)
+[packages/libcord/src/Client.ts:81](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Client.ts#L81)

@@ -32,7 +32,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:24](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L24)
+[packages/libcord/src/structures/Member.ts:24](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L24)
 
 ## Properties
 
@@ -46,7 +46,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:22](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L22)
+[packages/libcord/src/structures/Member.ts:22](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L22)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:19](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L19)
+[packages/libcord/src/structures/Member.ts:19](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L19)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:15](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L15)
+[packages/libcord/src/structures/Member.ts:15](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L15)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:21](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L21)
+[packages/libcord/src/structures/Member.ts:21](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L21)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:13](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L13)
+[packages/libcord/src/structures/Member.ts:13](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L13)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:17](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L17)
+[packages/libcord/src/structures/Member.ts:17](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L17)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:20](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L20)
+[packages/libcord/src/structures/Member.ts:20](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L20)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:18](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L18)
+[packages/libcord/src/structures/Member.ts:18](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L18)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:16](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L16)
+[packages/libcord/src/structures/Member.ts:16](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L16)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:14](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L14)
+[packages/libcord/src/structures/Member.ts:14](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L14)
 
 ## Methods
 
@@ -160,4 +160,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Member.ts:52](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Member.ts#L52)
+[packages/libcord/src/structures/Member.ts:52](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Member.ts#L52)

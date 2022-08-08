@@ -3,7 +3,7 @@ import { Client } from "../Client";
 import { Snowflake } from "../utils/Snowflake";
 import { Base } from "./Base";
 import { User, TextChannel, Guild } from "./index";
-import { CustomMessageData } from "../gateway/actions/MESSAGE_CREATE";
+import { CustomMessageData } from "../gateway/actions";
 import { ComponentsType, Member } from "..";
 import { Embed } from "./Embed";
 import { MESSAGES } from "../rest/EndPoints";

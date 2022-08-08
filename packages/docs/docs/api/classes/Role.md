@@ -31,7 +31,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[packages/libcord/src/structures/Role.ts:14](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Role.ts#L14)
+[packages/libcord/src/structures/Role.ts:14](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Role.ts#L14)
 
 ## Properties
 
@@ -45,7 +45,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Role.ts:11](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Role.ts#L11)
+[packages/libcord/src/structures/Role.ts:11](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Role.ts#L11)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Role.ts:9](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Role.ts#L9)
+[packages/libcord/src/structures/Role.ts:9](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Role.ts#L9)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Role.ts:12](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Role.ts#L12)
+[packages/libcord/src/structures/Role.ts:12](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Role.ts#L12)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Role.ts:6](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Role.ts#L6)
+[packages/libcord/src/structures/Role.ts:6](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Role.ts#L6)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Role.ts:10](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Role.ts#L10)
+[packages/libcord/src/structures/Role.ts:10](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Role.ts#L10)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Role.ts:8](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Role.ts#L8)
+[packages/libcord/src/structures/Role.ts:8](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Role.ts#L8)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Role.ts:7](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Role.ts#L7)
+[packages/libcord/src/structures/Role.ts:7](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Role.ts#L7)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Role.ts:13](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Role.ts#L13)
+[packages/libcord/src/structures/Role.ts:13](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Role.ts#L13)
 
 ## Accessors
 
@@ -139,4 +139,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Role.ts:23](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Role.ts#L23)
+[packages/libcord/src/structures/Role.ts:23](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Role.ts#L23)

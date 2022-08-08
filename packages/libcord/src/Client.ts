@@ -33,6 +33,7 @@ import {
   VoiceChannel,
   CategoryChannel,
   CommandInteraction,
+    GuildChannel, Role,
   PublicThread,
   PrivateThread,
 } from "./structures";
@@ -141,6 +142,70 @@ export declare interface Client extends EventEmitter {
     event: CLIENT_EVENTS.ERROR | "error",
     listener: (error: Error) => void
   ): this;
+  /**
+   * emitted when the bot has joined a new server
+   * @event Client#guildCreate
+   */
+  on(
+    event: CLIENT_EVENTS.GUILD_CREATE | "guildCreate",
+    listener: (guild: Guild) => void
+  ): this;
+  /**
+   * emitted when the bot has left a server
+   * @event Client#guildDelete
+   */
+  on(
+    event: CLIENT_EVENTS.GUILD_DELETE | "guildDelete",
+    listener: (guild: Guild) => void
+  ): this;
+  /**
+   * emitted when a new channel has been created in a server
+   * @event Client#channelCreate
+   */
+  on(
+    event: CLIENT_EVENTS.CHANNEL_CREATE | "channelCreate",
+    listener: (channel: GuildChannel) => void
+  ): this;
+  /**
+   * emitted when a channel has been deleted
+   * @event Client#channelDelete
+   */
+  on(
+    event: CLIENT_EVENTS.CHANNEL_DELETE | "channelDelete",
+    listener: (channel: GuildChannel) => void
+  ): this;
+  /**
+   * emitted when a channel has been edited
+   * @event Client#channelUpdate
+   */
+  on(
+    event: CLIENT_EVENTS.CHANNEL_EDIT | "channelUpdate",
+    listener: (channel: GuildChannel) => void
+  ): this;
+  /**
+   * emitted when a role has been created
+   * @event Client#roleCreate
+   */
+  on(
+    event: CLIENT_EVENTS.ROLE_CREATE | "roleCreate",
+    listener: (role: Role) => void
+  ): this;
+  /**
+   * emitted when a role has been edited
+   * @event Client#roleUpdate
+   */
+  on(
+    event: CLIENT_EVENTS.ROLE_EDIT | "roleUpdate",
+    listener: (role: Role) => void
+  ): this;
+  /**
+   * emitted when a role has been deleted
+   * @event Client#roleDelete
+   */
+  on(
+    event: CLIENT_EVENTS.ROLE_DELETE | "roleDelete",
+    listener: (role: Role) => void
+  ): this;
 }
 
 export class Client extends EventEmitter {
@@ -238,7 +303,7 @@ export class Client extends EventEmitter {
         throw r;
       }
       this.token = token;
-      let url: string = `${r.url}/?v=9`;
+      let url: string = r.url;
       this.gateway.connect(token, url);
     });
     return this;

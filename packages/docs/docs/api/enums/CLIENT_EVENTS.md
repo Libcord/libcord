@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:156](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L156)
+[packages/libcord/src/Constants.ts:156](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L156)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:160](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L160)
+[packages/libcord/src/Constants.ts:162](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L162)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:159](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L159)
+[packages/libcord/src/Constants.ts:161](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L161)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:167](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L167)
+[packages/libcord/src/Constants.ts:169](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L169)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:165](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L165)
+[packages/libcord/src/Constants.ts:167](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L167)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:157](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L157)
+[packages/libcord/src/Constants.ts:159](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L159)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:158](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L158)
+[packages/libcord/src/Constants.ts:160](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L160)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:164](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L164)
+[packages/libcord/src/Constants.ts:166](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L166)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:154](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L154)
+[packages/libcord/src/Constants.ts:154](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L154)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:166](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L166)
+[packages/libcord/src/Constants.ts:168](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L168)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:155](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L155)
+[packages/libcord/src/Constants.ts:155](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L155)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:161](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L161)
+[packages/libcord/src/Constants.ts:163](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L163)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:163](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L163)
+[packages/libcord/src/Constants.ts:165](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L165)
 
 ___
 
@@ -144,4 +144,24 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:162](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L162)
+[packages/libcord/src/Constants.ts:164](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L164)
+
+___
+
+### THREAD\_CREATE
+
+• **THREAD\_CREATE** = ``"threadCreate"``
+
+#### Defined in
+
+[packages/libcord/src/Constants.ts:157](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L157)
+
+___
+
+### THREAD\_DELETE
+
+• **THREAD\_DELETE** = ``"threadDelete"``
+
+#### Defined in
+
+[packages/libcord/src/Constants.ts:158](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L158)

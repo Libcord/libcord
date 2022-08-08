@@ -16,7 +16,7 @@ Footer icon URL
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:206](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L206)
+[packages/libcord/src/Constants.ts:208](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L208)
 
 ___
 
@@ -28,4 +28,4 @@ Footer text
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:201](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/Constants.ts#L201)
+[packages/libcord/src/Constants.ts:203](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/Constants.ts#L203)

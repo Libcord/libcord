@@ -37,7 +37,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:29](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L29)
+[packages/libcord/src/structures/channels/Thread.ts:29](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L29)
 
 ## Properties
 
@@ -47,7 +47,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:17](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L17)
+[packages/libcord/src/structures/channels/Thread.ts:17](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L17)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:25](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L25)
+[packages/libcord/src/structures/channels/Thread.ts:25](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L25)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:28](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L28)
+[packages/libcord/src/structures/channels/Thread.ts:28](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L28)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:16](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L16)
+[packages/libcord/src/structures/channels/Thread.ts:16](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L16)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:18](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L18)
+[packages/libcord/src/structures/channels/Thread.ts:18](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L18)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:24](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L24)
+[packages/libcord/src/structures/channels/Thread.ts:24](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L24)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:23](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L23)
+[packages/libcord/src/structures/channels/Thread.ts:23](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L23)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:19](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L19)
+[packages/libcord/src/structures/channels/Thread.ts:19](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L19)
 
 ## Methods
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:43](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L43)
+[packages/libcord/src/structures/channels/Thread.ts:43](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L43)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:46](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L46)
+[packages/libcord/src/structures/channels/Thread.ts:46](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L46)
 
 ▸ **send**(`msg`): `Promise`<[`Message`](Message.md)\>
 
@@ -181,4 +181,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Thread.ts:49](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/channels/Thread.ts#L49)
+[packages/libcord/src/structures/channels/Thread.ts:49](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/channels/Thread.ts#L49)

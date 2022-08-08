@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:174](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Message.ts#L174)
+[packages/libcord/src/structures/Message.ts:174](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Message.ts#L174)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:172](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Message.ts#L172)
+[packages/libcord/src/structures/Message.ts:172](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Message.ts#L172)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:173](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Message.ts#L173)
+[packages/libcord/src/structures/Message.ts:173](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Message.ts#L173)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:175](https://github.com/Libcord/libcord/blob/58e1159/packages/libcord/src/structures/Message.ts#L175)
+[packages/libcord/src/structures/Message.ts:175](https://github.com/Libcord/libcord/blob/60a6e24/packages/libcord/src/structures/Message.ts#L175)
