@@ -4,7 +4,7 @@ import { Client } from "../../Client";
 import { Snowflake } from "../../utils/Snowflake";
 import { ChannelTypes } from "../../Constants";
 import { GuildChannel } from "./GuildChannel";
-import { Message, MessageInteractionOptions } from "../Message";
+import { Message, MessageOptions } from "../Message";
 import { Embed } from "../Embed";
 
 import { MESSAGES } from "../../rest/EndPoints";
@@ -19,7 +19,7 @@ export class TextChannel extends GuildChannel {
   public rateLimitPerUser: number | null;
   public lastMessageId: Snowflake | null;
   public messages: Collection<Snowflake, Message>;
-  public threads: ThreadManager
+  public threads: ThreadManager;
 
   constructor(client: Client, data: APITextChannel) {
     super(client, data);
@@ -27,7 +27,7 @@ export class TextChannel extends GuildChannel {
     this.rateLimitPerUser = data.rate_limit_per_user || null;
     this.lastMessageId = (data.last_message_id as unknown as Snowflake) || null;
     this.messages = new Collection();
-    this.threads = new ThreadManager(this.client, this)
+    this.threads = new ThreadManager(this.client, this);
   }
 
   update(data: APITextChannel): GuildChannel {
@@ -36,20 +36,26 @@ export class TextChannel extends GuildChannel {
     this.rateLimitPerUser = data.rate_limit_per_user || null;
     return super.update(data);
   }
-  public send(
-    content: MessageInteractionOptions | string | Embed
+
+  /**
+   * Sends a message in a text channel
+   * @param content the content to send can be an embed, object or string
+   */
+  public createMessage(
+    content: MessageOptions | string | Embed
   ): Promise<Message>;
-  public send(
-    msg: MessageInteractionOptions | string | Embed
-  ): Promise<Message>;
-  public async send(
-    msg: MessageInteractionOptions | string
+  public createMessage(msg: MessageOptions | string | Embed): Promise<Message>;
+  public async createMessage(
+    msg: MessageOptions | string
   ): Promise<Message | undefined> {
     let payload = {
       content: "" as any,
       embeds: [] as any,
       components: [] as any,
       attachments: [] as any,
+      message_reference: {
+        message_id: null as any,
+      },
     };
     if (msg instanceof Embed) {
       payload.embeds.push(msg.getJSON());
@@ -77,6 +83,11 @@ export class TextChannel extends GuildChannel {
         msg.components?.forEach((comp: ComponentsType) => {
           payload.components.push(comp);
         });
+      }
+      if (msg.mentions) {
+        if (msg.mentions.message) {
+          payload.message_reference.message_id = msg.mentions.message.id;
+        }
       }
       if (msg.files) {
         let temp = new FormData();

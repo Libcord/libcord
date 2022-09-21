@@ -23,25 +23,27 @@ export default class RoleManager extends Manager {
     }
   }
   _addCache(role: APIRole) {
-    this.cache.set(role.id, new Role(this.client, role));
-    return new Role(this.client, role);
+    this.cache.set(role.id, new Role(this.client, role, this.guild));
+    return new Role(this.client, role, this.guild);
   }
-  async fetch(roleId: Snowflake): Promise<Role> {
+  fetch(roleId: Snowflake): Role | Promise<Role> {
     if (this.cache.get(roleId)) {
       return this.cache.get(roleId) as Role;
     } else {
-      const res = await this.client.requestHandler.request(
-        "GET",
-        ROLE(this.guild.id, roleId),
-      );
-      return this._addCache(res);
+      return new Promise(async (resolve, reject) => {
+        const res = await this.client.requestHandler.request(
+          "GET",
+          ROLE(this.guild.id, roleId)
+        );
+        resolve(this._addCache(res));
+      });
     }
   }
   async create(options: RoleCreateOptions): Promise<Role> {
     const res = await this.client.requestHandler.request(
       "POST",
       CREATE_ROLE(this.guild.id),
-      JSON.stringify(options),
+      JSON.stringify(options)
     );
     return this._addCache(res);
   }
@@ -56,13 +58,15 @@ export default class RoleManager extends Manager {
         })
       );
     }
-    if (!options.name)
-      options.name = await this.fetch(roleId).then((d) => d.name);
+    if (!options.name) {
+      const r = await this.fetch(roleId);
+      options.name = r.name;
+    }
 
     const d = await this.client.requestHandler.request(
       "PATCH",
       CREATE_ROLE(roleId),
-      JSON.stringify(options),
+      JSON.stringify(options)
     );
     return this._addCache(d);
   }
@@ -71,7 +75,7 @@ export default class RoleManager extends Manager {
     await this.client.requestHandler.request(
       "DELETE",
       ROLE(this.guild.id, roleId),
-      {},
+      {}
     );
     return true;
   }

@@ -17,6 +17,7 @@
 ### Properties
 
 - [client](Member.md#client)
+- [data](Member.md#data)
 - [deaf](Member.md#deaf)
 - [displayName](Member.md#displayname)
 - [guild](Member.md#guild)
@@ -51,7 +52,7 @@ Base.constructor
 
 #### Defined in
 
-[src/structures/Member.ts:24](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Member.ts#L24)
+[packages/libcord/src/structures/Member.ts:25](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L25)
 
 ## Properties
 
@@ -65,7 +66,17 @@ Base.constructor
 
 #### Defined in
 
-[src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Base.ts#L8)
+
+___
+
+### data
+
+• **data**: `APIGuildMember`
+
+#### Defined in
+
+[packages/libcord/src/structures/Member.ts:23](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L23)
 
 ___
 
@@ -75,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/structures/Member.ts:19](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Member.ts#L19)
+[packages/libcord/src/structures/Member.ts:20](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L20)
 
 ___
 
@@ -85,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/structures/Member.ts:15](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Member.ts#L15)
+[packages/libcord/src/structures/Member.ts:16](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L16)
 
 ___
 
@@ -95,7 +106,7 @@ ___
 
 #### Defined in
 
-[src/structures/Member.ts:21](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Member.ts#L21)
+[packages/libcord/src/structures/Member.ts:22](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L22)
 
 ___
 
@@ -105,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/structures/Member.ts:13](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Member.ts#L13)
+[packages/libcord/src/structures/Member.ts:14](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L14)
 
 ___
 
@@ -115,7 +126,7 @@ ___
 
 #### Defined in
 
-[src/structures/Member.ts:17](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Member.ts#L17)
+[packages/libcord/src/structures/Member.ts:18](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L18)
 
 ___
 
@@ -125,7 +136,7 @@ ___
 
 #### Defined in
 
-[src/structures/Member.ts:20](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Member.ts#L20)
+[packages/libcord/src/structures/Member.ts:21](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L21)
 
 ___
 
@@ -135,17 +146,17 @@ ___
 
 #### Defined in
 
-[src/structures/Member.ts:18](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Member.ts#L18)
+[packages/libcord/src/structures/Member.ts:19](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L19)
 
 ___
 
 ### roles
 
-• **roles**: [`Collection`](Collection.md)<`string`, [`Role`](Role.md)\>
+• **roles**: `default`
 
 #### Defined in
 
-[src/structures/Member.ts:16](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Member.ts#L16)
+[packages/libcord/src/structures/Member.ts:17](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L17)
 
 ___
 
@@ -155,7 +166,7 @@ ___
 
 #### Defined in
 
-[src/structures/Member.ts:14](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Member.ts#L14)
+[packages/libcord/src/structures/Member.ts:15](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L15)
 
 ## Methods
 
@@ -169,4 +180,4 @@ ___
 
 #### Defined in
 
-[src/structures/Member.ts:52](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Member.ts#L52)
+[packages/libcord/src/structures/Member.ts:46](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Member.ts#L46)

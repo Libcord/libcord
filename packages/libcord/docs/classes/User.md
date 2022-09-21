@@ -54,7 +54,7 @@ Base.constructor
 
 #### Defined in
 
-[src/structures/User.ts:63](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L63)
+[packages/libcord/src/structures/User.ts:62](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L62)
 
 ## Properties
 
@@ -66,7 +66,7 @@ hash of user avatar
 
 #### Defined in
 
-[src/structures/User.ts:21](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L21)
+[packages/libcord/src/structures/User.ts:20](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L20)
 
 ___
 
@@ -78,7 +78,7 @@ if the user is a bot
 
 #### Defined in
 
-[src/structures/User.ts:41](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L41)
+[packages/libcord/src/structures/User.ts:40](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L40)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -104,7 +104,7 @@ the date of the user account was created in timestamp
 
 #### Defined in
 
-[src/structures/User.ts:51](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L51)
+[packages/libcord/src/structures/User.ts:50](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L50)
 
 ___
 
@@ -116,7 +116,7 @@ discriminator of the user
 
 #### Defined in
 
-[src/structures/User.ts:31](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L31)
+[packages/libcord/src/structures/User.ts:30](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L30)
 
 ___
 
@@ -128,7 +128,7 @@ the id of the user
 
 #### Defined in
 
-[src/structures/User.ts:16](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L16)
+[packages/libcord/src/structures/User.ts:15](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L15)
 
 ___
 
@@ -140,7 +140,7 @@ user public's flags
 
 #### Defined in
 
-[src/structures/User.ts:56](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L56)
+[packages/libcord/src/structures/User.ts:55](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L55)
 
 ___
 
@@ -152,7 +152,7 @@ if the user are a official discord system user
 
 #### Defined in
 
-[src/structures/User.ts:46](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L46)
+[packages/libcord/src/structures/User.ts:45](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L45)
 
 ___
 
@@ -164,7 +164,7 @@ tag of the user (username#descriminator)
 
 #### Defined in
 
-[src/structures/User.ts:36](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L36)
+[packages/libcord/src/structures/User.ts:35](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L35)
 
 ___
 
@@ -176,7 +176,7 @@ username of the user
 
 #### Defined in
 
-[src/structures/User.ts:26](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L26)
+[packages/libcord/src/structures/User.ts:25](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L25)
 
 ## Methods
 
@@ -198,7 +198,7 @@ get avatar URL
 
 #### Defined in
 
-[src/structures/User.ts:84](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L84)
+[packages/libcord/src/structures/User.ts:83](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L83)
 
 ___
 
@@ -218,7 +218,7 @@ ___
 
 #### Defined in
 
-[src/structures/User.ts:98](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L98)
+[packages/libcord/src/structures/User.ts:97](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L97)
 
 ___
 
@@ -232,4 +232,4 @@ ___
 
 #### Defined in
 
-[src/structures/User.ts:94](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L94)
+[packages/libcord/src/structures/User.ts:93](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L93)

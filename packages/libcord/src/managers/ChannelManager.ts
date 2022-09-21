@@ -62,6 +62,12 @@ export default class ChannelManager extends Manager {
       return new GuildChannel(this.client, channel);
     }
   }
+
+  /**
+   * Fetches a channel by id
+   * @param channelId The id of the channel you want to fetch
+   * @returns {Promise<TextChannel | GuildChannel | CategoryChannel | VoiceChannel>} The channel
+   */
   async fetch(
     channelId: Snowflake
   ): Promise<TextChannel | GuildChannel | CategoryChannel | VoiceChannel> {
@@ -80,6 +86,11 @@ export default class ChannelManager extends Manager {
       return this._addCache(res);
     }
   }
+
+  /**
+   * Create a channel in a server
+   * @param options options when creating a channel
+   */
   async create(
     options: ChannelCreateOptions
   ): Promise<TextChannel | Channel | CategoryChannel | VoiceChannel> {
@@ -101,6 +112,11 @@ export default class ChannelManager extends Manager {
     );
     return this._addCache(d);
   }
+
+  /**
+   * Deletes a channel by id
+   * @param channelId the channel id
+   */
   async delete(channelId: Snowflake) {
     this.cache.delete(channelId);
     await this.client.requestHandler.request("DELETE", CHANNEL(channelId));

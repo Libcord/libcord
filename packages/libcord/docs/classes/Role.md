@@ -18,23 +18,27 @@
 
 - [client](Role.md#client)
 - [color](Role.md#color)
+- [guild](Role.md#guild)
 - [hoisted](Role.md#hoisted)
 - [icon](Role.md#icon)
 - [id](Role.md#id)
 - [integrated](Role.md#integrated)
 - [mentionable](Role.md#mentionable)
 - [name](Role.md#name)
-- [unicodeEmoji](Role.md#unicodeemoji)
 
 ### Accessors
 
 - [hex](Role.md#hex)
 
+### Methods
+
+- [edit](Role.md#edit)
+
 ## Constructors
 
 ### constructor
 
-• **new Role**(`client`, `data`)
+• **new Role**(`client`, `data`, `guild`)
 
 #### Parameters
 
@@ -42,6 +46,7 @@
 | :------ | :------ |
 | `client` | [`Client`](Client.md) |
 | `data` | `APIRole` |
+| `guild` | [`Guild`](Guild.md) |
 
 #### Overrides
 
@@ -49,7 +54,7 @@ Base.constructor
 
 #### Defined in
 
-[src/structures/Role.ts:14](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Role.ts#L14)
+[packages/libcord/src/structures/Role.ts:15](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Role.ts#L15)
 
 ## Properties
 
@@ -63,7 +68,7 @@ Base.constructor
 
 #### Defined in
 
-[src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -73,7 +78,17 @@ ___
 
 #### Defined in
 
-[src/structures/Role.ts:11](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Role.ts#L11)
+[packages/libcord/src/structures/Role.ts:12](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Role.ts#L12)
+
+___
+
+### guild
+
+• **guild**: [`Guild`](Guild.md)
+
+#### Defined in
+
+[packages/libcord/src/structures/Role.ts:14](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Role.ts#L14)
 
 ___
 
@@ -83,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/structures/Role.ts:9](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Role.ts#L9)
+[packages/libcord/src/structures/Role.ts:10](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Role.ts#L10)
 
 ___
 
@@ -93,7 +108,7 @@ ___
 
 #### Defined in
 
-[src/structures/Role.ts:12](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Role.ts#L12)
+[packages/libcord/src/structures/Role.ts:13](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Role.ts#L13)
 
 ___
 
@@ -103,7 +118,7 @@ ___
 
 #### Defined in
 
-[src/structures/Role.ts:6](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Role.ts#L6)
+[packages/libcord/src/structures/Role.ts:7](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Role.ts#L7)
 
 ___
 
@@ -113,7 +128,7 @@ ___
 
 #### Defined in
 
-[src/structures/Role.ts:10](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Role.ts#L10)
+[packages/libcord/src/structures/Role.ts:11](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Role.ts#L11)
 
 ___
 
@@ -123,7 +138,7 @@ ___
 
 #### Defined in
 
-[src/structures/Role.ts:8](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Role.ts#L8)
+[packages/libcord/src/structures/Role.ts:9](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Role.ts#L9)
 
 ___
 
@@ -133,17 +148,7 @@ ___
 
 #### Defined in
 
-[src/structures/Role.ts:7](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Role.ts#L7)
-
-___
-
-### unicodeEmoji
-
-• **unicodeEmoji**: `string`
-
-#### Defined in
-
-[src/structures/Role.ts:13](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Role.ts#L13)
+[packages/libcord/src/structures/Role.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Role.ts#L8)
 
 ## Accessors
 
@@ -157,4 +162,24 @@ ___
 
 #### Defined in
 
-[src/structures/Role.ts:23](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Role.ts#L23)
+[packages/libcord/src/structures/Role.ts:25](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Role.ts#L25)
+
+## Methods
+
+### edit
+
+▸ **edit**(`options`): `Promise`<[`Role`](Role.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options` | [`RoleEditOptions`](../interfaces/RoleEditOptions.md) |
+
+#### Returns
+
+`Promise`<[`Role`](Role.md)\>
+
+#### Defined in
+
+[packages/libcord/src/structures/Role.ts:28](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Role.ts#L28)

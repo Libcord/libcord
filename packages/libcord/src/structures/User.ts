@@ -117,28 +117,28 @@ export class User extends Base {
  */
 export enum ActivityTypes {
   /**
-   * Playing {game}
+   * Playing ...
    */
   game = 0,
   /**
-   * Streaming {details}
+   * Streaming ...
    */
   streaming = 1,
   /**
-   * Listening to {name}
+   * Listening to ...
    */
   listening = 2,
   /**
-   * Watching {details}
+   * Watching ...
    */
   watching = 3,
   /**
-   * {emoji} {details}
-   * WARNING : don't work for bots
+   * emoji ...
+   * WARNING : doesn't work for bots
    */
   custom = 4,
   /**
-   * Competing in {name}
+   * Competing in ...
    */
   competing = 5,
 }
@@ -163,7 +163,7 @@ export interface Presence {
    */
   status?: PresenceStatus;
   /**
-   * Whether or not the client is afk. default false
+   * Whether the client is afk. default false
    */
   afk?: boolean;
 }

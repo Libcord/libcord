@@ -5,6 +5,7 @@ import { Snowflake } from "../utils/Snowflake";
 import { Base } from "./Base";
 import { Guild } from "./Guild";
 import { User } from "./User";
+import MemberRoleManager from "../managers/MemberRoleManager";
 
 /**
  * @category Structures
@@ -13,13 +14,13 @@ export class Member extends Base {
   public id: Snowflake;
   public user: User;
   public displayName: string;
-  public roles = new Collection<Snowflake, Role>();
+  public roles: MemberRoleManager;
   public joinedAt: string;
   public premiumSince: string | null;
   public deaf: boolean;
   public mute: boolean;
   public guild: Guild;
-  private data: APIGuildMember;
+  public data: APIGuildMember;
 
   constructor(client: Client, guild: Guild, data: APIGuildMember) {
     super(client);
@@ -38,15 +39,8 @@ export class Member extends Base {
     this.deaf = data.deaf;
     this.mute = data.mute;
     this.guild = guild;
-
-    if (data.roles !== null) {
-      for (const roleId of data.roles) {
-        const role = this.guild.roles
-          .fetch(roleId as unknown as Snowflake)
-          .then((r) => this.roles.add(r));
-      }
-    }
     this.data = data;
+    this.roles = new MemberRoleManager(client, guild, this);
   }
 
   toString(): string {

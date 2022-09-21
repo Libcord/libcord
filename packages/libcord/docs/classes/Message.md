@@ -48,7 +48,7 @@ Base.constructor
 
 #### Defined in
 
-[src/structures/Message.ts:26](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Message.ts#L26)
+[packages/libcord/src/structures/Message.ts:26](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L26)
 
 ## Properties
 
@@ -58,7 +58,7 @@ Base.constructor
 
 #### Defined in
 
-[src/structures/Message.ts:22](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Message.ts#L22)
+[packages/libcord/src/structures/Message.ts:22](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L22)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[src/structures/Message.ts:18](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Message.ts#L18)
+[packages/libcord/src/structures/Message.ts:18](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L18)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[src/structures/Message.ts:20](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Message.ts#L20)
+[packages/libcord/src/structures/Message.ts:20](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L20)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[src/structures/Message.ts:21](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Message.ts#L21)
+[packages/libcord/src/structures/Message.ts:21](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L21)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[src/structures/Message.ts:24](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Message.ts#L24)
+[packages/libcord/src/structures/Message.ts:24](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L24)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[src/structures/Message.ts:19](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Message.ts#L19)
+[packages/libcord/src/structures/Message.ts:19](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L19)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[src/structures/Message.ts:23](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Message.ts#L23)
+[packages/libcord/src/structures/Message.ts:23](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L23)
 
 ## Methods
 
@@ -144,7 +144,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `msg` | `string` \| [`Embed`](Embed.md) \| [`MessageInteractionOptions`](../interfaces/MessageInteractionOptions.md) |
+| `msg` | `string` \| [`Embed`](Embed.md) \| [`MessageOptions`](../interfaces/MessageOptions.md) |
 
 #### Returns
 
@@ -152,4 +152,4 @@ ___
 
 #### Defined in
 
-[src/structures/Message.ts:83](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Message.ts#L83)
+[packages/libcord/src/structures/Message.ts:83](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L83)

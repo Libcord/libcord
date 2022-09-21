@@ -27,6 +27,7 @@
 - [Collection](classes/Collection.md)
 - [Color](classes/Color.md)
 - [Embed](classes/Embed.md)
+- [Gateway](classes/Gateway.md)
 - [GroupChannel](classes/GroupChannel.md)
 - [GuildChannel](classes/GuildChannel.md)
 - [Interaction](classes/Interaction.md)
@@ -72,7 +73,9 @@
 - [FooterOptions](interfaces/FooterOptions.md)
 - [ImageOptions](interfaces/ImageOptions.md)
 - [ImageUrlOptions](interfaces/ImageUrlOptions.md)
-- [MessageInteractionOptions](interfaces/MessageInteractionOptions.md)
+- [InteractionOptions](interfaces/InteractionOptions.md)
+- [MessageMention](interfaces/MessageMention.md)
+- [MessageOptions](interfaces/MessageOptions.md)
 - [Presence](interfaces/Presence.md)
 - [RoleCreateOptions](interfaces/RoleCreateOptions.md)
 - [RoleEditOptions](interfaces/RoleEditOptions.md)
@@ -80,6 +83,7 @@
 - [ThumbnailOptions](interfaces/ThumbnailOptions.md)
 - [WebhookOptions](interfaces/WebhookOptions.md)
 - [executeWebhookOptions](interfaces/executeWebhookOptions.md)
+- [rawWSEvent](interfaces/rawWSEvent.md)
 
 ### Type Aliases
 
@@ -87,6 +91,7 @@
 - [ApplicationCommandOptionsType](modules.md#applicationcommandoptionstype)
 - [ColorStrings](modules.md#colorstrings)
 - [ComponentsType](modules.md#componentstype)
+- [GatewayStatus](modules.md#gatewaystatus)
 - [Permission](modules.md#permission)
 - [PresenceStatus](modules.md#presencestatus)
 - [RGB](modules.md#rgb)
@@ -125,7 +130,7 @@
 
 #### Defined in
 
-[src/structures/User.ts:143](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L143)
+[packages/libcord/src/structures/User.ts:146](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L146)
 
 ___
 
@@ -135,7 +140,7 @@ ___
 
 #### Defined in
 
-[src/structures/ApplicationCommand.ts:112](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/ApplicationCommand.ts#L112)
+[packages/libcord/src/structures/ApplicationCommand.ts:112](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L112)
 
 ___
 
@@ -145,7 +150,7 @@ ___
 
 #### Defined in
 
-[src/utils/Utils.ts:23](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Utils.ts#L23)
+[packages/libcord/src/utils/Utils.ts:23](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Utils.ts#L23)
 
 ___
 
@@ -155,7 +160,17 @@ ___
 
 #### Defined in
 
-[src/structures/components/ActionRow.ts:4](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/components/ActionRow.ts#L4)
+[packages/libcord/src/structures/components/ActionRow.ts:4](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/components/ActionRow.ts#L4)
+
+___
+
+### GatewayStatus
+
+Ƭ **GatewayStatus**: ``"disconnected"`` \| ``"connected"`` \| ``"connecting..."`` \| ``"waiting_for_guilds"``
+
+#### Defined in
+
+[packages/libcord/src/gateway/Gateway.ts:45](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/gateway/Gateway.ts#L45)
 
 ___
 
@@ -165,7 +180,7 @@ ___
 
 #### Defined in
 
-[src/utils/Permissions.ts:148](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Permissions.ts#L148)
+[packages/libcord/src/utils/Permissions.ts:148](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L148)
 
 ___
 
@@ -175,7 +190,7 @@ ___
 
 #### Defined in
 
-[src/structures/User.ts:168](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L168)
+[packages/libcord/src/structures/User.ts:171](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L171)
 
 ___
 
@@ -185,7 +200,7 @@ ___
 
 #### Defined in
 
-[src/utils/Color.ts:1](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Color.ts#L1)
+[packages/libcord/src/utils/Color.ts:1](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Color.ts#L1)
 
 ___
 
@@ -195,7 +210,7 @@ ___
 
 #### Defined in
 
-[src/utils/Snowflake.ts:1](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Snowflake.ts#L1)
+[packages/libcord/src/utils/Snowflake.ts:1](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Snowflake.ts#L1)
 
 ___
 
@@ -205,7 +220,7 @@ ___
 
 #### Defined in
 
-[src/utils/Utils.ts:3](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Utils.ts#L3)
+[packages/libcord/src/utils/Utils.ts:3](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Utils.ts#L3)
 
 ___
 
@@ -215,7 +230,7 @@ ___
 
 #### Defined in
 
-[src/utils/Utils.ts:4](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Utils.ts#L4)
+[packages/libcord/src/utils/Utils.ts:4](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Utils.ts#L4)
 
 ## Variables
 
@@ -225,7 +240,7 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:167](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L167)
+[packages/libcord/src/Constants.ts:171](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L171)
 
 ## Functions
 
@@ -245,7 +260,7 @@ ___
 
 #### Defined in
 
-[src/utils/Utils.ts:44](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Utils.ts#L44)
+[packages/libcord/src/utils/Utils.ts:44](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Utils.ts#L44)
 
 ___
 
@@ -266,7 +281,7 @@ ___
 
 #### Defined in
 
-[src/utils/Permissions.ts:157](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Permissions.ts#L157)
+[packages/libcord/src/utils/Permissions.ts:157](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L157)
 
 ___
 
@@ -286,7 +301,7 @@ ___
 
 #### Defined in
 
-[src/utils/Permissions.ts:173](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Permissions.ts#L173)
+[packages/libcord/src/utils/Permissions.ts:173](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L173)
 
 ___
 
@@ -306,7 +321,7 @@ ___
 
 #### Defined in
 
-[src/utils/Snowflake.ts:3](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Snowflake.ts#L3)
+[packages/libcord/src/utils/Snowflake.ts:3](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Snowflake.ts#L3)
 
 ___
 
@@ -327,7 +342,7 @@ ___
 
 #### Defined in
 
-[src/utils/Permissions.ts:150](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Permissions.ts#L150)
+[packages/libcord/src/utils/Permissions.ts:150](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L150)
 
 ___
 
@@ -347,7 +362,7 @@ ___
 
 #### Defined in
 
-[src/utils/Utils.ts:32](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Utils.ts#L32)
+[packages/libcord/src/utils/Utils.ts:32](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Utils.ts#L32)
 
 ___
 
@@ -368,7 +383,7 @@ ___
 
 #### Defined in
 
-[src/utils/Permissions.ts:164](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Permissions.ts#L164)
+[packages/libcord/src/utils/Permissions.ts:164](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L164)
 
 ___
 
@@ -388,7 +403,7 @@ ___
 
 #### Defined in
 
-[src/utils/Utils.ts:69](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Utils.ts#L69)
+[packages/libcord/src/utils/Utils.ts:69](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Utils.ts#L69)
 
 ___
 
@@ -408,7 +423,7 @@ ___
 
 #### Defined in
 
-[src/Client.ts:764](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L764)
+[packages/libcord/src/Client.ts:847](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L847)
 
 ## Events
 
@@ -429,7 +444,7 @@ Client
 
 #### Defined in
 
-[src/Client.ts:754](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L754)
+[packages/libcord/src/Client.ts:837](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L837)
 
 ___
 
@@ -456,7 +471,7 @@ Client
 
 #### Defined in
 
-[src/Client.ts:762](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L762)
+[packages/libcord/src/Client.ts:845](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L845)
 
 ___
 
@@ -475,7 +490,7 @@ Client
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `packet` | `rawWSEvent` | a object of ws packets |
+| `packet` | [`rawWSEvent`](interfaces/rawWSEvent.md) | a object of ws packets |
 
 #### Returns
 
@@ -483,7 +498,7 @@ Client
 
 #### Defined in
 
-[src/Client.ts:747](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L747)
+[packages/libcord/src/Client.ts:830](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L830)
 
 ___
 
@@ -504,4 +519,4 @@ Client
 
 #### Defined in
 
-[src/Client.ts:739](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L739)
+[packages/libcord/src/Client.ts:822](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L822)

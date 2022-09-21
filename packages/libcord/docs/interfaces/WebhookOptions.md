@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/structures/Webhook.ts:12](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Webhook.ts#L12)
+[packages/libcord/src/structures/Webhook.ts:12](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L12)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/structures/Webhook.ts:13](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Webhook.ts#L13)
+[packages/libcord/src/structures/Webhook.ts:13](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L13)

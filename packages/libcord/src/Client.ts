@@ -33,7 +33,8 @@ import {
   VoiceChannel,
   CategoryChannel,
   CommandInteraction,
-    GuildChannel, Role,
+  GuildChannel,
+  Role,
   PublicThread,
   PrivateThread,
 } from "./structures";
@@ -56,7 +57,7 @@ export interface ClientOptions {
   /**
    * list of intents to disable [list-of-intents](https://discord.com/developers/docs/topics/gateway#list-of-intents)
    */
-  disableIntents?: (keyof typeof Intents)[];
+  intents: (keyof typeof Intents)[] | Intents[];
 
   /**
    * fetch all members and users
@@ -264,19 +265,26 @@ export class Client extends EventEmitter {
   /**
    * @param options options of the bot
    */
-  constructor(options: ClientOptions = {}) {
+  constructor(options: ClientOptions) {
     super();
     this.on(CLIENT_EVENTS.READY, () => {});
     this.slashCommand =
       typeof options.slashCommandByDefault === "undefined"
         ? true
         : options.slashCommandByDefault;
-    let intents = 32765;
+    let intents = 0;
 
-    if (options.disableIntents)
-      for (const intent of options.disableIntents) {
-        intents -= Intents[intent];
+    if (options.intents) {
+      for (const intent of options.intents) {
+        if (typeof intent === "number") {
+          intents += intent;
+        } else {
+          intents += Intents[intent];
+        }
       }
+    } else {
+      throw new Error("[Intents] Missing default intents");
+    }
     this.intents = intents;
 
     this.disableEvents = options.disablesEvents;

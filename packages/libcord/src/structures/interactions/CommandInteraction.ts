@@ -10,7 +10,7 @@ import { Guild } from "../Guild";
 import { Member } from "../Member";
 import { User } from "../User";
 import { MESSAGES, RESPOND_INTERACTION } from "../../rest/EndPoints";
-import { Message, MessageInteractionOptions } from "../Message";
+import { FileOption, Message } from "../Message";
 import { Embed } from "../Embed";
 import { ApplicationCommandOptionsTypes } from "../ApplicationCommand";
 import { Interaction } from "./Interaction";
@@ -40,7 +40,7 @@ export class CommandInteraction extends Interaction {
       client.channels.get(data.channel_id as unknown as Snowflake) || null;
     this.token = data.token;
     if (data.data.options) {
-     this.options = data.data.options.map((d: any) => {
+      this.options = data.data.options.map((d: any) => {
         return {
           value: d.value,
           name: d.value,
@@ -76,7 +76,7 @@ export class CommandInteraction extends Interaction {
       }
     );
   }
-  async reply(interactionOptions: MessageInteractionOptions | string) {
+  async reply(interactionOptions: InteractionOptions | string) {
     if (this.replied) throw new Error("[INTERACTIONS]: Already replied.");
     const payload = {
       content: "" as any,
@@ -155,4 +155,10 @@ export class CommandInteraction extends Interaction {
     );
     return this;
   }
+}
+export interface InteractionOptions {
+  content?: string | Embed;
+  embeds?: Array<Embed> | Array<any>;
+  components?: Array<ComponentsType>;
+  files?: FileOption[];
 }

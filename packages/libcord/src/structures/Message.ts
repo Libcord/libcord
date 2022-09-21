@@ -80,11 +80,9 @@ export class Message extends Base {
     }
   }
 
-  public reply(
-    msg: MessageInteractionOptions | string | Embed
-  ): Promise<Message>;
+  public reply(msg: MessageOptions | string | Embed): Promise<Message>;
   public async reply(
-    msg: MessageInteractionOptions | string
+    msg: MessageOptions | string
   ): Promise<Message | undefined> {
     const payload = {
       content: "" as any,
@@ -167,10 +165,13 @@ export interface FileOption {
   description?: string;
   file?: Buffer | string | Stream;
 }
-
-export interface MessageInteractionOptions {
+export interface MessageMention {
+  id: string;
+}
+export interface MessageOptions {
   content?: string | Embed;
   embeds?: Array<Embed> | Array<any>;
   components?: Array<ComponentsType>;
   files?: FileOption[];
+  mentions?: { message?: MessageMention };
 }

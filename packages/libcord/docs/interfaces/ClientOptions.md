@@ -6,27 +6,15 @@
 
 ### Properties
 
-- [disableIntents](ClientOptions.md#disableintents)
 - [disablesEvents](ClientOptions.md#disablesevents)
 - [fetchAllMembers](ClientOptions.md#fetchallmembers)
+- [intents](ClientOptions.md#intents)
 - [isABot](ClientOptions.md#isabot)
 - [presence](ClientOptions.md#presence)
 - [slashCommandByDefault](ClientOptions.md#slashcommandbydefault)
 - [token](ClientOptions.md#token)
 
 ## Properties
-
-### disableIntents
-
-• `Optional` **disableIntents**: (``"GUILDS"`` \| ``"GUILD_MEMBERS"`` \| ``"GUILD_BANS"`` \| ``"GUILD_EMOJIS"`` \| ``"GUILD_INTEGRATIONS"`` \| ``"GUILD_WEBHOOKS"`` \| ``"GUILD_INVITES"`` \| ``"GUILD_VOICE_STATES"`` \| ``"GUILD_PRESENCES"`` \| ``"GUILD_MESSAGES"`` \| ``"GUILD_MESSAGE_REACTIONS"`` \| ``"GUILD_MESSAGE_TYPING"`` \| ``"DIRECT_MESSAGES"`` \| ``"DIRECT_MESSAGE_REACTIONS"`` \| ``"DIRECT_MESSAGE_TYPING"``)[]
-
-list of intents to disable [list-of-intents](https://discord.com/developers/docs/topics/gateway#list-of-intents)
-
-#### Defined in
-
-[src/Client.ts:56](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L56)
-
-___
 
 ### disablesEvents
 
@@ -36,7 +24,7 @@ list of events that the client don't must emit
 
 #### Defined in
 
-[src/Client.ts:52](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L52)
+[packages/libcord/src/Client.ts:56](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L56)
 
 ___
 
@@ -52,7 +40,19 @@ false
 
 #### Defined in
 
-[src/Client.ts:62](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L62)
+[packages/libcord/src/Client.ts:66](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L66)
+
+___
+
+### intents
+
+• **intents**: (``"GUILDS"`` \| ``"GUILD_MEMBERS"`` \| ``"GUILD_BANS"`` \| ``"GUILD_EMOJIS"`` \| ``"GUILD_INTEGRATIONS"`` \| ``"GUILD_WEBHOOKS"`` \| ``"GUILD_INVITES"`` \| ``"GUILD_VOICE_STATES"`` \| ``"GUILD_PRESENCES"`` \| ``"GUILD_MESSAGES"`` \| ``"GUILD_MESSAGE_REACTIONS"`` \| ``"GUILD_MESSAGE_TYPING"`` \| ``"DIRECT_MESSAGES"`` \| ``"DIRECT_MESSAGE_REACTIONS"`` \| ``"DIRECT_MESSAGE_TYPING"``)[] \| [`Intents`](../enums/Intents.md)[]
+
+list of intents to disable [list-of-intents](https://discord.com/developers/docs/topics/gateway#list-of-intents)
+
+#### Defined in
+
+[packages/libcord/src/Client.ts:60](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L60)
 
 ___
 
@@ -68,7 +68,7 @@ true
 
 #### Defined in
 
-[src/Client.ts:68](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L68)
+[packages/libcord/src/Client.ts:72](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L72)
 
 ___
 
@@ -80,7 +80,7 @@ a object of presence
 
 #### Defined in
 
-[src/Client.ts:48](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L48)
+[packages/libcord/src/Client.ts:52](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L52)
 
 ___
 
@@ -96,7 +96,7 @@ true
 
 #### Defined in
 
-[src/Client.ts:73](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L73)
+[packages/libcord/src/Client.ts:77](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L77)
 
 ___
 
@@ -108,4 +108,4 @@ The token for the bot is required
 
 #### Defined in
 
-[src/Client.ts:78](https://github.com/Libcord/libcord/blob/f2b4cca/src/Client.ts#L78)
+[packages/libcord/src/Client.ts:82](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L82)

@@ -26,7 +26,7 @@ See https://discord.com/developers/docs/topics/gateway#activity-object
 
 #### Defined in
 
-[src/structures/User.ts:155](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L155)
+[packages/libcord/src/structures/User.ts:158](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L158)
 
 ___
 
@@ -34,11 +34,11 @@ ___
 
 • `Optional` **afk**: `boolean`
 
-Whether or not the client is afk. default false
+Whether the client is afk. default false
 
 #### Defined in
 
-[src/structures/User.ts:165](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L165)
+[packages/libcord/src/structures/User.ts:168](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L168)
 
 ___
 
@@ -52,4 +52,4 @@ See https://discord.com/developers/docs/topics/gateway#update-status-status-type
 
 #### Defined in
 
-[src/structures/User.ts:161](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L161)
+[packages/libcord/src/structures/User.ts:164](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L164)

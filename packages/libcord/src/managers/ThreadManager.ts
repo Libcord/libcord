@@ -40,7 +40,7 @@ export default class ThreadManager extends Manager {
   }
 
   /**
-   * Fetches all active threads in the current
+   * Fetches all active threads in the current guild
    */
   async fetchAll() {
     const d = await this.client.requestHandler.request(
@@ -59,6 +59,11 @@ export default class ThreadManager extends Manager {
         return new PrivateThread(this.client, thread);
     });
   }
+
+  /**
+   * Creates a thread in a channel
+   * @param options The thread options
+   */
   async create(options: ThreadCreatePayload) {
     const d = await this.client.requestHandler.request(
       "POST",
@@ -73,6 +78,11 @@ export default class ThreadManager extends Manager {
 
     return this._add(d);
   }
+
+  /**
+   * Deletes a thread from a channel
+   * @param threadId the id from the thread
+   */
   async delete(threadId: Snowflake) {
     await this.client.requestHandler.request("DELETE", CHANNEL(threadId));
     if (this.cache.has(threadId)) this.cache.delete(threadId);

@@ -11,6 +11,8 @@
 - [CHANNEL\_EDIT](CLIENT_EVENTS.md#channel_edit)
 - [CONNECTED](CLIENT_EVENTS.md#connected)
 - [ERROR](CLIENT_EVENTS.md#error)
+- [GUILD\_CREATE](CLIENT_EVENTS.md#guild_create)
+- [GUILD\_DELETE](CLIENT_EVENTS.md#guild_delete)
 - [INTERACTION\_CREATE](CLIENT_EVENTS.md#interaction_create)
 - [MESSAGE](CLIENT_EVENTS.md#message)
 - [RAW](CLIENT_EVENTS.md#raw)
@@ -18,6 +20,8 @@
 - [ROLE\_CREATE](CLIENT_EVENTS.md#role_create)
 - [ROLE\_DELETE](CLIENT_EVENTS.md#role_delete)
 - [ROLE\_EDIT](CLIENT_EVENTS.md#role_edit)
+- [THREAD\_CREATE](CLIENT_EVENTS.md#thread_create)
+- [THREAD\_DELETE](CLIENT_EVENTS.md#thread_delete)
 
 ## Enumeration Members
 
@@ -27,7 +31,7 @@
 
 #### Defined in
 
-[src/Constants.ts:156](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L156)
+[packages/libcord/src/Constants.ts:156](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L156)
 
 ___
 
@@ -37,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:158](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L158)
+[packages/libcord/src/Constants.ts:162](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L162)
 
 ___
 
@@ -47,7 +51,7 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:157](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L157)
+[packages/libcord/src/Constants.ts:161](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L161)
 
 ___
 
@@ -57,7 +61,7 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:165](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L165)
+[packages/libcord/src/Constants.ts:169](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L169)
 
 ___
 
@@ -67,7 +71,27 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:163](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L163)
+[packages/libcord/src/Constants.ts:167](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L167)
+
+___
+
+### GUILD\_CREATE
+
+• **GUILD\_CREATE** = ``"guildCreate"``
+
+#### Defined in
+
+[packages/libcord/src/Constants.ts:159](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L159)
+
+___
+
+### GUILD\_DELETE
+
+• **GUILD\_DELETE** = ``"guildDelete"``
+
+#### Defined in
+
+[packages/libcord/src/Constants.ts:160](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L160)
 
 ___
 
@@ -77,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:162](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L162)
+[packages/libcord/src/Constants.ts:166](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L166)
 
 ___
 
@@ -87,7 +111,7 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:154](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L154)
+[packages/libcord/src/Constants.ts:154](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L154)
 
 ___
 
@@ -97,7 +121,7 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:164](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L164)
+[packages/libcord/src/Constants.ts:168](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L168)
 
 ___
 
@@ -107,7 +131,7 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:155](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L155)
+[packages/libcord/src/Constants.ts:155](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L155)
 
 ___
 
@@ -117,7 +141,7 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:159](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L159)
+[packages/libcord/src/Constants.ts:163](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L163)
 
 ___
 
@@ -127,7 +151,7 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:161](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L161)
+[packages/libcord/src/Constants.ts:165](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L165)
 
 ___
 
@@ -137,4 +161,24 @@ ___
 
 #### Defined in
 
-[src/Constants.ts:160](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L160)
+[packages/libcord/src/Constants.ts:164](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L164)
+
+___
+
+### THREAD\_CREATE
+
+• **THREAD\_CREATE** = ``"threadCreate"``
+
+#### Defined in
+
+[packages/libcord/src/Constants.ts:157](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L157)
+
+___
+
+### THREAD\_DELETE
+
+• **THREAD\_DELETE** = ``"threadDelete"``
+
+#### Defined in
+
+[packages/libcord/src/Constants.ts:158](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L158)

@@ -50,7 +50,7 @@ Base.constructor
 
 #### Defined in
 
-[src/structures/channels/Channel.ts:12](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/channels/Channel.ts#L12)
+[packages/libcord/src/structures/channels/Channel.ts:12](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Channel.ts#L12)
 
 ## Properties
 
@@ -64,7 +64,7 @@ Base.constructor
 
 #### Defined in
 
-[src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[src/structures/channels/Channel.ts:8](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/channels/Channel.ts#L8)
+[packages/libcord/src/structures/channels/Channel.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Channel.ts#L8)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[src/structures/channels/Channel.ts:10](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/channels/Channel.ts#L10)
+[packages/libcord/src/structures/channels/Channel.ts:10](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Channel.ts#L10)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/structures/channels/Channel.ts:9](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/channels/Channel.ts#L9)
+[packages/libcord/src/structures/channels/Channel.ts:9](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Channel.ts#L9)
 
 ## Accessors
 
@@ -108,4 +108,4 @@ ___
 
 #### Defined in
 
-[src/structures/channels/Channel.ts:19](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/channels/Channel.ts#L19)
+[packages/libcord/src/structures/channels/Channel.ts:19](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Channel.ts#L19)

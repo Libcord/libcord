@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[src/utils/Color.ts:17](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Color.ts#L17)
+[packages/libcord/src/utils/Color.ts:17](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Color.ts#L17)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/utils/Color.ts:4](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Color.ts#L4)
+[packages/libcord/src/utils/Color.ts:4](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Color.ts#L4)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[src/utils/Color.ts:13](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Color.ts#L13)
+[packages/libcord/src/utils/Color.ts:13](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Color.ts#L13)
 
 ___
 
@@ -99,4 +99,4 @@ ___
 
 #### Defined in
 
-[src/utils/Color.ts:8](https://github.com/Libcord/libcord/blob/f2b4cca/src/utils/Color.ts#L8)
+[packages/libcord/src/utils/Color.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Color.ts#L8)

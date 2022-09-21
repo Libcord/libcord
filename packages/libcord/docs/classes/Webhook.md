@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[src/structures/Webhook.ts:27](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Webhook.ts#L27)
+[packages/libcord/src/structures/Webhook.ts:27](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L27)
 
 ## Properties
 
@@ -45,7 +45,7 @@
 
 #### Defined in
 
-[src/structures/Webhook.ts:26](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Webhook.ts#L26)
+[packages/libcord/src/structures/Webhook.ts:26](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L26)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/structures/Webhook.ts:22](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Webhook.ts#L22)
+[packages/libcord/src/structures/Webhook.ts:22](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L22)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/structures/Webhook.ts:23](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Webhook.ts#L23)
+[packages/libcord/src/structures/Webhook.ts:23](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L23)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/structures/Webhook.ts:25](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Webhook.ts#L25)
+[packages/libcord/src/structures/Webhook.ts:25](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L25)
 
 ## Methods
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/structures/Webhook.ts:42](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Webhook.ts#L42)
+[packages/libcord/src/structures/Webhook.ts:42](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L42)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[src/structures/Webhook.ts:38](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Webhook.ts#L38)
+[packages/libcord/src/structures/Webhook.ts:38](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L38)
 
 ___
 
@@ -135,4 +135,4 @@ ___
 
 #### Defined in
 
-[src/structures/Webhook.ts:34](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Webhook.ts#L34)
+[packages/libcord/src/structures/Webhook.ts:34](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L34)

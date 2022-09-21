@@ -21,11 +21,11 @@ list of activity types
 
 • **competing** = ``5``
 
-Competing in {name}
+Competing in ...
 
 #### Defined in
 
-[src/structures/User.ts:140](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L140)
+[packages/libcord/src/structures/User.ts:143](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L143)
 
 ___
 
@@ -33,12 +33,12 @@ ___
 
 • **custom** = ``4``
 
-{emoji} {details}
-WARNING : don't work for bots
+emoji ...
+WARNING : doesn't work for bots
 
 #### Defined in
 
-[src/structures/User.ts:136](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L136)
+[packages/libcord/src/structures/User.ts:139](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L139)
 
 ___
 
@@ -46,11 +46,11 @@ ___
 
 • **game** = ``0``
 
-Playing {game}
+Playing ...
 
 #### Defined in
 
-[src/structures/User.ts:119](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L119)
+[packages/libcord/src/structures/User.ts:122](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L122)
 
 ___
 
@@ -58,11 +58,11 @@ ___
 
 • **listening** = ``2``
 
-Listening to {name}
+Listening to ...
 
 #### Defined in
 
-[src/structures/User.ts:127](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L127)
+[packages/libcord/src/structures/User.ts:130](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L130)
 
 ___
 
@@ -70,11 +70,11 @@ ___
 
 • **streaming** = ``1``
 
-Streaming {details}
+Streaming ...
 
 #### Defined in
 
-[src/structures/User.ts:123](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L123)
+[packages/libcord/src/structures/User.ts:126](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L126)
 
 ___
 
@@ -82,8 +82,8 @@ ___
 
 • **watching** = ``3``
 
-Watching {details}
+Watching ...
 
 #### Defined in
 
-[src/structures/User.ts:131](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/User.ts#L131)
+[packages/libcord/src/structures/User.ts:134](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L134)

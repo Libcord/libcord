@@ -42,7 +42,7 @@ include events :
 
 #### Defined in
 
-[src/Constants.ts:138](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L138)
+[packages/libcord/src/Constants.ts:138](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L138)
 
 ___
 
@@ -58,7 +58,7 @@ include events :
 
 #### Defined in
 
-[src/Constants.ts:146](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L146)
+[packages/libcord/src/Constants.ts:146](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L146)
 
 ___
 
@@ -71,7 +71,7 @@ include event :
 
 #### Defined in
 
-[src/Constants.ts:151](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L151)
+[packages/libcord/src/Constants.ts:151](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L151)
 
 ___
 
@@ -99,7 +99,7 @@ include events :
 
 #### Defined in
 
-[src/Constants.ts:61](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L61)
+[packages/libcord/src/Constants.ts:61](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L61)
 
 ___
 
@@ -113,7 +113,7 @@ include events :
 
 #### Defined in
 
-[src/Constants.ts:75](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L75)
+[packages/libcord/src/Constants.ts:75](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L75)
 
 ___
 
@@ -126,7 +126,7 @@ GUILD_EMOJIS_UPDATE
 
 #### Defined in
 
-[src/Constants.ts:80](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L80)
+[packages/libcord/src/Constants.ts:80](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L80)
 
 ___
 
@@ -142,7 +142,7 @@ include events :
 
 #### Defined in
 
-[src/Constants.ts:88](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L88)
+[packages/libcord/src/Constants.ts:88](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L88)
 
 ___
 
@@ -156,7 +156,7 @@ include events
 
 #### Defined in
 
-[src/Constants.ts:99](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L99)
+[packages/libcord/src/Constants.ts:99](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L99)
 
 ___
 
@@ -172,7 +172,7 @@ include events :
 
 #### Defined in
 
-[src/Constants.ts:69](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L69)
+[packages/libcord/src/Constants.ts:69](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L69)
 
 ___
 
@@ -188,7 +188,7 @@ include events
 
 #### Defined in
 
-[src/Constants.ts:117](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L117)
+[packages/libcord/src/Constants.ts:117](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L117)
 
 ___
 
@@ -204,7 +204,7 @@ include events :
 
 #### Defined in
 
-[src/Constants.ts:125](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L125)
+[packages/libcord/src/Constants.ts:125](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L125)
 
 ___
 
@@ -217,7 +217,7 @@ include event :
 
 #### Defined in
 
-[src/Constants.ts:130](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L130)
+[packages/libcord/src/Constants.ts:130](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L130)
 
 ___
 
@@ -230,7 +230,7 @@ include event :
 
 #### Defined in
 
-[src/Constants.ts:109](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L109)
+[packages/libcord/src/Constants.ts:109](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L109)
 
 ___
 
@@ -243,7 +243,7 @@ include event :
 
 #### Defined in
 
-[src/Constants.ts:104](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L104)
+[packages/libcord/src/Constants.ts:104](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L104)
 
 ___
 
@@ -256,4 +256,4 @@ include event :
 
 #### Defined in
 
-[src/Constants.ts:93](https://github.com/Libcord/libcord/blob/f2b4cca/src/Constants.ts#L93)
+[packages/libcord/src/Constants.ts:93](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L93)

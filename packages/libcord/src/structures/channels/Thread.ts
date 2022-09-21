@@ -4,8 +4,7 @@ import { Snowflake } from "../../utils/Snowflake";
 import { APIThreadChannel, ChannelType } from "discord-api-types/v9";
 import { TextChannel } from "./TextChannel";
 import { NewsChannel } from "./NewsChannel";
-import { channel } from "diagnostic_channel";
-import { Message, MessageInteractionOptions } from "../Message";
+import { Message, MessageOptions } from "../Message";
 import { Embed } from "../Embed";
 import { ComponentsType } from "../components/ActionRow";
 import * as FormData from "form-data";
@@ -43,14 +42,10 @@ export class Thread extends Base {
   public async delete() {
     return await ((await this.channel) as TextChannel).threads.delete(this.id);
   }
-  public send(
-    content: MessageInteractionOptions | string | Embed
-  ): Promise<Message>;
-  public send(
-    msg: MessageInteractionOptions | string | Embed
-  ): Promise<Message>;
+  public send(content: MessageOptions | string | Embed): Promise<Message>;
+  public send(msg: MessageOptions | string | Embed): Promise<Message>;
   public async send(
-    msg: MessageInteractionOptions | string
+    msg: MessageOptions | string
   ): Promise<Message | undefined> {
     let payload = {
       content: "" as any,

@@ -23,9 +23,19 @@
 ### Properties
 
 - [archived](Thread.md#archived)
+- [channel](Thread.md#channel)
 - [client](Thread.md#client)
+- [data](Thread.md#data)
 - [id](Thread.md#id)
 - [locked](Thread.md#locked)
+- [member\_count](Thread.md#member_count)
+- [rate\_limit](Thread.md#rate_limit)
+- [type](Thread.md#type)
+
+### Methods
+
+- [delete](Thread.md#delete)
+- [send](Thread.md#send)
 
 ## Constructors
 
@@ -46,7 +56,7 @@ Base.constructor
 
 #### Defined in
 
-[src/structures/channels/Thread.ts:11](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/channels/Thread.ts#L11)
+[packages/libcord/src/structures/channels/Thread.ts:28](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L28)
 
 ## Properties
 
@@ -56,7 +66,17 @@ Base.constructor
 
 #### Defined in
 
-[src/structures/channels/Thread.ts:8](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/channels/Thread.ts#L8)
+[packages/libcord/src/structures/channels/Thread.ts:16](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L16)
+
+___
+
+### channel
+
+• `Readonly` **channel**: `undefined` \| `Promise`<`undefined` \| [`TextChannel`](TextChannel.md) \| [`NewsChannel`](NewsChannel.md)\>
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:24](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L24)
 
 ___
 
@@ -70,7 +90,17 @@ ___
 
 #### Defined in
 
-[src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Base.ts#L8)
+
+___
+
+### data
+
+• `Readonly` **data**: `APIThreadChannel`
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:27](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L27)
 
 ___
 
@@ -80,7 +110,7 @@ ___
 
 #### Defined in
 
-[src/structures/channels/Thread.ts:7](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/channels/Thread.ts#L7)
+[packages/libcord/src/structures/channels/Thread.ts:15](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L15)
 
 ___
 
@@ -90,4 +120,84 @@ ___
 
 #### Defined in
 
-[src/structures/channels/Thread.ts:9](https://github.com/Libcord/libcord/blob/f2b4cca/src/structures/channels/Thread.ts#L9)
+[packages/libcord/src/structures/channels/Thread.ts:17](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L17)
+
+___
+
+### member\_count
+
+• `Readonly` **member\_count**: `undefined` \| `number`
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:23](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L23)
+
+___
+
+### rate\_limit
+
+• `Readonly` **rate\_limit**: `undefined` \| `number`
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:22](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L22)
+
+___
+
+### type
+
+• `Readonly` **type**: `GuildNewsThread` \| `GuildPublicThread` \| `GuildPrivateThread`
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:18](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L18)
+
+## Methods
+
+### delete
+
+▸ **delete**(): `Promise`<`default`\>
+
+#### Returns
+
+`Promise`<`default`\>
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:42](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L42)
+
+___
+
+### send
+
+▸ **send**(`content`): `Promise`<[`Message`](Message.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `content` | `string` \| [`Embed`](Embed.md) \| [`MessageOptions`](../interfaces/MessageOptions.md) |
+
+#### Returns
+
+`Promise`<[`Message`](Message.md)\>
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:45](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L45)
+
+▸ **send**(`msg`): `Promise`<[`Message`](Message.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `msg` | `string` \| [`Embed`](Embed.md) \| [`MessageOptions`](../interfaces/MessageOptions.md) |
+
+#### Returns
+
+`Promise`<[`Message`](Message.md)\>
+
+#### Defined in
+
+[packages/libcord/src/structures/channels/Thread.ts:46](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Thread.ts#L46)
