@@ -53,7 +53,7 @@ Allows for the addition of reactions to messages
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:29](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L29)
+[packages/libcord/src/utils/Permissions.ts:29](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L29)
 
 ___
 
@@ -65,7 +65,7 @@ Allows all permissions and bypasses channel permission overwrites
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:17](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L17)
+[packages/libcord/src/utils/Permissions.ts:17](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L17)
 
 ___
 
@@ -77,7 +77,7 @@ Allows for uploading images and files
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:65](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L65)
+[packages/libcord/src/utils/Permissions.ts:65](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L65)
 
 ___
 
@@ -89,7 +89,7 @@ Allows banning members
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:13](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L13)
+[packages/libcord/src/utils/Permissions.ts:13](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L13)
 
 ___
 
@@ -101,7 +101,7 @@ Allows for modification of own nickname
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:109](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L109)
+[packages/libcord/src/utils/Permissions.ts:109](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L109)
 
 ___
 
@@ -113,7 +113,7 @@ Allows for joining of a voice channel
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:85](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L85)
+[packages/libcord/src/utils/Permissions.ts:85](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L85)
 
 ___
 
@@ -125,7 +125,7 @@ Allows creation of instant invites
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:5](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L5)
+[packages/libcord/src/utils/Permissions.ts:5](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L5)
 
 ___
 
@@ -137,7 +137,7 @@ Allows for deafening of members in a voice channel
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:97](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L97)
+[packages/libcord/src/utils/Permissions.ts:97](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L97)
 
 ___
 
@@ -149,7 +149,7 @@ Links sent by users with this permission will be auto-embedded
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:61](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L61)
+[packages/libcord/src/utils/Permissions.ts:61](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L61)
 
 ___
 
@@ -161,7 +161,7 @@ Allows kicking members
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:9](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L9)
+[packages/libcord/src/utils/Permissions.ts:9](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L9)
 
 ___
 
@@ -173,7 +173,7 @@ Allows management and editing of channels
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:21](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L21)
+[packages/libcord/src/utils/Permissions.ts:21](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L21)
 
 ___
 
@@ -185,7 +185,7 @@ Allows management and editing of emojis
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:125](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L125)
+[packages/libcord/src/utils/Permissions.ts:125](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L125)
 
 ___
 
@@ -197,7 +197,7 @@ Allows management and editing of the guild
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:25](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L25)
+[packages/libcord/src/utils/Permissions.ts:25](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L25)
 
 ___
 
@@ -209,7 +209,7 @@ Allows for deletion of other users messages
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:57](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L57)
+[packages/libcord/src/utils/Permissions.ts:57](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L57)
 
 ___
 
@@ -221,7 +221,7 @@ Allows for modification of other users nicknames
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:113](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L113)
+[packages/libcord/src/utils/Permissions.ts:113](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L113)
 
 ___
 
@@ -233,7 +233,7 @@ Allows management and editing of roles
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:117](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L117)
+[packages/libcord/src/utils/Permissions.ts:117](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L117)
 
 ___
 
@@ -245,7 +245,7 @@ Allows for deleting and archiving threads, and viewing all private threads
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:137](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L137)
+[packages/libcord/src/utils/Permissions.ts:137](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L137)
 
 ___
 
@@ -257,7 +257,7 @@ Allows management and editing of webhooks
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:121](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L121)
+[packages/libcord/src/utils/Permissions.ts:121](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L121)
 
 ___
 
@@ -277,7 +277,7 @@ tag to notify all online users in a channel
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:73](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L73)
+[packages/libcord/src/utils/Permissions.ts:73](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L73)
 
 ___
 
@@ -289,7 +289,7 @@ Allows for moving of members between voice channels
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:101](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L101)
+[packages/libcord/src/utils/Permissions.ts:101](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L101)
 
 ___
 
@@ -301,7 +301,7 @@ Allows for muting members in a voice channel
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:93](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L93)
+[packages/libcord/src/utils/Permissions.ts:93](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L93)
 
 ___
 
@@ -313,7 +313,7 @@ Allows for using priority speaker in a voice channel
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:37](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L37)
+[packages/libcord/src/utils/Permissions.ts:37](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L37)
 
 ___
 
@@ -325,7 +325,7 @@ Allows for reading of message history
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:69](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L69)
+[packages/libcord/src/utils/Permissions.ts:69](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L69)
 
 ___
 
@@ -337,7 +337,7 @@ Allows for requesting to speak in stage channels. (This permission is under acti
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:133](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L133)
+[packages/libcord/src/utils/Permissions.ts:133](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L133)
 
 ___
 
@@ -349,7 +349,7 @@ Allows for sending messages in a channel
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:49](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L49)
+[packages/libcord/src/utils/Permissions.ts:49](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L49)
 
 ___
 
@@ -361,7 +361,7 @@ Allows for sending of /tts messages
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:53](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L53)
+[packages/libcord/src/utils/Permissions.ts:53](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L53)
 
 ___
 
@@ -373,7 +373,7 @@ Allows for speaking in a voice channel
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:89](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L89)
+[packages/libcord/src/utils/Permissions.ts:89](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L89)
 
 ___
 
@@ -385,7 +385,7 @@ Allows the user to go live
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:41](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L41)
+[packages/libcord/src/utils/Permissions.ts:41](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L41)
 
 ___
 
@@ -397,7 +397,7 @@ Allows the usage of custom emojis from other servers
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:77](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L77)
+[packages/libcord/src/utils/Permissions.ts:77](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L77)
 
 ___
 
@@ -409,7 +409,7 @@ Allows for creating and participating in private threads
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:145](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L145)
+[packages/libcord/src/utils/Permissions.ts:145](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L145)
 
 ___
 
@@ -421,7 +421,7 @@ Allows for creating and participating in threads
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:141](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L141)
+[packages/libcord/src/utils/Permissions.ts:141](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L141)
 
 ___
 
@@ -433,7 +433,7 @@ Allows members to use slash commands in text channels
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:129](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L129)
+[packages/libcord/src/utils/Permissions.ts:129](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L129)
 
 ___
 
@@ -445,7 +445,7 @@ Allows for using voice-activity-detection in a voice channel
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:105](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L105)
+[packages/libcord/src/utils/Permissions.ts:105](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L105)
 
 ___
 
@@ -457,7 +457,7 @@ Allows for viewing of audit logs
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:33](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L33)
+[packages/libcord/src/utils/Permissions.ts:33](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L33)
 
 ___
 
@@ -469,7 +469,7 @@ Allows guild members to view a channel, which includes reading messages in text 
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:45](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L45)
+[packages/libcord/src/utils/Permissions.ts:45](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L45)
 
 ___
 
@@ -481,4 +481,4 @@ Allows for viewing guild insights
 
 #### Defined in
 
-[packages/libcord/src/utils/Permissions.ts:81](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/Permissions.ts#L81)
+[packages/libcord/src/utils/Permissions.ts:81](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/Permissions.ts#L81)

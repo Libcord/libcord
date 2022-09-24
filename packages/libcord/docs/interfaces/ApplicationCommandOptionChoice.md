@@ -19,7 +19,7 @@ the name of the choice
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:105](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L105)
+[packages/libcord/src/structures/ApplicationCommand.ts:112](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L112)
 
 ___
 
@@ -31,4 +31,4 @@ the value of the choice
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:109](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L109)
+[packages/libcord/src/structures/ApplicationCommand.ts:116](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L116)

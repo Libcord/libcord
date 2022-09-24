@@ -63,7 +63,7 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts:16](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts#L16)
+[packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts:16](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts#L16)
 
 ## Properties
 
@@ -77,7 +77,7 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/CommandInteraction.ts:26](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/CommandInteraction.ts#L26)
+[packages/libcord/src/structures/interactions/CommandInteraction.ts:26](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/CommandInteraction.ts#L26)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/Interaction.ts:17](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/Interaction.ts#L17)
+[packages/libcord/src/structures/interactions/Interaction.ts:17](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/Interaction.ts#L17)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/CommandInteraction.ts:32](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/CommandInteraction.ts#L32)
+[packages/libcord/src/structures/interactions/CommandInteraction.ts:32](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/CommandInteraction.ts#L32)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/CommandInteraction.ts:27](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/CommandInteraction.ts#L27)
+[packages/libcord/src/structures/interactions/CommandInteraction.ts:27](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/CommandInteraction.ts#L27)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts:14](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts#L14)
+[packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts:14](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts#L14)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/CommandInteraction.ts:29](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/CommandInteraction.ts#L29)
+[packages/libcord/src/structures/interactions/CommandInteraction.ts:29](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/CommandInteraction.ts#L29)
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/Interaction.ts:18](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/Interaction.ts#L18)
+[packages/libcord/src/structures/interactions/Interaction.ts:18](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/Interaction.ts#L18)
 
 ___
 
@@ -189,7 +189,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/CommandInteraction.ts:31](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/CommandInteraction.ts#L31)
+[packages/libcord/src/structures/interactions/CommandInteraction.ts:31](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/CommandInteraction.ts#L31)
 
 ___
 
@@ -203,7 +203,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/CommandInteraction.ts:33](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/CommandInteraction.ts#L33)
+[packages/libcord/src/structures/interactions/CommandInteraction.ts:33](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/CommandInteraction.ts#L33)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/CommandInteraction.ts:30](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/CommandInteraction.ts#L30)
+[packages/libcord/src/structures/interactions/CommandInteraction.ts:30](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/CommandInteraction.ts#L30)
 
 ___
 
@@ -231,7 +231,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/Interaction.ts:19](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/Interaction.ts#L19)
+[packages/libcord/src/structures/interactions/Interaction.ts:19](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/Interaction.ts#L19)
 
 ___
 
@@ -245,7 +245,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/CommandInteraction.ts:28](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/CommandInteraction.ts#L28)
+[packages/libcord/src/structures/interactions/CommandInteraction.ts:28](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/CommandInteraction.ts#L28)
 
 ## Accessors
 
@@ -259,7 +259,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts:22](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts#L22)
+[packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts:22](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/MessageContextMenuInteraction.ts#L22)
 
 ## Methods
 
@@ -283,7 +283,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/CommandInteraction.ts:67](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/CommandInteraction.ts#L67)
+[packages/libcord/src/structures/interactions/CommandInteraction.ts:67](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/CommandInteraction.ts#L67)
 
 ___
 
@@ -301,7 +301,7 @@ this is ButtonInteraction
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/Interaction.ts:38](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/Interaction.ts#L38)
+[packages/libcord/src/structures/interactions/Interaction.ts:38](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/Interaction.ts#L38)
 
 ___
 
@@ -319,7 +319,7 @@ this is CommandInteraction
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/Interaction.ts:26](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/Interaction.ts#L26)
+[packages/libcord/src/structures/interactions/Interaction.ts:26](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/Interaction.ts#L26)
 
 ___
 
@@ -337,7 +337,7 @@ this is MessageContextMenuInteraction
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/Interaction.ts:30](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/Interaction.ts#L30)
+[packages/libcord/src/structures/interactions/Interaction.ts:30](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/Interaction.ts#L30)
 
 ___
 
@@ -355,7 +355,7 @@ this is SelectMenuInteraction
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/Interaction.ts:46](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/Interaction.ts#L46)
+[packages/libcord/src/structures/interactions/Interaction.ts:46](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/Interaction.ts#L46)
 
 ___
 
@@ -373,7 +373,7 @@ this is UserContextMenuInteraction
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/Interaction.ts:34](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/Interaction.ts#L34)
+[packages/libcord/src/structures/interactions/Interaction.ts:34](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/Interaction.ts#L34)
 
 ___
 
@@ -397,4 +397,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/interactions/CommandInteraction.ts:79](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/interactions/CommandInteraction.ts#L79)
+[packages/libcord/src/structures/interactions/CommandInteraction.ts:79](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/interactions/CommandInteraction.ts#L79)

@@ -17,6 +17,7 @@
 
 ### Methods
 
+- [execute](Webhook.md#execute)
 - [send](Webhook.md#send)
 - [setAvatar](Webhook.md#setavatar)
 - [setUsername](Webhook.md#setusername)
@@ -35,7 +36,7 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/Webhook.ts:27](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L27)
+[packages/libcord/src/structures/Webhook.ts:28](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Webhook.ts#L28)
 
 ## Properties
 
@@ -45,7 +46,7 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/Webhook.ts:26](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L26)
+[packages/libcord/src/structures/Webhook.ts:27](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Webhook.ts#L27)
 
 ___
 
@@ -55,7 +56,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Webhook.ts:22](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L22)
+[packages/libcord/src/structures/Webhook.ts:23](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Webhook.ts#L23)
 
 ___
 
@@ -65,7 +66,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Webhook.ts:23](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L23)
+[packages/libcord/src/structures/Webhook.ts:24](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Webhook.ts#L24)
 
 ___
 
@@ -75,19 +76,21 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Webhook.ts:25](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L25)
+[packages/libcord/src/structures/Webhook.ts:26](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Webhook.ts#L26)
 
 ## Methods
 
-### send
+### execute
 
-▸ **send**(`options`): `Promise`<`undefined` \| [`Webhook`](Webhook.md)\>
+▸ **execute**(`options`): `Promise`<`undefined` \| [`Webhook`](Webhook.md)\>
+
+Sends a message to a webhook
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `string` \| [`executeWebhookOptions`](../interfaces/executeWebhookOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | `string` \| [`executeWebhookOptions`](../interfaces/executeWebhookOptions.md) | the payload for the webhook |
 
 #### Returns
 
@@ -95,7 +98,31 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Webhook.ts:42](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L42)
+[packages/libcord/src/structures/Webhook.ts:57](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Webhook.ts#L57)
+
+___
+
+### send
+
+▸ **send**(`options`): `Promise`<`undefined` \| [`Webhook`](Webhook.md)\>
+
+Sends a message to a webhook
+
+**`Deprecated`**
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options` | `string` \| [`executeWebhookOptions`](../interfaces/executeWebhookOptions.md) | the payload for the webhook |
+
+#### Returns
+
+`Promise`<`undefined` \| [`Webhook`](Webhook.md)\>
+
+#### Defined in
+
+[packages/libcord/src/structures/Webhook.ts:49](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Webhook.ts#L49)
 
 ___
 
@@ -115,7 +142,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Webhook.ts:38](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L38)
+[packages/libcord/src/structures/Webhook.ts:39](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Webhook.ts#L39)
 
 ___
 
@@ -135,4 +162,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Webhook.ts:34](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Webhook.ts#L34)
+[packages/libcord/src/structures/Webhook.ts:35](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Webhook.ts#L35)

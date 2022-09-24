@@ -10,6 +10,7 @@ import { MESSAGES } from "../rest/EndPoints";
 import { Stream } from "stream";
 import * as FormData from "form-data";
 import { FileUtils } from "../utils/FileUtils";
+import { Deprecated } from "../utils/Decorators";
 
 /**
  * @category Structures
@@ -80,9 +81,14 @@ export class Message extends Base {
     }
   }
 
-  public reply(msg: MessageOptions | string | Embed): Promise<Message>;
+  /**
+   * Reply to a message
+   * @param options The options for the message, can be a string or embed or object
+   * @returns {Promise<Message>} message
+   */
+  public reply(options: MessageOptions | string | Embed): Promise<Message>;
   public async reply(
-    msg: MessageOptions | string
+    options: MessageOptions | string
   ): Promise<Message | undefined> {
     const payload = {
       content: "" as any,
@@ -93,21 +99,21 @@ export class Message extends Base {
       },
       attachments: [] as any,
     };
-    if (msg instanceof Embed) {
-      payload.embeds.push(msg.getJSON());
+    if (options instanceof Embed) {
+      payload.embeds.push(options.getJSON());
     }
-    if (typeof msg === "string") {
-      payload.content = msg;
+    if (typeof options === "string") {
+      payload.content = options;
     }
-    if (typeof msg === "object") {
-      if (typeof msg?.content === "string") {
-        payload.content = msg?.content;
+    if (typeof options === "object") {
+      if (typeof options?.content === "string") {
+        payload.content = options?.content;
       }
-      if (msg.content instanceof Embed) {
-        payload.embeds.push(msg.content.getJSON());
+      if (options.content instanceof Embed) {
+        payload.embeds.push(options.content.getJSON());
       }
-      if (msg.embeds) {
-        msg.embeds.forEach((em: any) => {
+      if (options.embeds) {
+        options.embeds.forEach((em: any) => {
           if (em instanceof Embed) {
             payload.embeds.push((em as Embed).getJSON());
           } else {
@@ -115,16 +121,16 @@ export class Message extends Base {
           }
         });
       }
-      if (msg.components?.length! > 0) {
-        msg.components?.forEach((comp: ComponentsType) => {
+      if (options.components?.length! > 0) {
+        options.components?.forEach((comp: ComponentsType) => {
           payload.components.push(comp);
         });
       }
-      if (msg.files) {
+      if (options.files) {
         let temp = new FormData();
-        const { files } = await FileUtils.resolveFiles(msg.files, payload);
+        const { files } = await FileUtils.resolveFiles(options.files, payload);
         const attachment = files.map((file: any, i: any) => {
-          const filee = msg.files?.[i];
+          const filee = options.files?.[i];
           for (const file of files) {
             temp.append(`files[${i}]`, file.file, file.name);
           }

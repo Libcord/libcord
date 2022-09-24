@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[packages/libcord/src/utils/PermissionOverwrite.ts:10](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/PermissionOverwrite.ts#L10)
+[packages/libcord/src/utils/PermissionOverwrite.ts:10](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/PermissionOverwrite.ts#L10)
 
 ## Properties
 
@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[packages/libcord/src/utils/PermissionOverwrite.ts:7](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/PermissionOverwrite.ts#L7)
+[packages/libcord/src/utils/PermissionOverwrite.ts:7](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/PermissionOverwrite.ts#L7)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/utils/PermissionOverwrite.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/PermissionOverwrite.ts#L8)
+[packages/libcord/src/utils/PermissionOverwrite.ts:8](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/PermissionOverwrite.ts#L8)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/utils/PermissionOverwrite.ts:6](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/PermissionOverwrite.ts#L6)
+[packages/libcord/src/utils/PermissionOverwrite.ts:6](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/PermissionOverwrite.ts#L6)
 
 ___
 
@@ -73,4 +73,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/utils/PermissionOverwrite.ts:5](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/PermissionOverwrite.ts#L5)
+[packages/libcord/src/utils/PermissionOverwrite.ts:5](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/PermissionOverwrite.ts#L5)

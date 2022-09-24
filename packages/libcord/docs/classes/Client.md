@@ -82,7 +82,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:268](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L268)
+[packages/libcord/src/Client.ts:268](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L268)
 
 ## Properties
 
@@ -92,7 +92,7 @@ EventEmitter.constructor
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:238](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L238)
+[packages/libcord/src/Client.ts:238](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L238)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:249](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L249)
+[packages/libcord/src/Client.ts:249](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L249)
 
 ___
 
@@ -114,7 +114,7 @@ list of events that the bot don't emit
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:229](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L229)
+[packages/libcord/src/Client.ts:229](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L229)
 
 ___
 
@@ -124,19 +124,19 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:237](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L237)
+[packages/libcord/src/Client.ts:237](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L237)
 
 ___
 
 ### gateway
 
-• **gateway**: [`Gateway`](Gateway.md)
+• **gateway**: `Gateway`
 
 bot gateway
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:224](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L224)
+[packages/libcord/src/Client.ts:224](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L224)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:248](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L248)
+[packages/libcord/src/Client.ts:248](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L248)
 
 ___
 
@@ -158,7 +158,7 @@ int number for intents
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:216](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L216)
+[packages/libcord/src/Client.ts:216](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L216)
 
 ___
 
@@ -170,7 +170,7 @@ the options for the client
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:264](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L264)
+[packages/libcord/src/Client.ts:264](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L264)
 
 ___
 
@@ -182,7 +182,7 @@ bot current presence
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:220](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L220)
+[packages/libcord/src/Client.ts:220](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L220)
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:225](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L225)
+[packages/libcord/src/Client.ts:225](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L225)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:243](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L243)
+[packages/libcord/src/Client.ts:243](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L243)
 
 ___
 
@@ -218,7 +218,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:253](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L253)
+[packages/libcord/src/Client.ts:253](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L253)
 
 ___
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:235](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L235)
+[packages/libcord/src/Client.ts:235](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L235)
 
 ___
 
@@ -238,7 +238,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:255](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L255)
+[packages/libcord/src/Client.ts:255](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L255)
 
 ___
 
@@ -250,7 +250,7 @@ a user object of the bot
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:234](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L234)
+[packages/libcord/src/Client.ts:234](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L234)
 
 ___
 
@@ -260,7 +260,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:247](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L247)
+[packages/libcord/src/Client.ts:247](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L247)
 
 ___
 
@@ -276,7 +276,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:240](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L240)
+[packages/libcord/src/Client.ts:240](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L240)
 
 ## Methods
 
@@ -299,7 +299,7 @@ Takes a list of application commands, overwriting existing commands that are reg
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:569](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L569)
+[packages/libcord/src/Client.ts:569](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L569)
 
 ___
 
@@ -323,7 +323,7 @@ Takes a list of application commands, overwriting existing commands for the guil
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:779](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L779)
+[packages/libcord/src/Client.ts:779](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L779)
 
 ___
 
@@ -345,7 +345,7 @@ connect the bot to discord
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:302](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L302)
+[packages/libcord/src/Client.ts:302](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L302)
 
 ___
 
@@ -369,7 +369,7 @@ Create a new global command. New global commands will be available in all guilds
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:441](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L441)
+[packages/libcord/src/Client.ts:441](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L441)
 
 ___
 
@@ -389,7 +389,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:401](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L401)
+[packages/libcord/src/Client.ts:401](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L401)
 
 ___
 
@@ -414,7 +414,7 @@ Create a new guild command. <br></br>
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:629](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L629)
+[packages/libcord/src/Client.ts:629](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L629)
 
 ___
 
@@ -436,7 +436,7 @@ delete a global application command
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:552](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L552)
+[packages/libcord/src/Client.ts:552](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L552)
 
 ___
 
@@ -459,7 +459,7 @@ delete a guild command
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:756](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L756)
+[packages/libcord/src/Client.ts:756](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L756)
 
 ___
 
@@ -483,7 +483,7 @@ Edit a global command. Updates will be available in all guilds after 1 hour
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:516](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L516)
+[packages/libcord/src/Client.ts:516](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L516)
 
 ___
 
@@ -508,7 +508,7 @@ Edit a guild command.
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:713](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L713)
+[packages/libcord/src/Client.ts:713](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L713)
 
 ___
 
@@ -541,7 +541,7 @@ EventEmitter.emit
 
 #### Defined in
 
-[packages/libcord/src/utils/EventEmitter.ts:139](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/EventEmitter.ts#L139)
+[packages/libcord/src/utils/EventEmitter.ts:139](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/EventEmitter.ts#L139)
 
 ___
 
@@ -575,7 +575,7 @@ EventEmitter.emitSync
 
 #### Defined in
 
-[packages/libcord/src/utils/EventEmitter.ts:112](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/EventEmitter.ts#L112)
+[packages/libcord/src/utils/EventEmitter.ts:112](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/EventEmitter.ts#L112)
 
 ___
 
@@ -599,7 +599,7 @@ fetch a global application command with the command id
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:488](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L488)
+[packages/libcord/src/Client.ts:488](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L488)
 
 ___
 
@@ -623,7 +623,7 @@ a array of commands object
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:417](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L417)
+[packages/libcord/src/Client.ts:417](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L417)
 
 ___
 
@@ -645,7 +645,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:338](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L338)
+[packages/libcord/src/Client.ts:338](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L338)
 
 ___
 
@@ -667,7 +667,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:320](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L320)
+[packages/libcord/src/Client.ts:320](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L320)
 
 ___
 
@@ -692,7 +692,7 @@ fetch a guild command with id
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:683](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L683)
+[packages/libcord/src/Client.ts:683](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L683)
 
 ___
 
@@ -717,7 +717,7 @@ a array of commands object
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:598](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L598)
+[packages/libcord/src/Client.ts:598](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L598)
 
 ___
 
@@ -740,7 +740,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:368](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L368)
+[packages/libcord/src/Client.ts:368](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L368)
 
 ___
 
@@ -774,7 +774,7 @@ EventEmitter.off
 
 #### Defined in
 
-[packages/libcord/src/utils/EventEmitter.ts:68](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/EventEmitter.ts#L68)
+[packages/libcord/src/utils/EventEmitter.ts:68](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/EventEmitter.ts#L68)
 
 ▸ **off**<`K`\>(`event`): [`Client`](Client.md)
 
@@ -802,7 +802,7 @@ EventEmitter.off
 
 #### Defined in
 
-[packages/libcord/src/utils/EventEmitter.ts:74](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/EventEmitter.ts#L74)
+[packages/libcord/src/utils/EventEmitter.ts:74](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/EventEmitter.ts#L74)
 
 ▸ **off**(): [`Client`](Client.md)
 
@@ -818,7 +818,7 @@ EventEmitter.off
 
 #### Defined in
 
-[packages/libcord/src/utils/EventEmitter.ts:79](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/EventEmitter.ts#L79)
+[packages/libcord/src/utils/EventEmitter.ts:79](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/EventEmitter.ts#L79)
 
 ___
 
@@ -851,7 +851,7 @@ EventEmitter.once
 
 #### Defined in
 
-[packages/libcord/src/utils/EventEmitter.ts:49](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/EventEmitter.ts#L49)
+[packages/libcord/src/utils/EventEmitter.ts:49](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/EventEmitter.ts#L49)
 
 ___
 
@@ -885,7 +885,7 @@ EventEmitter.queue
 
 #### Defined in
 
-[packages/libcord/src/utils/EventEmitter.ts:170](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/utils/EventEmitter.ts#L170)
+[packages/libcord/src/utils/EventEmitter.ts:170](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/utils/EventEmitter.ts#L170)
 
 ___
 
@@ -905,7 +905,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:804](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L804)
+[packages/libcord/src/Client.ts:804](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L804)
 
 ## Events
 
@@ -933,7 +933,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:89](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L89)
+[packages/libcord/src/Client.ts:89](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L89)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -957,7 +957,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:97](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L97)
+[packages/libcord/src/Client.ts:97](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L97)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -981,7 +981,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:102](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L102)
+[packages/libcord/src/Client.ts:102](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L102)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1005,7 +1005,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:110](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L110)
+[packages/libcord/src/Client.ts:110](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L110)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1029,7 +1029,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:124](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L124)
+[packages/libcord/src/Client.ts:124](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L124)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1053,7 +1053,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:133](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L133)
+[packages/libcord/src/Client.ts:133](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L133)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1077,7 +1077,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:142](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L142)
+[packages/libcord/src/Client.ts:142](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L142)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1101,7 +1101,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:150](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L150)
+[packages/libcord/src/Client.ts:150](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L150)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1125,7 +1125,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:158](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L158)
+[packages/libcord/src/Client.ts:158](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L158)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1149,7 +1149,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:166](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L166)
+[packages/libcord/src/Client.ts:166](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L166)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1173,7 +1173,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:174](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L174)
+[packages/libcord/src/Client.ts:174](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L174)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1197,7 +1197,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:182](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L182)
+[packages/libcord/src/Client.ts:182](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L182)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1221,7 +1221,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:190](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L190)
+[packages/libcord/src/Client.ts:190](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L190)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1245,7 +1245,7 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:198](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L198)
+[packages/libcord/src/Client.ts:198](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L198)
 
 ▸ **on**(`event`, `listener`): [`Client`](Client.md)
 
@@ -1269,4 +1269,4 @@ EventEmitter.on
 
 #### Defined in
 
-[packages/libcord/src/Client.ts:206](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Client.ts#L206)
+[packages/libcord/src/Client.ts:206](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Client.ts#L206)

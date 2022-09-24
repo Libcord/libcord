@@ -3,6 +3,8 @@ import { Client } from "../Client";
 import { Snowflake } from "../utils/Snowflake";
 import { Base } from "./Base";
 import { Guild } from "./Guild";
+import { Permission, Permissions } from "../utils/Permissions";
+import { Intents } from "../Constants";
 
 export enum ApplicationCommandType {
   CHAT_INPUT = 1,
@@ -27,9 +29,14 @@ export interface ApplicationCommandBase {
     ApplicationCommandOption | ApplicationCommandOptionWithSubCommand
   >;
   /**
-   * if the command are enable when the app is add to a guild
+   * Default permissions for the user to have if they want to use this command
    */
-  defaultPermissions?: boolean;
+  default_member_permissions?: Permission[] | Permissions[];
+  /**
+   * if the command are enable when the app is add to a guild
+   * @deprecated
+   */
+  default_permission?: boolean;
 }
 
 export interface EditApplicationCommandOptions {
@@ -137,7 +144,6 @@ export class ApplicationCommand extends Base {
    * the options of the command
    */
   public options: ApplicationCommandOption[] | null;
-
   /**
    * if the command is enable by default on add guild
    */
@@ -217,10 +223,21 @@ export class ApplicationCommand extends Base {
  * @internal
  */
 export function resolveApplicationCommandForApi(cmd: {
-  [index: string]: any;
+  [index: string | number]: any;
 }): object {
   if (cmd.hasOwnProperty("options"))
     cmd["options"] = resolveApplicationCommandOptionsForApi(cmd["options"]);
+  if (cmd.hasOwnProperty("default_member_permissions")) {
+    let permissions: any = 0;
+    for (const permission of cmd["default_member_permissions"]) {
+      if (typeof permission === "number") {
+        permissions += permission;
+      } else {
+        permissions += Permissions[permission];
+      }
+    }
+    cmd["default_member_permissions"] = permissions;
+  }
   return cmd;
 }
 

@@ -36,4 +36,4 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/components/ActionRow.ts:14](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/components/ActionRow.ts#L14)
+[packages/libcord/src/structures/components/ActionRow.ts:14](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/components/ActionRow.ts#L14)

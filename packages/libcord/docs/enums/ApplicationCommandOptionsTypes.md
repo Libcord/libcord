@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:94](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L94)
+[packages/libcord/src/structures/ApplicationCommand.ts:101](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L101)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:96](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L96)
+[packages/libcord/src/structures/ApplicationCommand.ts:103](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L103)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:93](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L93)
+[packages/libcord/src/structures/ApplicationCommand.ts:100](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L100)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:98](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L98)
+[packages/libcord/src/structures/ApplicationCommand.ts:105](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L105)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:97](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L97)
+[packages/libcord/src/structures/ApplicationCommand.ts:104](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L104)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:92](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L92)
+[packages/libcord/src/structures/ApplicationCommand.ts:99](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L99)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:90](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L90)
+[packages/libcord/src/structures/ApplicationCommand.ts:97](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L97)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:91](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L91)
+[packages/libcord/src/structures/ApplicationCommand.ts:98](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L98)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:95](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L95)
+[packages/libcord/src/structures/ApplicationCommand.ts:102](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L102)

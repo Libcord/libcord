@@ -1,6 +1,6 @@
 {
   "name": "libcord",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A library to interact with the Discord API written in typescript",
   "main": "lib/src/index.js",
   "types": "lib/src/index.d.ts",
@@ -12,6 +12,12 @@
     "build": "tsc",
     "docs": "typedoc --tsconfig typedoc.json",
     "deno": "node scripts/deno"
+  },
+  "repository": {
+    "url": "https://github.com/Libcord/libcord"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "author": "tovade",
   "license": "GPL-3.0",

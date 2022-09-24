@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:262](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L262)
+[packages/libcord/src/Constants.ts:262](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Constants.ts#L262)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:264](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L264)
+[packages/libcord/src/Constants.ts:264](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Constants.ts#L264)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:266](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L266)
+[packages/libcord/src/Constants.ts:266](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Constants.ts#L266)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:265](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L265)
+[packages/libcord/src/Constants.ts:265](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Constants.ts#L265)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:261](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L261)
+[packages/libcord/src/Constants.ts:261](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Constants.ts#L261)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:259](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L259)
+[packages/libcord/src/Constants.ts:259](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Constants.ts#L259)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:260](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L260)
+[packages/libcord/src/Constants.ts:260](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Constants.ts#L260)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/Constants.ts:263](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/Constants.ts#L263)
+[packages/libcord/src/Constants.ts:263](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/Constants.ts#L263)

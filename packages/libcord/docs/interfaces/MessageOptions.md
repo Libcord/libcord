@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:174](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L174)
+[packages/libcord/src/structures/Message.ts:180](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Message.ts#L180)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:172](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L172)
+[packages/libcord/src/structures/Message.ts:178](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Message.ts#L178)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:173](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L173)
+[packages/libcord/src/structures/Message.ts:179](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Message.ts#L179)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:175](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L175)
+[packages/libcord/src/structures/Message.ts:181](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Message.ts#L181)
 
 ___
 
@@ -66,4 +66,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:176](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L176)
+[packages/libcord/src/structures/Message.ts:182](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Message.ts#L182)

@@ -7,6 +7,7 @@ import { BASE_URL, EXECUTE_WEBHOOK } from "../rest/EndPoints";
 import axios from "axios";
 import { version } from "../../package.json";
 import { RequestError } from "../utils/Errors";
+import { Deprecated } from "../utils/Decorators";
 
 export interface WebhookOptions {
   id: string;
@@ -39,7 +40,21 @@ export class Webhook {
     this.avatar_url = url;
     return this;
   }
+
+  /**
+   * Sends a message to a webhook
+   * @param options the payload for the webhook
+   * @deprecated
+   */
+  @Deprecated.Method("Use webhook#execute instead")
   async send(options: string | executeWebhookOptions) {
+    return this.execute(options);
+  }
+  /**
+   * Sends a message to a webhook
+   * @param options the payload for the webhook
+   */
+  async execute(options: string | executeWebhookOptions) {
     const payload = {
       content: "" as any,
       embeds: [] as any,

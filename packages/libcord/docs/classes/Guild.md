@@ -59,7 +59,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:38](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L38)
+[packages/libcord/src/structures/Guild.ts:38](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L38)
 
 ## Properties
 
@@ -69,7 +69,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:29](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L29)
+[packages/libcord/src/structures/Guild.ts:29](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L29)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:31](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L31)
+[packages/libcord/src/structures/Guild.ts:31](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L31)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:30](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L30)
+[packages/libcord/src/structures/Guild.ts:30](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L30)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:36](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L36)
+[packages/libcord/src/structures/Guild.ts:36](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L36)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:26](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L26)
+[packages/libcord/src/structures/Guild.ts:26](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L26)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:24](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L24)
+[packages/libcord/src/structures/Guild.ts:24](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L24)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:22](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L22)
+[packages/libcord/src/structures/Guild.ts:22](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L22)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:32](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L32)
+[packages/libcord/src/structures/Guild.ts:32](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L32)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:23](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L23)
+[packages/libcord/src/structures/Guild.ts:23](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L23)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:28](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L28)
+[packages/libcord/src/structures/Guild.ts:28](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L28)
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:27](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L27)
+[packages/libcord/src/structures/Guild.ts:27](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L27)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:34](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L34)
+[packages/libcord/src/structures/Guild.ts:34](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L34)
 
 ___
 
@@ -203,7 +203,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:25](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L25)
+[packages/libcord/src/structures/Guild.ts:25](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L25)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:33](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L33)
+[packages/libcord/src/structures/Guild.ts:33](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L33)
 
 ## Accessors
 
@@ -227,7 +227,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:60](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L60)
+[packages/libcord/src/structures/Guild.ts:60](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L60)
 
 ## Methods
 
@@ -251,4 +251,4 @@ a array of commands object
 
 #### Defined in
 
-[packages/libcord/src/structures/Guild.ts:73](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Guild.ts#L73)
+[packages/libcord/src/structures/Guild.ts:73](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Guild.ts#L73)

@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:165](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L165)
+[packages/libcord/src/structures/Message.ts:171](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Message.ts#L171)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:166](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L166)
+[packages/libcord/src/structures/Message.ts:172](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Message.ts#L172)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/Message.ts:164](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Message.ts#L164)
+[packages/libcord/src/structures/Message.ts:170](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Message.ts#L170)

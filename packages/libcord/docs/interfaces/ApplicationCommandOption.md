@@ -28,7 +28,7 @@ choices of the command option,You can specify a maximum of 25 choices per option
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:78](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L78)
+[packages/libcord/src/structures/ApplicationCommand.ts:85](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L85)
 
 ___
 
@@ -40,7 +40,7 @@ description of the command option (1 to 100 characters)
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:68](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L68)
+[packages/libcord/src/structures/ApplicationCommand.ts:75](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L75)
 
 ___
 
@@ -52,7 +52,7 @@ name of the command option (1 to 32 characters that match `^[\w-]{1,32}$`)
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:64](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L64)
+[packages/libcord/src/structures/ApplicationCommand.ts:71](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L71)
 
 ___
 
@@ -68,7 +68,7 @@ false
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:73](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L73)
+[packages/libcord/src/structures/ApplicationCommand.ts:80](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L80)
 
 ___
 
@@ -80,4 +80,4 @@ the type of the command option
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:60](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L60)
+[packages/libcord/src/structures/ApplicationCommand.ts:67](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L67)

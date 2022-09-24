@@ -50,7 +50,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:150](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L150)
+[packages/libcord/src/structures/ApplicationCommand.ts:156](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L156)
 
 ## Properties
 
@@ -64,7 +64,7 @@ Base.constructor
 
 #### Defined in
 
-[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -76,7 +76,7 @@ if the command is enable by default on add guild
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:144](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L144)
+[packages/libcord/src/structures/ApplicationCommand.ts:150](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L150)
 
 ___
 
@@ -88,7 +88,7 @@ the description of the command
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:134](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L134)
+[packages/libcord/src/structures/ApplicationCommand.ts:141](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L141)
 
 ___
 
@@ -100,7 +100,7 @@ the guild of the command (is null for global commands)
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:124](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L124)
+[packages/libcord/src/structures/ApplicationCommand.ts:131](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L131)
 
 ___
 
@@ -112,7 +112,7 @@ the id of the command
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:119](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L119)
+[packages/libcord/src/structures/ApplicationCommand.ts:126](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L126)
 
 ___
 
@@ -124,7 +124,7 @@ the name of the command
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:129](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L129)
+[packages/libcord/src/structures/ApplicationCommand.ts:136](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L136)
 
 ___
 
@@ -136,7 +136,7 @@ the options of the command
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:139](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L139)
+[packages/libcord/src/structures/ApplicationCommand.ts:146](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L146)
 
 ## Methods
 
@@ -157,7 +157,7 @@ the options of the command
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:168](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L168)
+[packages/libcord/src/structures/ApplicationCommand.ts:174](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L174)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:179](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L179)
+[packages/libcord/src/structures/ApplicationCommand.ts:185](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L185)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:175](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L175)
+[packages/libcord/src/structures/ApplicationCommand.ts:181](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L181)
 
 ___
 
@@ -211,4 +211,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:195](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L195)
+[packages/libcord/src/structures/ApplicationCommand.ts:201](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L201)

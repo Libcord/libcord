@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/VoiceChannel.ts:14](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/VoiceChannel.ts#L14)
+[packages/libcord/src/structures/channels/VoiceChannel.ts:14](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/VoiceChannel.ts#L14)
 
 ## Properties
 
@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:14](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L14)
+[packages/libcord/src/structures/channels/GuildChannel.ts:14](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L14)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Channel.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Channel.ts#L8)
+[packages/libcord/src/structures/channels/Channel.ts:8](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/Channel.ts#L8)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:13](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L13)
+[packages/libcord/src/structures/channels/GuildChannel.ts:13](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L13)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:15](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L15)
+[packages/libcord/src/structures/channels/GuildChannel.ts:15](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L15)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:17](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L17)
+[packages/libcord/src/structures/channels/GuildChannel.ts:17](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L17)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:18](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L18)
+[packages/libcord/src/structures/channels/GuildChannel.ts:18](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L18)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:16](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L16)
+[packages/libcord/src/structures/channels/GuildChannel.ts:16](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L16)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/VoiceChannel.ts:7](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/VoiceChannel.ts#L7)
+[packages/libcord/src/structures/channels/VoiceChannel.ts:7](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/VoiceChannel.ts#L7)
 
 ## Accessors
 
@@ -200,7 +200,7 @@ GuildChannel.mention
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Channel.ts:19](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Channel.ts#L19)
+[packages/libcord/src/structures/channels/Channel.ts:19](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/Channel.ts#L19)
 
 ## Methods
 
@@ -224,7 +224,7 @@ GuildChannel.mention
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:71](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L71)
+[packages/libcord/src/structures/channels/GuildChannel.ts:71](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L71)
 
 ___
 
@@ -248,4 +248,4 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:43](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L43)
+[packages/libcord/src/structures/channels/GuildChannel.ts:43](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L43)

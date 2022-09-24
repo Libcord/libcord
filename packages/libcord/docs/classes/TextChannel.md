@@ -41,7 +41,7 @@
 
 - [createMessage](TextChannel.md#createmessage)
 - [edit](TextChannel.md#edit)
-- [update](TextChannel.md#update)
+- [send](TextChannel.md#send)
 
 ## Constructors
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/TextChannel.ts:24](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/TextChannel.ts#L24)
+[packages/libcord/src/structures/channels/TextChannel.ts:25](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/TextChannel.ts#L25)
 
 ## Properties
 
@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/Base.ts#L8)
+[packages/libcord/src/structures/Base.ts:8](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/Base.ts#L8)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:14](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L14)
+[packages/libcord/src/structures/channels/GuildChannel.ts:14](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L14)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Channel.ts:8](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Channel.ts#L8)
+[packages/libcord/src/structures/channels/Channel.ts:8](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/Channel.ts#L8)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/TextChannel.ts:20](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/TextChannel.ts#L20)
+[packages/libcord/src/structures/channels/TextChannel.ts:21](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/TextChannel.ts#L21)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/TextChannel.ts:21](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/TextChannel.ts#L21)
+[packages/libcord/src/structures/channels/TextChannel.ts:22](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/TextChannel.ts#L22)
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:13](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L13)
+[packages/libcord/src/structures/channels/GuildChannel.ts:13](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L13)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:15](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L15)
+[packages/libcord/src/structures/channels/GuildChannel.ts:15](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L15)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:17](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L17)
+[packages/libcord/src/structures/channels/GuildChannel.ts:17](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L17)
 
 ___
 
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:18](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L18)
+[packages/libcord/src/structures/channels/GuildChannel.ts:18](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L18)
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:16](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L16)
+[packages/libcord/src/structures/channels/GuildChannel.ts:16](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L16)
 
 ___
 
@@ -204,7 +204,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/TextChannel.ts:19](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/TextChannel.ts#L19)
+[packages/libcord/src/structures/channels/TextChannel.ts:20](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/TextChannel.ts#L20)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/TextChannel.ts:22](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/TextChannel.ts#L22)
+[packages/libcord/src/structures/channels/TextChannel.ts:23](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/TextChannel.ts#L23)
 
 ___
 
@@ -224,7 +224,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/TextChannel.ts:18](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/TextChannel.ts#L18)
+[packages/libcord/src/structures/channels/TextChannel.ts:19](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/TextChannel.ts#L19)
 
 ___
 
@@ -238,7 +238,7 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/TextChannel.ts:17](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/TextChannel.ts#L17)
+[packages/libcord/src/structures/channels/TextChannel.ts:18](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/TextChannel.ts#L18)
 
 ## Accessors
 
@@ -256,7 +256,7 @@ GuildChannel.mention
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/Channel.ts:19](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/Channel.ts#L19)
+[packages/libcord/src/structures/channels/Channel.ts:19](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/Channel.ts#L19)
 
 ## Methods
 
@@ -278,7 +278,7 @@ Sends a message in a text channel
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/TextChannel.ts:44](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/TextChannel.ts#L44)
+[packages/libcord/src/structures/channels/TextChannel.ts:57](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/TextChannel.ts#L57)
 
 ▸ **createMessage**(`msg`): `Promise`<[`Message`](Message.md)\>
 
@@ -294,7 +294,7 @@ Sends a message in a text channel
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/TextChannel.ts:47](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/TextChannel.ts#L47)
+[packages/libcord/src/structures/channels/TextChannel.ts:60](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/TextChannel.ts#L60)
 
 ___
 
@@ -318,28 +318,28 @@ ___
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/GuildChannel.ts:71](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/GuildChannel.ts#L71)
+[packages/libcord/src/structures/channels/GuildChannel.ts:71](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/GuildChannel.ts#L71)
 
 ___
 
-### update
+### send
 
-▸ **update**(`data`): [`GuildChannel`](GuildChannel.md)
+▸ **send**(`content`): `Promise`<[`Message`](Message.md)\>
+
+Sends a message in a text channel
+
+**`Deprecated`**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `APITextChannel` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `content` | `string` \| [`Embed`](Embed.md) \| [`MessageOptions`](../interfaces/MessageOptions.md) | the content to send can be an embed, object or string |
 
 #### Returns
 
-[`GuildChannel`](GuildChannel.md)
-
-#### Overrides
-
-[GuildChannel](GuildChannel.md).[update](GuildChannel.md#update)
+`Promise`<[`Message`](Message.md)\>
 
 #### Defined in
 
-[packages/libcord/src/structures/channels/TextChannel.ts:33](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/channels/TextChannel.ts#L33)
+[packages/libcord/src/structures/channels/TextChannel.ts:49](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/channels/TextChannel.ts#L49)

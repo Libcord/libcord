@@ -21,7 +21,7 @@ if the command are enable when the app is add to a guild
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:53](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L53)
+[packages/libcord/src/structures/ApplicationCommand.ts:60](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L60)
 
 ___
 
@@ -33,7 +33,7 @@ the description of the command
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:43](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L43)
+[packages/libcord/src/structures/ApplicationCommand.ts:50](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L50)
 
 ___
 
@@ -45,7 +45,7 @@ the name of the command
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:39](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L39)
+[packages/libcord/src/structures/ApplicationCommand.ts:46](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L46)
 
 ___
 
@@ -57,4 +57,4 @@ the options of the command
 
 #### Defined in
 
-[packages/libcord/src/structures/ApplicationCommand.ts:47](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/ApplicationCommand.ts#L47)
+[packages/libcord/src/structures/ApplicationCommand.ts:54](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/ApplicationCommand.ts#L54)

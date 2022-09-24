@@ -7,4 +7,3 @@ export * from "./utils/PermissionOverwrite";
 export * from "./utils/Permissions";
 export * from "./utils/Snowflake";
 export * from "./utils/Utils";
-export * from "./gateway/Gateway";

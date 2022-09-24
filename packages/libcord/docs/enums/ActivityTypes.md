@@ -25,7 +25,7 @@ Competing in ...
 
 #### Defined in
 
-[packages/libcord/src/structures/User.ts:143](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L143)
+[packages/libcord/src/structures/User.ts:143](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/User.ts#L143)
 
 ___
 
@@ -38,7 +38,7 @@ WARNING : doesn't work for bots
 
 #### Defined in
 
-[packages/libcord/src/structures/User.ts:139](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L139)
+[packages/libcord/src/structures/User.ts:139](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/User.ts#L139)
 
 ___
 
@@ -50,7 +50,7 @@ Playing ...
 
 #### Defined in
 
-[packages/libcord/src/structures/User.ts:122](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L122)
+[packages/libcord/src/structures/User.ts:122](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/User.ts#L122)
 
 ___
 
@@ -62,7 +62,7 @@ Listening to ...
 
 #### Defined in
 
-[packages/libcord/src/structures/User.ts:130](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L130)
+[packages/libcord/src/structures/User.ts:130](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/User.ts#L130)
 
 ___
 
@@ -74,7 +74,7 @@ Streaming ...
 
 #### Defined in
 
-[packages/libcord/src/structures/User.ts:126](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L126)
+[packages/libcord/src/structures/User.ts:126](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/User.ts#L126)
 
 ___
 
@@ -86,4 +86,4 @@ Watching ...
 
 #### Defined in
 
-[packages/libcord/src/structures/User.ts:134](https://github.com/Libcord/libcord/blob/d0e0b8c/packages/libcord/src/structures/User.ts#L134)
+[packages/libcord/src/structures/User.ts:134](https://github.com/Libcord/libcord/blob/f9964b8/packages/libcord/src/structures/User.ts#L134)

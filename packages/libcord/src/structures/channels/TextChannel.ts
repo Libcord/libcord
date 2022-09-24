@@ -11,6 +11,7 @@ import { MESSAGES } from "../../rest/EndPoints";
 import { FileUtils } from "../../utils/FileUtils";
 import * as FormData from "form-data";
 import ThreadManager from "../../managers/ThreadManager";
+import { Deprecated } from "../../utils/Decorators";
 
 export class TextChannel extends GuildChannel {
   // @ts-ignore
@@ -30,6 +31,9 @@ export class TextChannel extends GuildChannel {
     this.threads = new ThreadManager(this.client, this);
   }
 
+  /**
+   * @ignore
+   */
   update(data: APITextChannel): GuildChannel {
     this.lastMessageId = (data.last_message_id as unknown as Snowflake) || null;
     this.topic = data.topic || null;
@@ -37,6 +41,15 @@ export class TextChannel extends GuildChannel {
     return super.update(data);
   }
 
+  /**
+   * Sends a message in a text channel
+   * @param content the content to send can be an embed, object or string
+   * @deprecated
+   */
+  @Deprecated.Method("Use Textchannel#createMessage instead")
+  public send(content: MessageOptions | string | Embed) {
+    return this.createMessage(content);
+  }
   /**
    * Sends a message in a text channel
    * @param content the content to send can be an embed, object or string
@@ -48,14 +61,11 @@ export class TextChannel extends GuildChannel {
   public async createMessage(
     msg: MessageOptions | string
   ): Promise<Message | undefined> {
-    let payload = {
+    let payload: any = {
       content: "" as any,
       embeds: [] as any,
       components: [] as any,
       attachments: [] as any,
-      message_reference: {
-        message_id: null as any,
-      },
     };
     if (msg instanceof Embed) {
       payload.embeds.push(msg.getJSON());
