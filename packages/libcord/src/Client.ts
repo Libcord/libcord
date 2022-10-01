@@ -42,8 +42,8 @@ import { Collection } from "./utils/Collection";
 import { EventEmitter } from "./utils/EventEmitter";
 import { Snowflake } from "./utils/Snowflake";
 import { RequestError } from "./utils/Errors";
-import { Interaction } from "./structures/interactions/Interaction";
-import { MessageContextMenuInteraction } from "./structures/interactions/MessageContextMenuInteraction";
+import { Interaction } from "./structures";
+import { MessageContextMenuInteraction } from "./structures";
 
 export interface ClientOptions {
   /**
@@ -312,8 +312,12 @@ export class Client extends EventEmitter {
       }
       this.token = token;
       let url: string = r.url;
-      this.gateway.connect(token, url);
+      this.gateway.connect(token, r);
     });
+    return this;
+  }
+  public destroy(): Client {
+    this.gateway.ws?.close(1_000);
     return this;
   }
 

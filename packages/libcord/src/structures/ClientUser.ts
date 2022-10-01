@@ -74,7 +74,6 @@ export class ClientUser extends User {
   }
 
   public setAvatar(avatar: string) {
-    //TODO check data format
     this.edit({ avatar });
   }
 }

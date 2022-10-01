@@ -13,7 +13,7 @@ import {
 } from "discord-api-types/v9";
 import { EventEmitter } from "events";
 import { Client } from "../Client";
-import { CLIENT_EVENTS } from "../Constants";
+import { CLIENT_EVENTS, GatewayConnectData } from "../Constants";
 import { ActivityTypes, Guild, Presence } from "../structures";
 import { platform } from "../utils/Platform";
 import { Snowflake } from "../utils/Snowflake";
@@ -63,6 +63,7 @@ export class Gateway {
   public emitter: EventEmitter;
   private _token!: string;
   private _url!: string;
+  private sessionId!: string;
   private readonly intents: number;
 
   constructor(client: Client, emitter: any) {
@@ -141,14 +142,20 @@ export class Gateway {
 
   public heartbeat() {
     if (!this.lastHeartbeatAck) {
-      //TODO reconnecting
+      if (this.sessionId) {
+        this.sendWS(GatewayOpcodes.Resume, {
+          token: this._token,
+          session_id: this.sessionId,
+          seq: this.lastSequence,
+        });
+      }
     }
     this.lastHeartbeatAck = false;
     this.lastHeartbeatSend = Date.now();
     this.sendWS(GatewayOpcodes.Heartbeat, this.lastSequence);
   }
 
-  public connect(token: string, url: string) {
+  public connect(token: string, data: GatewayConnectData) {
     this._token = token;
     if (this.ws && this.ws.isOpen) {
       this.emitter.emit(
@@ -157,13 +164,14 @@ export class Gateway {
       );
       return;
     }
-    this._url = url;
+    this._url = data.url;
+    this.gatewayURL = data.url;
     this.initWS();
   }
 
   public initWS() {
     this.status = "connecting...";
-    this.ws = new AWebSocket(this._url);
+    this.ws = new AWebSocket(this.client);
     this.ws.on("open", () => this.onWsOpen);
     this.ws.on("message", (msg) => this.onWsMessage(msg));
     this.ws.on("error", (error) => this.onWsError(error));
@@ -185,6 +193,9 @@ export class Gateway {
         this.lastHeartbeatReceive = Date.now();
         this.latency = this.lastHeartbeatReceive - this.lastHeartbeatSend;
         this.client.ws.ping = this.latency;
+        break;
+      case GatewayOpcodes.Reconnect:
+        (this.ws as AWebSocket).reconnect();
         break;
       case GatewayOpcodes.Dispatch: {
         const { d, t } = msg as GatewayDispatchPayload;
@@ -211,6 +222,7 @@ export class Gateway {
     switch (msg.t) {
       case GatewayDispatchEvents.Ready:
         this.heartbeat();
+        this.sessionId = msg.d.session_id;
         this.status = "waiting_for_guilds";
         this.actions.READY!.handle(msg.d).then();
         break;

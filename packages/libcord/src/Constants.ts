@@ -222,6 +222,10 @@ export enum ChannelTypes {
   UNKNOWN = 7,
 }
 
+export interface GatewayConnectData {
+  url: string;
+  shards: number;
+}
 export interface ChannelCreateOptions {
   name: string;
   type: ChannelTypes;

@@ -1,5 +1,6 @@
 import * as Ws from "ws";
 import { EventEmitter } from "../utils/EventEmitter";
+import { Client } from "../Client";
 export class AWebSocket extends EventEmitter<{
   open: () => void;
   close: (code: number, reason: string) => void;
@@ -9,9 +10,11 @@ export class AWebSocket extends EventEmitter<{
   error: (error: Error) => void;
 }> {
   private _ws: Ws;
-  constructor(endpoint: string) {
+  private _client!: Client;
+  constructor(client: Client) {
     super();
-    this._ws = new Ws(endpoint);
+    this._ws = new Ws(client.gateway.gatewayURL as string);
+    this._client = client;
     this._ws.on("open", () => this.emit("open"));
     this._ws.on("close", (code, reason) => this.emit("close", code, reason));
     this._ws.on("message", (data) => this.emit("message", data as string));
@@ -24,6 +27,9 @@ export class AWebSocket extends EventEmitter<{
   }
   close(code: number, reason?: string) {
     this._ws.close(code, reason);
+  }
+  reconnect() {
+    this._ws = new Ws(this._client.gateway.gatewayURL as string);
   }
   get isOpen(): boolean {
     return this._ws.readyState === Ws.OPEN;
