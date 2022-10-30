@@ -164,8 +164,7 @@ export class ApplicationCommand extends Base {
    * @returns {any} returns the application command
    */
   public edit(data: EditApplicationCommandOptions, cache = true) {
-    /*Promise<ApplicationCommand>*/
-    // return this.client.editApplicationCommand(this.id, data, cache);
+    return this.client.application?.editCommand(this.id, data, cache);
   }
 
   public toString(): string {

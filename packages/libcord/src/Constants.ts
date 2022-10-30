@@ -2,7 +2,7 @@ import { version } from "../package.json";
 import type { Stream } from "stream";
 
 export const VERSION = version;
-export const REST_VERSION = 10;
+export const REST_VERSION = 9;
 export const BASE_URL = "https://discord.com";
 export const API_URL = `${BASE_URL}/api/v${REST_VERSION}`;
 export const USER_AGENT = `libcord/${VERSION} (https://github.com/libcord/Libcord)`;

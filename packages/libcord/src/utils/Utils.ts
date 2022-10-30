@@ -1,4 +1,11 @@
 import type { Permission } from "../types/permissions";
+import type { APIChannel } from "discord-api-types/v9";
+import { ChannelType } from "discord-api-types/v9";
+import { TextChannel } from "../structures/channels/TextChannel";
+import type { Client } from "../Client";
+import { CategoryChannel } from "../structures/channels/CategoryChannel";
+import { VoiceChannel } from "../structures/channels/VoiceChannel";
+import { Channel } from "../structures/channels/Channel";
 
 export type Snowflake = `${string}`;
 export function getDate(snowflake: Snowflake): number {
@@ -41,4 +48,19 @@ export function getAllPermissions(permissions: number): Permission[] {
       p.push(perm as Permission);
   }
   return p;
+}
+export function detectChannelType(client: Client, data: APIChannel) {
+  let value = new Channel(client, data);
+  switch (data.type) {
+    case ChannelType.GuildText:
+      value = new TextChannel(client, data);
+      break;
+    case ChannelType.GuildCategory:
+      value = new CategoryChannel(client, data);
+      break;
+    case ChannelType.GuildVoice:
+      value = new VoiceChannel(client, data);
+      break;
+  }
+  return value;
 }

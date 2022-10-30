@@ -24,12 +24,12 @@
     "ws": "^7.4.5"
   },
   "devDependencies": {
-    "@types/node": "^15.0.1",
+    "@types/node": "^18.11.7",
     "@types/ws": "^7.4.2",
     "i": "^0.3.6",
     "npm": "^7.13.0",
     "prettier": "^2.7.1",
-    "ts-node": "^9.1.1",
+    "ts-node": "^10.9.1",
     "typedoc": "^0.20.36",
     "typedoc-plugin-as-member-of": "^1.0.2",
     "typescript": "^4.2.4"

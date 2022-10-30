@@ -10,16 +10,12 @@ import type { Presence } from "../types/Types";
 export class ShardManager extends Collection<number, Shard> {
   #client: Client;
   public url?: string;
-  private interval: any;
   /**
    * Represents a manager of handling shard creation & disposing.
    * @param client The [[WebSocketClient]] attached to this [[ShardManager]].
    */
   constructor(client: Client) {
     super();
-    this.interval = setInterval(() => {
-      this._checkReady();
-    }, 10000);
     this.#client = client;
   }
 
@@ -31,14 +27,14 @@ export class ShardManager extends Collection<number, Shard> {
   }
 
   /**
-   * Returns all of the connected shards available
+   * Returns all the connected shards available
    */
   get connected() {
     return this.filter((shard) => shard.status === "connected");
   }
 
   /**
-   * Returns a shard by it's guild ID
+   * Returns a shard by its guild ID
    * @param guildID The guild ID
    */
   getByGuildId(guildID: bigint): Shard | undefined;
@@ -74,28 +70,18 @@ export class ShardManager extends Collection<number, Shard> {
     }
 
     shard = new Shard(this.#client, id);
-    /*shard
-      .on("disconnect", (id, error) =>
-        this.#client.emit("er", id, error)
-      )
-      .on("connect", (id) => this.#client.emit(SHARD_EVENTS.SHARD_CONNECT, id))
-      .on("close", (id, code, error, recoverable) =>
-        this.#client.emit(
-          SHARD_EVENTS.SHARD_CLOSE,
-          id,
-          code,
-          error,
-          recoverable
-        )
-      )
-      .on("error", (id, error) =>
-        this.#client.emit(SHARD_EVENTS.SHARD_ERROR, id, error)
-      )
-      .on("resume", (id) => this.#client.emit(SHARD_EVENTS.SHARD_RESUME, id))*/
     shard
+      .on("disconnect", (id, code, error) =>
+        this.#client.emit("shardDisconnect", id, code, error)
+      )
+      .on("error", (id, error) => this.#client.emit("error", id, error))
+      .on("resume", (id) => this.#client.emit("shardResume", id))
       .on("ready", (id) => {
         this.#client.emit("shardReady", id);
         this.set(shard!.id, shard!);
+      })
+      .on("guildsReceived", (id) => {
+        this._checkReady();
       })
       .on("debug", (...args) => this.#client.emit("shardDebug", id, ...args));
     return shard.connect(data);
@@ -121,11 +107,11 @@ export class ShardManager extends Collection<number, Shard> {
   }
 
   /**
-   * Disposes a shard from this shard manager
+   * disconnects a shard from this shard manager
    * if connected, or it'll do nothing if shards
    * are dead.
    */
-  dispose(id: number, reconnect: boolean = false) {
+  disconnect(id: number, reconnect: boolean = false) {
     const shard = this.get(id);
     if (shard === undefined)
       throw new TypeError(`Shard #${id} is not connected.`);
@@ -142,6 +128,5 @@ export class ShardManager extends Collection<number, Shard> {
     }
 
     this.#client.emit("ready");
-    clearInterval(this.interval);
   }
 }

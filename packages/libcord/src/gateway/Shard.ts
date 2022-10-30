@@ -1,9 +1,11 @@
 import type { Client } from "../Client";
 import { API_VERSION } from "../Constants";
 import {
+  APIUnavailableGuild,
   GatewayCloseCodes,
   GatewayDispatchEvents,
   GatewayDispatchPayload,
+  GatewayGuildCreateDispatch,
   GatewayHeartbeatData,
   GatewayIdentifyData,
   GatewayOpcodes,
@@ -11,13 +13,13 @@ import {
   GatewayReceivePayload,
 } from "discord-api-types/v9";
 import { ActivityTypes, Presence } from "../types/Types";
-import { ClientUser } from "../structures/ClientUser";
+import { Guild } from "../structures";
 import TypedEmitter from "../utils/TypedEmitter";
 import type { ShardEvents } from "../types/events";
 import type { GatewayConnectData } from "../types/gateway";
-import { sleep } from "../utils/Utils";
-import { ClientApplication } from "../structures/Application";
-import WebSocket = require("ws");
+import Collection from "../utils/Collection";
+import * as events from "./events/index";
+import WebSocket from "ws";
 
 export type GatewayStatus =
   | "disconnected"
@@ -31,6 +33,7 @@ export class Shard extends TypedEmitter<ShardEvents> {
   public gatewayURL?: string;
   private readonly intents: number;
   public client: Client;
+  public unavailableGuilds: Collection<string, APIUnavailableGuild>;
 
   public sessionId!: string | null;
   public heartbeatInterval?: number;
@@ -45,6 +48,7 @@ export class Shard extends TypedEmitter<ShardEvents> {
     this.id = id;
     this.intents = client.intents;
     this.client = client;
+    this.unavailableGuilds = new Collection<string, APIUnavailableGuild>();
   }
   identify() {
     const data: GatewayIdentifyData = {
@@ -87,7 +91,7 @@ export class Shard extends TypedEmitter<ShardEvents> {
   }
   public connect(gatewayData: GatewayConnectData) {
     if (this.ws && this.ws.readyState != WebSocket.CLOSED) {
-      this.client.emit("error", new Error("the bot are already connect !"));
+      this.emit("error", this.id, "The shard is already connected");
       return;
     }
     this.gatewayURL = gatewayData.url;
@@ -118,12 +122,19 @@ export class Shard extends TypedEmitter<ShardEvents> {
         this.identify();
         break;
       case GatewayOpcodes.Dispatch:
-        const { t } = msg as GatewayDispatchPayload;
         if (
           this.status === "waiting_for_guilds" &&
-          t === <any>GatewayDispatchEvents.GuildCreate
+          msg.t === <any>GatewayDispatchEvents.GuildCreate
         ) {
-          this.status = "connected";
+          const { d } = msg as GatewayGuildCreateDispatch;
+          if (this.client.clientOptions.cache?.guilds) {
+            this.client.guilds.set(d.id, new Guild(this.client, d));
+          }
+          this.unavailableGuilds.delete(d.id);
+          if (this.unavailableGuilds.size === 0) {
+            this.status = "connected";
+            this.emit("guildsReceived", this.id);
+          }
         } else {
           this.handleEvent(msg as GatewayDispatchPayload);
         }
@@ -149,15 +160,18 @@ export class Shard extends TypedEmitter<ShardEvents> {
       case GatewayDispatchEvents.Ready:
         this.heartbeat();
         this.sessionId = msg.d.session_id;
-        this.status = "waiting_for_guilds";
-        this.emit("ready", this.id);
-        this.client.user = new ClientUser(this.client, msg.d.user);
-        this.client.application = new ClientApplication(
-          this.client,
-          msg.d.application
-        );
-        sleep(10000);
-        if (this.status === "waiting_for_guilds") this.status = "connected";
+        if (msg.d.guilds.length > 0) {
+          this.status = "waiting_for_guilds";
+          for (const g of msg.d.guilds) {
+            this.unavailableGuilds.set(g.id, g);
+          }
+        } else {
+          this.status = "connected";
+        }
+        events.READY(this, msg.d);
+        break;
+      case GatewayDispatchEvents.MessageCreate:
+        events.MESSAGE_CREATE(this, msg.d);
         break;
     }
   }
@@ -202,7 +216,8 @@ export class Shard extends TypedEmitter<ShardEvents> {
 
           break;
       }
-      this.emit("error", error, this.id);
+      this.emit("error", this.id, error);
+      this.emit("disconnect", this.id, code, error);
     }
   }
 

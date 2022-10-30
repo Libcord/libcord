@@ -114,7 +114,7 @@ export class RequestHandler {
         const headers: Record<string, string> = options.headers ?? {};
         try {
           if (options.auth) {
-            headers.Authorization = `Bearer ${this._client.token}`;
+            headers.Authorization = `Bot ${this._client.token}`;
           }
           if (options.reason) {
             headers["X-Audit-Log-Reason"] = encodeURIComponent(options.reason);

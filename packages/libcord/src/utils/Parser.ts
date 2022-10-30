@@ -1,11 +1,13 @@
 import { Buffer } from "node:buffer";
 import * as path from "path";
 import * as fs from "fs";
-import axios from "axios";
 import type { MessageOptions } from "../Constants";
+import type { Client } from "../Client";
+import { FormData, request } from "undici";
+import { Blob } from "buffer";
 
 export class Parser {
-  static async resolveFile(file: any) {
+  static async resolveFile(client: Client, file: any) {
     if (Buffer.isBuffer(file)) return { data: file };
     if (typeof file[Symbol.asyncIterator] === "function") {
       const buffers = [];
@@ -14,9 +16,12 @@ export class Parser {
     }
     if (typeof file === "string") {
       if (/^https?:\/\//.test(file)) {
-        const res = await axios.get(file, { responseType: "arraybuffer" });
+        const res = await request(file, {
+          method: "GET",
+        });
+
         return {
-          data: Buffer.from(res.data),
+          data: await res.body.arrayBuffer(),
           contentType: res.headers["content-type"],
         };
       }
@@ -41,16 +46,16 @@ export class Parser {
     const res = path.parse(pathe);
     return ext && res.ext.startsWith(ext) ? res.name : res.base.split("?")[0];
   }
-  static async resolveFiles(files: any, body: any) {
+  static async resolveFiles(client: Client, files: any, body: any) {
     files = await Promise.all(
-      files?.map((file: any) => this.resolveData(file)) ?? []
+      files?.map((file: any) => this.resolveData(client, file)) ?? []
     );
     return {
       files,
       body,
     };
   }
-  static async resolveData(file: any) {
+  static async resolveData(client: Client, file: any) {
     let attachment;
     let name;
 
@@ -78,10 +83,13 @@ export class Parser {
       name = file.name ?? findName(attachment);
     }
 
-    const { data, contentType } = (await this.resolveFile(attachment)) as any;
+    const { data, contentType } = (await this.resolveFile(
+      client,
+      attachment
+    )) as any;
     return { file: await data, name, contentType };
   }
-  static async resolveContentForApi(data: MessageOptions) {
+  static async resolveContentForApi(client: Client, data: MessageOptions) {
     const payload: any = {
       content: "" as any,
       attachments: [] as any,
@@ -97,11 +105,11 @@ export class Parser {
       }
       if (data.files) {
         let temp = new FormData();
-        const { files } = await this.resolveFiles(data.files, payload);
+        const { files } = await this.resolveFiles(client, data.files, payload);
         const attachment = files.map((file: any, i: any) => {
           const filee = data.files?.[i];
           for (const file of files) {
-            temp.append(`files[${i}]`, file.file, file.name);
+            temp.append(`files[${i}]`, new Blob([file.file]), file.name);
           }
           return {
             id: i.toString(),

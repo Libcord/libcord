@@ -74,8 +74,8 @@ export class Client extends TypedEmitter<ClientEvents> {
 
   public fetchAllMembers: boolean;
 
-  public users = new Map<Snowflake, User>();
-  public guilds = new Map<Snowflake, Guild>();
+  public users = new Collection<Snowflake, User>();
+  public guilds = new Collection<Snowflake, Guild>();
 
   public shards: ShardManager;
 
@@ -136,6 +136,7 @@ export class Client extends TypedEmitter<ClientEvents> {
         : await this.requestHandler.request<RESTGetAPIGatewayResult>({
             path: "/gateway",
             method: "GET",
+            auth: false,
           });
     if (
       (data as APIGatewayBotInfo).session_start_limit !== undefined &&
@@ -160,5 +161,12 @@ export class Client extends TypedEmitter<ClientEvents> {
       });
       await sleep(1000);
     }
+  }
+
+  /**
+   * gets the client latency
+   */
+  get ping() {
+    return this.shards.latency;
   }
 }

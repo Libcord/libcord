@@ -1,13 +1,12 @@
 import { GuildChannel } from "./GuildChannel";
 import type { Snowflake } from "../../utils/Utils";
-import Collection from "../../utils/Collection";
 import { Message } from "../Message";
 import type { Client } from "../../Client";
 import type {
   APITextChannel,
+  ChannelType,
   RESTPostAPIChannelMessageResult,
 } from "discord-api-types/v9";
-import type { ChannelType } from "discord-api-types/v9";
 import type { MessageOptions } from "../../Constants";
 import { Parser } from "../../utils/Parser";
 
@@ -16,7 +15,6 @@ export class TextChannel extends GuildChannel {
   public topic: string | null;
   public rateLimitPerUser: number | null;
   public lastMessageId: Snowflake | null;
-  public messages: Collection<Snowflake, Message>;
 
   constructor(client: Client, data: APITextChannel) {
     super(client, data);
@@ -24,7 +22,6 @@ export class TextChannel extends GuildChannel {
     this.topic = data.topic || null;
     this.rateLimitPerUser = data.rate_limit_per_user || null;
     this.lastMessageId = (data.last_message_id as unknown as Snowflake) || null;
-    this.messages = new Collection();
   }
 
   /**
@@ -32,7 +29,10 @@ export class TextChannel extends GuildChannel {
    * @param options The options needed to make a message
    */
   async createMessage(options: MessageOptions) {
-    const { type, data } = await Parser.resolveContentForApi(options);
+    const { type, data } = await Parser.resolveContentForApi(
+      this.client,
+      options
+    );
     if (type === "file") {
       const d =
         await this.client.requestHandler.request<RESTPostAPIChannelMessageResult>(
@@ -40,6 +40,7 @@ export class TextChannel extends GuildChannel {
             path: `/channels/${this.id}/messages`,
             method: "POST",
             form: data,
+            auth: true,
           }
         );
       return new Message(this.client, d);
@@ -50,6 +51,7 @@ export class TextChannel extends GuildChannel {
             path: `/channels/${this.id}/messages`,
             method: "POST",
             json: data,
+            auth: true,
           }
         );
       return new Message(this.client, d);
