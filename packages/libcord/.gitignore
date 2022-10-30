@@ -1,9 +1,6 @@
 node_modules
-Test.ts
+test/
 lib
 .idea
-test
-docsjson
-package-lock.json
-deno/.idea
-deno/config.ts
+docs
+config.json

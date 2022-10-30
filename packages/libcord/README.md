@@ -1,12 +1,16 @@
 <div align="center">
 
+![Logo](https://github.com/Libcord.png)
+
 # Libcord
 
-[![https://nodei.co/npm/libcord.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/libcord.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/libcord) <br></br>
-[![Discord](https://img.shields.io/discord/976566685895114823.png?color=7289da&label=Libcord&logo=discord&style=flat-square)](https://discord.gg/k672733TU3) [![GitHub license](https://img.shields.io/github/license/tovade/libcord.svg)](https://github.com/tovade/libcord/blob/master/LICENSE)  [![DOWNLOADS](https://img.shields.io/npm/dm/libcord)](https://www.npmjs.com/package/libcord) [![DOCS](https://img.shields.io/badge/typedoc-docs-blue.svg)](https://libcord.js.org/)
+**Work in progress discord library**
 
-
-Libcord is a library written in typescript to interact with the Discord API <br></br>
+[![https://nodei.co/npm/libcord.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/libcord.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/libcord) <br/>
+[![DOWNLOADS](https://img.shields.io/npm/dm/libcord)](https://www.npmjs.com/package/libcord)
+[![GitHub](https://img.shields.io/github/license/Libcord/libcord)](https://github.com/libcord/libcord/blob/main/LICENSE.md)
+[![Discord](https://img.shields.io/discord/976566685895114823.png?color=7289da&label=Libcord&logo=discord&style=flat-square)](https://discord.gg/k672733TU3)
+[![npm](https://img.shields.io/npm/v/libcord?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/libcord)
 
 </div>
 
@@ -14,10 +18,28 @@ Libcord is a library written in typescript to interact with the Discord API <br>
 
 ````javascript
 const { Client } = require('libcord')
-const client = new Client();
+const client = new Client({
+    token: "token",
+    intents: ["GUILDS", "GUILD_MESSAGES"],
+});
 
 client.on("ready", () => {
     console.log("I am ready")
 });
-client.login("TOKEN")
+client.connect()
 ````
+
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

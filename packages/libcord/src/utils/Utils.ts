@@ -1,76 +1,44 @@
-import { ButtonStyle } from "discord-api-types/v9";
+import type { Permission } from "../types/permissions";
 
-export type imageFormats = "jpg" | "png" | "webp" | "gif";
-export type imageSize = 16 | 32 | 64 | 128 | 256 | 512 | 1024 | 2048 | 4096;
-
-export interface ImageUrlOptions {
-  /**
-   * the format of the image
-   * @default jpg
-   */
-  format?: imageFormats;
-  /**
-   * the size of the image
-   * @default 4096
-   */
-  size?: imageSize;
-  /**
-   * if the avatar are animated give gif url
-   * @default false
-   */
-  dynamic?: boolean;
+export type Snowflake = `${string}`;
+export function getDate(snowflake: Snowflake): number {
+  return Math.floor(parseInt(snowflake, 10) / 4194304) + 1420070400000;
 }
-export type ColorStrings =
-  | "LINK"
-  | "PRIMARY"
-  | "SECONDARY"
-  | "SUCCESS"
-  | "DANGER";
+/**
+ * Sleeps on the current promise for a specific amount of time.
+ * @param duration The duration to sleep on.
+ */
+export function sleep(duration: number) {
+  return new Promise<unknown>((resolve) => setTimeout(resolve, duration));
+}
+export function hasPermission(
+  permissions: number,
+  permission: Permission
+): boolean {
+  return (permissions & Permissions[permission]) !== 0;
+}
 
-// Adapted from discord.js
+export function addPermission(
+  permissions: number,
+  permission: Permission
+): number {
+  return permissions | Permissions[permission];
+}
 
-export const parseEmoji = (text: string) => {
-  if (text.includes("%")) text = decodeURIComponent(text);
-  if (!text.includes(":")) return { animated: false, name: text, id: null };
-  const match = text.match(/<?(?:(a):)?(\w{2,32}):(\d{17,19})?>?/);
-  return (
-    match && {
-      animated: Boolean(match[1]),
-      name: match[2],
-      id: match[3] ?? null,
-    }
-  );
-};
-export const ParseColor = (color: ColorStrings | ButtonStyle) => {
-  if (typeof color === "number") return color;
-  let value;
-  switch (color) {
-    case "DANGER":
-      value = ButtonStyle.Danger;
-      break;
-    case "PRIMARY":
-      value = ButtonStyle.Primary;
-      break;
-    case "SUCCESS":
-      value = ButtonStyle.Success;
-      break;
-    case "LINK":
-      value = ButtonStyle.Link;
-      break;
-    case "SECONDARY":
-      value = ButtonStyle.Secondary;
-      break;
-    default:
-      throw new Error("[COLORS] Invalid color");
+export function removePermission(
+  permissions: number,
+  permission: Permission
+): number {
+  return hasPermission(permissions, permission)
+    ? permissions ^ Permissions[permission]
+    : permissions;
+}
+
+export function getAllPermissions(permissions: number): Permission[] {
+  const p: Permission[] = [];
+  for (const perm of Object.keys(Permissions)) {
+    if (hasPermission(permissions, perm as Permission))
+      p.push(perm as Permission);
   }
-  return value;
-};
-
-export const resolvePartialEmoji = (emoji: any) => {
-  if (!emoji) return null;
-  if (typeof emoji === "string")
-    return /^\d{17,19}$/.test(emoji) ? { id: emoji } : parseEmoji(emoji);
-  const { id, name, animated } = emoji;
-  if (!id && !name) return null;
-  return { id, name, animated: Boolean(animated) };
-};
+  return p;
+}

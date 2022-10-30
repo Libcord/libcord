@@ -1,14 +1,28 @@
 {
-  "include": ["src/**/*"],
-  "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "strict": true,
-    "moduleResolution": "node",
-    "declaration": true,
-    "outDir": "./lib",
-    "typeRoots": ["src/typing", "node_modules/@types"],
-    "experimentalDecorators": true,
-    "resolveJsonModule": true
-  }
+    "include": [
+        "src/**/*",
+        "test/"
+    ],
+    "compilerOptions": {
+        "target": "es2020",
+        "module": "commonjs",
+        "strict": true,
+        "moduleResolution": "node",
+        "suppressImplicitAnyIndexErrors": true,
+        "importsNotUsedAsValues": "error",
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "declaration": true,
+        "resolveJsonModule": true,
+        "outDir": "./lib",
+        "typeRoots": [
+          "src/types",
+            "node_modules/@types"
+        ]
+    },
+    "exclude": ["node_modules", "lib"]
+
 }

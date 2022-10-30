@@ -1,7 +1,5 @@
-import { TextChannel } from "./TextChannel";
-import { ChannelTypes } from "../../Constants";
+import {TextChannel} from "./TextChannel";
 
 export class NewsChannel extends TextChannel {
-  public rateLimitPerUser = null; // news channel don't have message rate limit
-  public readonly type = ChannelTypes.News;
+
 }

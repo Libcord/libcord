@@ -1,9 +1,10 @@
-import { APIUser } from "discord-api-types/v9";
-import { Client } from "../Client";
-import { DEFAULT_USER_AVATAR, USER_AVATAR } from "../rest/EndPoints";
-import { getDate, Snowflake } from "../utils/Snowflake";
-import { ImageUrlOptions } from "../utils/Utils";
 import { Base } from "./Base";
+import type { Snowflake } from "../utils/Utils";
+import { getDate } from "../utils/Utils";
+import type { Client } from "../Client";
+import type { APIUser } from "discord-api-types/v9";
+import type { ImageUrlOptions } from "../types/Types";
+import { getDefaultUserAvatar, getUserAvatar } from "../rest/CDN";
 
 /**
  * @category Structures
@@ -47,7 +48,7 @@ export class User extends Base {
   /**
    * the date of the user account was created in timestamp
    */
-  public readonly createAt: number;
+  public readonly createdAt: number;
 
   /**
    * user public's flags
@@ -63,15 +64,17 @@ export class User extends Base {
     super(client);
 
     // init data
-    this.id = data.id as unknown as Snowflake;
+    this.id = data.id;
     this.avatar = data.avatar;
     this.username = data.username;
     this.discriminator = data.discriminator;
     this.tag = `${data.username}#${data.discriminator}`;
     this.bot = !!data.bot;
     this.system = !!data.system;
-    this.createAt = getDate(data.id as unknown as Snowflake);
+    this.createdAt = getDate(data.id);
     this.publicFlags = data.public_flags ? data.public_flags : 0;
+
+    this.client.users.set(this.id, this);
   }
 
   /**
@@ -85,113 +88,12 @@ export class User extends Base {
     if (!size) size = 4096;
     if (!dynamic) dynamic = false;
     if (!this.avatar)
-      return DEFAULT_USER_AVATAR(`${parseInt(this.discriminator, 10) % 5}`);
+      return getDefaultUserAvatar(`${parseInt(this.discriminator, 10) % 5}`);
     if (dynamic && this.avatar && this.avatar.startsWith("a_")) format = "gif";
-    return USER_AVATAR(this.id as unknown as string, this.avatar, format, size);
+    return getUserAvatar(this.id, this.avatar, format, size);
   }
 
   toString() {
     return `<@${this.id}>`;
   }
-
-  toJSON(space = 1): string {
-    return JSON.stringify(
-      {
-        id: this.id,
-        username: this.username,
-        discriminator: this.discriminator,
-        avatar: this.avatar,
-        bot: this.bot,
-        system: this.system,
-        createAt: this.createAt,
-        public_flags: this.publicFlags,
-      },
-      null,
-      space
-    );
-  }
-}
-
-/**
- * list of activity types
- */
-export enum ActivityTypes {
-  /**
-   * Playing ...
-   */
-  game = 0,
-  /**
-   * Streaming ...
-   */
-  streaming = 1,
-  /**
-   * Listening to ...
-   */
-  listening = 2,
-  /**
-   * Watching ...
-   */
-  watching = 3,
-  /**
-   * emoji ...
-   * WARNING : doesn't work for bots
-   */
-  custom = 4,
-  /**
-   * Competing in ...
-   */
-  competing = 5,
-}
-
-export type ActivityType = keyof typeof ActivityTypes;
-
-/**
- * a presence object
- * @interface
- */
-export interface Presence {
-  /**
-   * The user's activities
-   *
-   * See https://discord.com/developers/docs/topics/gateway#activity-object
-   */
-  activity?: Activity;
-  /**
-   * The user's new status
-   *
-   * See https://discord.com/developers/docs/topics/gateway#update-status-status-types
-   */
-  status?: PresenceStatus;
-  /**
-   * Whether the client is afk. default false
-   */
-  afk?: boolean;
-}
-
-export type PresenceStatus =
-  | "online"
-  | "dnd"
-  | "idle"
-  | "invisible"
-  | "offline";
-
-/**
- *
- */
-export interface Activity {
-  /**
-   * The activity's name
-   */
-  name: string;
-  /**
-   * Activity type
-   *
-   * @see https://discord.com/developers/docs/topics/gateway#activity-object-activity-types
-   * @default "game"
-   */
-  type?: ActivityType;
-  /**
-   * Stream url (only with type Streaming)
-   */
-  url?: string;
 }

@@ -1,6 +1,5 @@
-import { VoiceChannel } from "./VoiceChannel";
-import { ChannelTypes } from "../../Constants";
+import {VoiceChannel} from "./VoiceChannel";
 
 export class StageChannel extends VoiceChannel {
-  public readonly type = ChannelTypes.Stage;
+
 }

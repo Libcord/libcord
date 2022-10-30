@@ -1,29 +1,19 @@
 export class RequestError extends Error {
-  public method: string;
-  public url: string;
-  public data?: any;
-  public status?: string;
-  public msg?: string;
-
-  constructor(
-    message: string,
-    method: string,
-    url: string,
-    data?: any,
-    status?: string,
-    msg?: string
-  ) {
-    message += `
+    public method: string;
+    public url: string;
+    public data?: any;
+    public status?: string;
+    constructor(message: string,method: string, url: string, data?: any, status?: string) {
+        message += `
 debug: 
-url : ${method} ${url}
-data : ${JSON.stringify(data)}
-status : ${status}
-message : ${msg}`;
-    super(message);
-    this.method = method;
-    this.url = url;
-    this.data = data;
-    this.status = status;
-    this.msg = msg;
-  }
+url : ${url}
+data : ${data}
+status : ${status}`;
+        super(message);
+        this.method = method;
+        this.url = url;
+        this.data = data;
+        this.status = status;
+    }
+
 }

@@ -1,7 +1,6 @@
-import { Client, Guild, RoleEditOptions } from "..";
+import type { Client, Guild } from "..";
 import { Base } from "./Base";
-import { APIRole, Snowflake } from "discord-api-types/v9";
-import RoleManager from "../managers/RoleManager";
+import type { APIRole, Snowflake } from "discord-api-types/v9";
 
 export class Role extends Base {
   public id!: Snowflake;
@@ -22,11 +21,11 @@ export class Role extends Base {
     this.color = data.color;
     this.guild = guild;
   }
+
+  /**
+   * @returns {string} the role color by hex
+   */
   get hex() {
     return this.color.toString(16);
-  }
-  async edit(options: RoleEditOptions) {
-    const manager = new RoleManager(this.client, this.guild);
-    return manager.edit(this.id, options);
   }
 }

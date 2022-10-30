@@ -1,6 +1,5 @@
-import { USER_ME } from "../rest/EndPoints";
-import { Activity, Presence, PresenceStatus } from "./";
 import { User } from "./User";
+import type { Activity, Presence, PresenceStatus } from "../types/Types";
 
 /**
  * @category Structures
@@ -23,7 +22,7 @@ export class ClientUser extends User {
    *     status: "dnd",
    *     activity: {
    *         type: "game",
-   *         name: "on libcord"
+   *         name: "on arcscord"
    *     }
    * });
    */
@@ -31,7 +30,6 @@ export class ClientUser extends User {
     if (!presence.status) presence.status = this.client.presence.status;
     if (!presence.status) presence.status = "online";
     this.client.presence = presence;
-    this.client.gateway.updatePresence(presence);
   }
 
   /**
@@ -42,7 +40,7 @@ export class ClientUser extends User {
    */
   public setStatus(status: PresenceStatus) {
     this.client.presence.status = status;
-    this.client.gateway.updatePresence(this.client.presence);
+    //this.client.gateway.updatePresence(this.client.presence);
   }
 
   /**
@@ -56,24 +54,17 @@ export class ClientUser extends User {
    */
   public setActivity(activity: Activity) {
     this.client.presence.activity = activity;
-    this.client.gateway.updatePresence(this.client.presence);
+    //this.client.gateway.updatePresence(this.client.presence);
   }
 
   public edit(data: { username?: string; avatar?: string }) {
-    this.client.requestHandler
-      .request("PATCH", USER_ME, data)
-      .then((r) => {
-        this.username = r.username;
-        this.avatar = r.avatar;
-      })
-      .catch(console.error);
+    /*      this.client.requestHandler.request('PATCH', USER_ME, data).then(r => {
+            this.username = r.username;
+            this.avatar = r.avatar;
+        }).catch(console.error);*/
   }
 
   public setUsername(username: string) {
     this.edit({ username });
-  }
-
-  public setAvatar(avatar: string) {
-    this.edit({ avatar });
   }
 }

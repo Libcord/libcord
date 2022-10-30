@@ -1,22 +1,19 @@
-import { APIChannel } from "discord-api-types/v9";
-import { Client } from "../../Client";
-import { Snowflake } from "../../utils/Snowflake";
 import { Base } from "../Base";
-import { ChannelTypes } from "../../Constants";
+import type { Snowflake } from "../../utils/Utils";
+import type { APIChannel } from "discord-api-types/v9";
+import type { Client } from "../../Client";
 
+/**
+ * @category channels
+ */
 export class Channel extends Base {
+  /**
+   * channel id
+   */
   public id: Snowflake;
-  public readonly type: ChannelTypes;
-  public name: string;
 
   constructor(client: Client, data: APIChannel) {
     super(client);
-    this.id = data.id as unknown as Snowflake;
-    this.name = data.name as string;
-    this.type = data.type as unknown as ChannelTypes;
-  }
-
-  get mention(): string {
-    return `<#${this.id}>`;
+    this.id = data.id;
   }
 }

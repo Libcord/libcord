@@ -1,10 +1,9 @@
-import { APIApplicationCommand } from "discord-api-types/v9";
-import { Client } from "../Client";
-import { Snowflake } from "../utils/Snowflake";
+import type { APIApplicationCommand } from "discord-api-types/v9";
+import type { Client } from "../Client";
 import { Base } from "./Base";
-import { Guild } from "./Guild";
-import { Permission, Permissions } from "../utils/Permissions";
-import { Intents } from "../Constants";
+import type { Guild } from "./Guild";
+import { Permission, Permissions } from "../types/permissions";
+import type { Snowflake } from "../utils/Utils";
 
 export enum ApplicationCommandType {
   CHAT_INPUT = 1,
@@ -32,11 +31,6 @@ export interface ApplicationCommandBase {
    * Default permissions for the user to have if they want to use this command
    */
   default_member_permissions?: Permission[] | Permissions[];
-  /**
-   * if the command are enable when the app is add to a guild
-   * @deprecated
-   */
-  default_permission?: boolean;
 }
 
 export interface EditApplicationCommandOptions {
@@ -55,9 +49,9 @@ export interface EditApplicationCommandOptions {
     ApplicationCommandOption | ApplicationCommandOptionWithSubCommand
   >;
   /**
-   * if the command are enable when the app is add to a guild
+   * Default permissions for the user to have if they want to use this command
    */
-  defaultPermissions?: boolean;
+  default_member_permissions?: Permission[] | Permissions[];
 }
 
 export interface ApplicationCommandOption {
@@ -145,10 +139,6 @@ export class ApplicationCommand extends Base {
    */
   public options: ApplicationCommandOption[] | null;
   /**
-   * if the command is enable by default on add guild
-   */
-  public defaultPermission: boolean;
-  /**
    * @internal
    */
   public data: { [index: string]: any };
@@ -164,18 +154,18 @@ export class ApplicationCommand extends Base {
     this.options = data.options
       ? (data.options as unknown as ApplicationCommandOption[])
       : null;
-    this.defaultPermission =
-      typeof data.default_permission !== "undefined"
-        ? data.default_permission
-        : true;
     this.data = data;
   }
 
-  public edit(
-    data: EditApplicationCommandOptions,
-    cache = true
-  ): Promise<ApplicationCommand> {
-    return this.client.editApplicationCommand(this.id, data, cache);
+  /**
+   * edits an existing application command
+   * @param data New options for the command
+   * @param cache wether to store the command in the clients cache
+   * @returns {any} returns the application command
+   */
+  public edit(data: EditApplicationCommandOptions, cache = true) {
+    /*Promise<ApplicationCommand>*/
+    // return this.client.editApplicationCommand(this.id, data, cache);
   }
 
   public toString(): string {
@@ -187,11 +177,10 @@ export class ApplicationCommand extends Base {
       {
         id: this.id,
         application_id: this.client.user?.id || undefined,
-        guild_id: this.guild ? this.guild.id : undefined,
+        //guild_id: this.guild ? this.guild.id : undefined,
         name: this.name,
         description: this.description,
         options: this.options || undefined,
-        default_permission: this.defaultPermission,
       },
       null,
       space
@@ -209,11 +198,6 @@ export class ApplicationCommand extends Base {
       JSON.stringify(data.options as any) !== JSON.stringify(this.options)
     )
       this.options = data.options as any;
-    if (
-      data.default_permission !== this.defaultPermission &&
-      typeof data.default_permission !== "undefined"
-    )
-      this.defaultPermission = data.default_permission;
     this.data = data;
     return this;
   }
@@ -222,19 +206,17 @@ export class ApplicationCommand extends Base {
 /**
  * @internal
  */
-export function resolveApplicationCommandForApi(cmd: {
-  [index: string | number]: any;
+export function resolveApplicationCommandForApi({
+  cmd,
+}: {
+  cmd: { [p: string]: any; [p: number]: any };
 }): object {
   if (cmd.hasOwnProperty("options"))
     cmd["options"] = resolveApplicationCommandOptionsForApi(cmd["options"]);
   if (cmd.hasOwnProperty("default_member_permissions")) {
     let permissions: any = 0;
     for (const permission of cmd["default_member_permissions"]) {
-      if (typeof permission === "number") {
-        permissions += permission;
-      } else {
-        permissions += Permissions[permission];
-      }
+      permissions += Permissions[permission];
     }
     cmd["default_member_permissions"] = permissions;
   }

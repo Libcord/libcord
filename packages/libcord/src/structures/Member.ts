@@ -1,49 +1,37 @@
-import { APIGuildMember } from "discord-api-types/v9";
-import { Collection, Role } from "..";
-import { Client } from "../Client";
-import { Snowflake } from "../utils/Snowflake";
 import { Base } from "./Base";
-import { Guild } from "./Guild";
 import { User } from "./User";
-import MemberRoleManager from "../managers/MemberRoleManager";
+import type { Snowflake } from "../utils/Utils";
+import type { Client } from "../Client";
+import type { APIGuildMember } from "discord-api-types/v9";
 
 /**
  * @category Structures
  */
 export class Member extends Base {
-  public id: Snowflake;
-  public user: User;
-  public displayName: string;
-  public roles: MemberRoleManager;
+  public user?: User;
+  public nick: string | null;
+  public roles: Snowflake[];
   public joinedAt: string;
   public premiumSince: string | null;
   public deaf: boolean;
   public mute: boolean;
-  public guild: Guild;
-  public data: APIGuildMember;
 
-  constructor(client: Client, guild: Guild, data: APIGuildMember) {
+  constructor(client: Client, data: APIGuildMember) {
     super(client);
 
     this.user =
-      this.client.users.get(data.user?.id as unknown as Snowflake) ||
-      new User(client, data.user!);
-    this.id = this.user.id;
-    this.displayName =
-      typeof data.nick !== "undefined"
-        ? (data.nick as string)
-        : (this.user.username as string);
+      this.client.users.get(data.user?.id as Snowflake) ||
+      (data.user ? new User(client, data.user) : undefined);
+    this.nick = typeof data.nick !== "undefined" ? data.nick : null;
+    this.roles = data.roles;
     this.joinedAt = data.joined_at;
     this.premiumSince =
       typeof data.premium_since !== "undefined" ? data.premium_since : null;
     this.deaf = data.deaf;
     this.mute = data.mute;
-    this.guild = guild;
-    this.data = data;
-    this.roles = new MemberRoleManager(client, guild, this);
   }
 
   toString(): string {
-    return `<@${this.data.nick ? "!" : ""}${this.user?.id}>`;
+    return `<@${this.nick ? "!" : ""}${this.user?.id}>`;
   }
 }
