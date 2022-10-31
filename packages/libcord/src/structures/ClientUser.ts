@@ -1,5 +1,5 @@
 import { User } from "./User";
-import type { Activity, Presence, PresenceStatus } from "../types/Types";
+import type { Presence } from "../types/Types";
 
 /**
  * @category Structures
@@ -29,32 +29,7 @@ export class ClientUser extends User {
   public setPresence(presence: Presence) {
     if (!presence.status) presence.status = this.client.presence.status;
     if (!presence.status) presence.status = "online";
-    this.client.presence = presence;
-  }
-
-  /**
-   * update the status of the ClientUser
-   * @param status the status to set
-   * @example
-   * client.user.setStatus('dnd');
-   */
-  public setStatus(status: PresenceStatus) {
-    this.client.presence.status = status;
-    //this.client.gateway.updatePresence(this.client.presence);
-  }
-
-  /**
-   * update the activity of the ClientUser
-   * @param activity the activity to set
-   * @example
-   * client.user.setActivity({
-   *     name: 'using libcord',
-   *     type: 'game'
-   * });
-   */
-  public setActivity(activity: Activity) {
-    this.client.presence.activity = activity;
-    //this.client.gateway.updatePresence(this.client.presence);
+    this.client.shards.setPresence(presence);
   }
 
   public edit(data: { username?: string; avatar?: string }) {

@@ -1,5 +1,3 @@
-import {TextChannel} from "./TextChannel";
+import { TextableChannel } from "./TextableChannel";
 
-export class NewsChannel extends TextChannel {
-
-}
+export class NewsChannel extends TextableChannel {}

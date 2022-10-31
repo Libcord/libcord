@@ -5,6 +5,7 @@ import type { MessageOptions } from "../Constants";
 import type { Client } from "../Client";
 import { FormData, request } from "undici";
 import { Blob } from "buffer";
+import type { ComponentsType } from "../structures/components/Row";
 
 export class Parser {
   static async resolveFile(client: Client, file: any) {
@@ -93,6 +94,7 @@ export class Parser {
     const payload: any = {
       content: "" as any,
       attachments: [] as any,
+      components: [] as any,
     };
     if (typeof data === "object") {
       if (typeof data?.content === "string") {
@@ -100,8 +102,15 @@ export class Parser {
       }
       if (data.mentions) {
         if (data.mentions.message) {
-          payload.message_reference.message_id = data.mentions.message.id;
+          payload.message_reference = {
+            message_id: data.mentions.message.id,
+          };
         }
+      }
+      if (data.components?.length! > 0) {
+        data.components?.forEach((comp: ComponentsType) => {
+          payload.components.push(comp);
+        });
       }
       if (data.files) {
         let temp = new FormData();

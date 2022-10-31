@@ -1,4 +1,7 @@
-import type { GatewayGuildCreateDispatchData } from "discord-api-types/v9";
+import type {
+  APIEmoji,
+  GatewayGuildCreateDispatchData,
+} from "discord-api-types/v9";
 import type { Client } from "../Client";
 import type { Snowflake } from "../utils/Utils";
 import { detectChannelType } from "../utils/Utils";
@@ -20,12 +23,12 @@ export class Guild extends Base {
   public ownerId: Snowflake;
   public owner: User;
   public afkChannelId: Snowflake | null;
+  public emojis: Collection<string, APIEmoji>;
   public commands: Collection<string, ApplicationCommand>;
   public data: GatewayGuildCreateDispatchData;
 
   constructor(client: Client, data: GatewayGuildCreateDispatchData) {
     super(client);
-
     this.id = data.id as unknown as Snowflake;
     this.name = data.name;
     this.icon = data.icon;
@@ -35,6 +38,7 @@ export class Guild extends Base {
     this.owner = client.users.get(data.owner_id as unknown as Snowflake)!;
     this.afkChannelId = data.afk_channel_id as unknown as Snowflake;
     this.commands = new Collection<string, ApplicationCommand>();
+    this.emojis = new Collection<string, APIEmoji>();
     this._patch(data);
     this.data = data;
   }
@@ -42,6 +46,11 @@ export class Guild extends Base {
     if (d.channels) {
       for (const ch of d.channels) {
         this.client.channels.set(ch.id, detectChannelType(this.client, ch));
+      }
+    }
+    if (d.emojis) {
+      for (const emo of d.emojis) {
+        this.emojis.set(emo.id as string, emo);
       }
     }
   }

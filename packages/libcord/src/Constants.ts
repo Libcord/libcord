@@ -1,5 +1,6 @@
 import { version } from "../package.json";
 import type { Stream } from "stream";
+import type { ComponentsType } from "./structures/components/Row";
 
 export const VERSION = version;
 export const REST_VERSION = 9;
@@ -137,4 +138,5 @@ export interface MessageOptions {
   content?: string;
   files?: FileOption[];
   mentions?: { message?: MessageMention };
+  components?: Array<ComponentsType>;
 }
