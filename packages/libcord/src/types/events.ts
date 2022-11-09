@@ -1,4 +1,12 @@
-import type { Message } from "../structures";
+import type {
+  CommandInteraction,
+  Interaction,
+  Message,
+  MessageContextMenuInteraction,
+  SelectMenuInteraction,
+  UserContextMenuInteraction,
+} from "../structures";
+import type ButtonInteraction from "../structures/interactions/ButtonInteraction";
 
 export interface ClientEvents {
   /** @event Emitted when all shards are ready. */
@@ -15,6 +23,16 @@ export interface ClientEvents {
   shardDebug: [id: number, ...args: any];
   /** @event Emitted when a message has been received. */
   messageCreate: [message: Message];
+  /** @event Emitted when an interaction has been used by a user  */
+  interactionCreate: [
+    interaction:
+      | Interaction
+      | MessageContextMenuInteraction
+      | CommandInteraction
+      | SelectMenuInteraction
+      | UserContextMenuInteraction
+      | ButtonInteraction
+  ];
 }
 export interface ShardEvents {
   /** @event Emitted with various information for debugging. */

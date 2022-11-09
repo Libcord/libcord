@@ -138,31 +138,6 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@augu/collections@1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@augu/collections/-/collections-1.0.8.tgz#773f4bad2ed4000f007c05bbb98c431e2e01693d"
-  integrity sha512-N/cYv0ZdL5uyU2sx+HugleHIYN0WEDQUD/buFGgvC39lMUl0/V909h514EleJaFTLe2MG7Jrl6sVjhpQkbzldA==
-
-"@augu/collections@1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@augu/collections/-/collections-1.0.9.tgz#d878c64b34720f3ac9f1354643d8355ffbf10beb"
-  integrity sha512-zYnxP+l50qiwd4kJ8sERWTqikkGoguzpL55VMePAbAJthyKfwZv/Ipq/SOH/WAtdsPwct3tm+GujGysx4GXTDw==
-
-"@augu/orchid@3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@augu/orchid/-/orchid-3.1.1.tgz#0de1ee098cba3d64ce6903f8114d20dd35adbc12"
-  integrity sha512-1eYeun7FPd+3MegfFG59gRGitMWKlBr0JojNhAjx5R+at+uQKWH+JR91D9Bocw9jn06vZMTnFd6I9eG/XqhxIw==
-  dependencies:
-    "@augu/collections" "1.0.8"
-    "@augu/utils" "1.5.3"
-    form-data "4.0.0"
-    undici "3.3.6"
-
-"@augu/utils@1.5.3":
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/@augu/utils/-/utils-1.5.3.tgz#eb82352e2690b0467ef690885e6496f0e7a12da9"
-  integrity sha512-Pyu+JoK7f7AUjZvffCjf6ZLEpwa09ig7WNOn/ozzZDGeWNad9PMj8EsYzVsKLRyP/SnvbLDvpRWGEObgcACtYg==
-
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.16.0", "@babel/code-frame@^7.18.6", "@babel/code-frame@^7.8.3":
   version "7.18.6"
   resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.18.6.tgz"
@@ -2520,16 +2495,6 @@
     "@webassemblyjs/ast" "1.11.1"
     "@xtuc/long" "4.2.2"
 
-"@wumpcord/rest@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@wumpcord/rest/-/rest-1.2.1.tgz#88ed2da588867da902e3f661a98736eddcd61b06"
-  integrity sha512-q2HcK8sH1ZrXj5LiAzFLSghwh9Nd/RxsWU9PDF85MJPHvvJnyiuoaJJHI80NkZgKwL2U1XW5VJiDyMJ+jyOcjQ==
-  dependencies:
-    "@augu/collections" "1.0.9"
-    "@augu/orchid" "3.1.1"
-    "@augu/utils" "1.5.3"
-    form-data "4.0.0"
-
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.npmjs.org/@xtuc/ieee754/-/ieee754-1.2.0.tgz"
@@ -3475,7 +3440,7 @@ combine-promises@^1.1.0:
   resolved "https://registry.npmjs.org/combine-promises/-/combine-promises-1.1.0.tgz"
   integrity sha512-ZI9jvcLDxqwaXEixOhArm3r7ReIivsXkpbyEWyeOhzz1QS0iSgBPnWvEqvIQtYyamGCYA88gFhmUrs9hrrQ0pg==
 
-combined-stream@^1.0.6, combined-stream@^1.0.8, combined-stream@~1.0.6:
+combined-stream@^1.0.6, combined-stream@~1.0.6:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
   integrity sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
@@ -4775,15 +4740,6 @@ fork-ts-checker-webpack-plugin@^6.5.0:
     schema-utils "2.7.0"
     semver "^7.3.2"
     tapable "^1.0.0"
-
-form-data@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
-  integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
-  dependencies:
-    asynckit "^0.4.0"
-    combined-stream "^1.0.8"
-    mime-types "^2.1.12"
 
 form-data@~2.3.2:
   version "2.3.3"
@@ -9430,11 +9386,6 @@ unbox-primitive@^1.0.2:
     has-bigints "^1.0.2"
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
-
-undici@3.3.6:
-  version "3.3.6"
-  resolved "https://registry.yarnpkg.com/undici/-/undici-3.3.6.tgz#06d3b97b7eeff46bce6f8a71079c09f64dd59dc1"
-  integrity sha512-/j3YTZ5AobMB4ZrTY72mzM54uFUX32v0R/JRW9G2vOyF1uSKYAx+WT8dMsAcRS13TOFISv094TxIyWYk+WEPsA==
 
 undici@^5.12.0:
   version "5.12.0"

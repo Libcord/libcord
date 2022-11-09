@@ -5,7 +5,9 @@ import type { MessageOptions } from "../Constants";
 import type { Client } from "../Client";
 import { FormData, request } from "undici";
 import { Blob } from "buffer";
-import type { ComponentsType } from "../structures/components/Row";
+import type { ComponentsType } from "../structures";
+import type { InteractionOptions } from "../structures/interactions/CommandInteraction";
+import { MessageFlags } from "discord-api-types/v9";
 
 export class Parser {
   static async resolveFile(client: Client, file: any) {
@@ -90,7 +92,11 @@ export class Parser {
     )) as any;
     return { file: await data, name, contentType };
   }
-  static async resolveContentForApi(client: Client, data: MessageOptions) {
+  static async resolveContentForApi(
+    client: Client,
+    data: MessageOptions | InteractionOptions,
+    interaction: boolean = false
+  ) {
     const payload: any = {
       content: "" as any,
       attachments: [] as any,
@@ -100,12 +106,15 @@ export class Parser {
       if (typeof data?.content === "string") {
         payload.content = data?.content;
       }
-      if (data.mentions) {
+      if ("mentions" in data && data.mentions) {
         if (data.mentions.message) {
           payload.message_reference = {
             message_id: data.mentions.message.id,
           };
         }
+      }
+      if ((data as InteractionOptions).ephemeral) {
+        payload.flags = MessageFlags.Ephemeral;
       }
       if (data.components?.length! > 0) {
         data.components?.forEach((comp: ComponentsType) => {
@@ -131,8 +140,16 @@ export class Parser {
         } else {
           payload.attachments = attachment;
         }
-        const JSONPayload = JSON.stringify(payload);
-        temp.append("payload_json", JSONPayload);
+        if (interaction) {
+          const JSONPayload = JSON.stringify(payload);
+          temp.append("payload_json", {
+            type: 4,
+            data: JSONPayload,
+          });
+        } else {
+          const JSONPayload = JSON.stringify(payload);
+          temp.append("payload_json", JSONPayload);
+        }
         return { type: "file", data: temp };
       }
     }

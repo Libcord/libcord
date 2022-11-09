@@ -19,3 +19,4 @@ export const READY: EventProcessor<GatewayReadyDispatchData> = (
   shard.emit("ready", shard.id);
 };
 export * from "./message";
+export * from "./interaction";

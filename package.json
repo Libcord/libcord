@@ -19,8 +19,7 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "@wumpcord/rest": "^1.2.1",
-    "libcord": "^0.3.3"
+    "libcord": "^1.0.0"
   },
   "packageManager": "yarn@1.22.19"
 }

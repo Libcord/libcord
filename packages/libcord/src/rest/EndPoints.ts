@@ -24,3 +24,11 @@ export const SelfMessageReaction = (
   messageId: string,
   emojiId: string
 ) => `/channels/${channelId}/messages/${messageId}/reactions/${emojiId}/@me`;
+
+export const RespondInteraction = (
+  interactionId: string,
+  interactionToken: string
+) => `/interactions/${interactionId}/${interactionToken}/callback`;
+
+export const EditReply = (applicationId: string, interactionToken: string) =>
+  `/webhooks/${applicationId}/${interactionToken}/messages/@original`;

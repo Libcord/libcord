@@ -159,13 +159,14 @@ export class ClientApplication extends Base {
         const resolvedData = resolveApplicationCommandForApi({
           cmd: data,
         }) as ApplicationCommandBase;
+        console.log(resolvedData);
         const command = new ApplicationCommand(
           this.client,
           await this.client.requestHandler.request<RESTPostAPIApplicationCommandsResult>(
             {
               method: "POST",
               path: Endpoints.ApplicationGuildCommands(this.id, guildId),
-              json: resolvedData,
+              json: resolvedData[0],
               auth: true,
             }
           )

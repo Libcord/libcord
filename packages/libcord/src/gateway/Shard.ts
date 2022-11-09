@@ -173,6 +173,9 @@ export class Shard extends TypedEmitter<ShardEvents> {
       case GatewayDispatchEvents.MessageCreate:
         events.MESSAGE_CREATE(this, msg.d);
         break;
+      case GatewayDispatchEvents.InteractionCreate:
+        events.INTERACTION_CREATE(this, msg.d);
+        break;
     }
   }
 
